@@ -1,0 +1,593 @@
+16:53:23 **** Incremental Build of project CustomMapping ****
+/usr/bin/make -j8 all 
+mkdir -p bin
+cd build && cmake -Wdev -DCMAKE_TOOLCHAIN_FILE=/opt/ros/kinetic/share/ros/core/rosbuild/rostoolchain.cmake  ..
+Re-run cmake no build system arguments
+[rosbuild] Building package CustomMapping
+[rosbuild] using multiarch 'x86_64-linux-gnu' for finding Boost
+-- Using CATKIN_DEVEL_PREFIX: /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/devel
+-- Using CMAKE_PREFIX_PATH: /opt/ros/kinetic
+-- This workspace overlays: /opt/ros/kinetic
+-- Using PYTHON_EXECUTABLE: /usr/bin/python
+-- Using Debian Python package layout
+-- Using empy: /usr/bin/empy
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Skip enable_testing() for dry packages
+-- Using CATKIN_TEST_RESULTS_DIR: /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/test_results
+-- Found gtest sources under '/usr/src/gtest': gtests will be built
+-- Using Python nosetests: /usr/bin/nosetests-2.7
+-- catkin 0.7.6
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+[rosbuild] Including /opt/ros/kinetic/share/roslisp/rosbuild/roslisp.cmake
+[rosbuild] Including /opt/ros/kinetic/share/roscpp/rosbuild/roscpp.cmake
+[rosbuild] Including /opt/ros/kinetic/share/rospy/rosbuild/rospy.cmake
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build
+cd build && /usr/bin/make 
+make[1]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/usr/bin/cmake -H/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping -B/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/progress.marks
+/usr/bin/make -f CMakeFiles/Makefile2 all
+make[2]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/usr/bin/make -f CMakeFiles/rospack_genmsg_libexe.dir/build.make CMakeFiles/rospack_genmsg_libexe.dir/depend
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+cd /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/rospack_genmsg_libexe.dir/DependInfo.cmake --color=
+Dependee "/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/rospack_genmsg_libexe.dir/DependInfo.cmake" is newer than depender "/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/rospack_genmsg_libexe.dir/depend.internal".
+Dependee "/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/rospack_genmsg_libexe.dir/depend.internal".
+Scanning dependencies of target rospack_genmsg_libexe
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/usr/bin/make -f CMakeFiles/rospack_genmsg_libexe.dir/build.make CMakeFiles/rospack_genmsg_libexe.dir/build
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+make[3]: Nothing to be done for 'CMakeFiles/rospack_genmsg_libexe.dir/build'.
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+[  0%] Built target rospack_genmsg_libexe
+/usr/bin/make -f CMakeFiles/rosbuild_precompile.dir/build.make CMakeFiles/rosbuild_precompile.dir/depend
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+cd /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/rosbuild_precompile.dir/DependInfo.cmake --color=
+Dependee "/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/rosbuild_precompile.dir/DependInfo.cmake" is newer than depender "/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/rosbuild_precompile.dir/depend.internal".
+Dependee "/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/rosbuild_precompile.dir/depend.internal".
+Scanning dependencies of target rosbuild_precompile
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/usr/bin/make -f CMakeFiles/rosbuild_precompile.dir/build.make CMakeFiles/rosbuild_precompile.dir/build
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+make[3]: Nothing to be done for 'CMakeFiles/rosbuild_precompile.dir/build'.
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+[  0%] Built target rosbuild_precompile
+/usr/bin/make -f CMakeFiles/MapPublisherTest.dir/build.make CMakeFiles/MapPublisherTest.dir/depend
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+cd /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/MapPublisherTest.dir/DependInfo.cmake --color=
+Dependee "/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/MapPublisherTest.dir/DependInfo.cmake" is newer than depender "/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/MapPublisherTest.dir/depend.internal".
+Dependee "/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/CMakeDirectoryInformation.cmake" is newer than depender "/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/MapPublisherTest.dir/depend.internal".
+Scanning dependencies of target MapPublisherTest
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/usr/bin/make -f CMakeFiles/MapPublisherTest.dir/build.make CMakeFiles/MapPublisherTest.dir/build
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+[ 50%] Building CXX object CMakeFiles/MapPublisherTest.dir/src/MapPublisherTest.cpp.o
+/usr/bin/c++   -DROS_PACKAGE_NAME=\"CustomMapping\" -I/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/include -I/opt/ros/kinetic/include  -O2 -g -DNDEBUG   -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/MapPublisherTest.dir/src/MapPublisherTest.cpp.o -c /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/src/MapPublisherTest.cpp
+/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/src/MapPublisherTest.cpp: In function ‘int main(int, char**)’:
+/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/src/MapPublisherTest.cpp:36:11: error: no match for ‘operator=’ (operand types are ‘nav_msgs::OccupancyGrid_<std::allocator<void> >::_data_type {aka std::vector<signed char, std::allocator<signed char> >}’ and ‘unsigned char [200][200]’)
+  map.data = myMap;
+           ^
+In file included from /usr/include/c++/5/vector:69:0,
+                 from /usr/include/boost/format.hpp:17,
+                 from /usr/include/boost/math/policies/error_handling.hpp:31,
+                 from /usr/include/boost/math/special_functions/round.hpp:14,
+                 from /opt/ros/kinetic/include/ros/time.h:58,
+                 from /opt/ros/kinetic/include/ros/ros.h:38,
+                 from /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/src/MapPublisherTest.cpp:1:
+/usr/include/c++/5/bits/vector.tcc:167:5: note: candidate: std::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(const std::vector<_Tp, _Alloc>&) [with _Tp = signed char; _Alloc = std::allocator<signed char>]
+     vector<_Tp, _Alloc>::
+     ^
+/usr/include/c++/5/bits/vector.tcc:167:5: note:   no known conversion for argument 1 from ‘unsigned char [200][200]’ to ‘const std::vector<signed char, std::allocator<signed char> >&’
+/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/src/MapPublisherTest.cpp:46:23: error: ‘msg’ was not declared in this scope
+   chatter_pub.publish(msg);
+                       ^
+CMakeFiles/MapPublisherTest.dir/build.make:86: recipe for target 'CMakeFiles/MapPublisherTest.dir/src/MapPublisherTest.cpp.o' failed
+make[3]: *** [CMakeFiles/MapPublisherTest.dir/src/MapPublisherTest.cpp.o] Error 1
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+CMakeFiles/Makefile2:709: recipe for target 'CMakeFiles/MapPublisherTest.dir/all' failed
+make[2]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+make[2]: *** [CMakeFiles/MapPublisherTest.dir/all] Error 2
+Makefile:127: recipe for target 'all' failed
+make[1]: *** [all] Error 2
+make[1]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+make: *** [all] Error 2
+/opt/ros/kinetic/share/mk/cmake.mk:7: recipe for target 'all' failed
+16:53:43 **** Incremental Build of project CustomMapping ****
+/usr/bin/make -j8 all 
+mkdir -p bin
+cd build && cmake -Wdev -DCMAKE_TOOLCHAIN_FILE=/opt/ros/kinetic/share/ros/core/rosbuild/rostoolchain.cmake  ..
+Re-run cmake no build system arguments
+[rosbuild] Building package CustomMapping
+[rosbuild] using multiarch 'x86_64-linux-gnu' for finding Boost
+-- Using CATKIN_DEVEL_PREFIX: /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/devel
+-- Using CMAKE_PREFIX_PATH: /opt/ros/kinetic
+-- This workspace overlays: /opt/ros/kinetic
+-- Using PYTHON_EXECUTABLE: /usr/bin/python
+-- Using Debian Python package layout
+-- Using empy: /usr/bin/empy
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Skip enable_testing() for dry packages
+-- Using CATKIN_TEST_RESULTS_DIR: /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/test_results
+-- Found gtest sources under '/usr/src/gtest': gtests will be built
+-- Using Python nosetests: /usr/bin/nosetests-2.7
+-- catkin 0.7.6
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+[rosbuild] Including /opt/ros/kinetic/share/roslisp/rosbuild/roslisp.cmake
+[rosbuild] Including /opt/ros/kinetic/share/roscpp/rosbuild/roscpp.cmake
+[rosbuild] Including /opt/ros/kinetic/share/rospy/rosbuild/rospy.cmake
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build
+cd build && /usr/bin/make 
+make[1]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/usr/bin/cmake -H/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping -B/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/progress.marks
+/usr/bin/make -f CMakeFiles/Makefile2 all
+make[2]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/usr/bin/make -f CMakeFiles/rospack_genmsg_libexe.dir/build.make CMakeFiles/rospack_genmsg_libexe.dir/depend
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+cd /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/rospack_genmsg_libexe.dir/DependInfo.cmake --color=
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/usr/bin/make -f CMakeFiles/rospack_genmsg_libexe.dir/build.make CMakeFiles/rospack_genmsg_libexe.dir/build
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+make[3]: Nothing to be done for 'CMakeFiles/rospack_genmsg_libexe.dir/build'.
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+[  0%] Built target rospack_genmsg_libexe
+/usr/bin/make -f CMakeFiles/rosbuild_precompile.dir/build.make CMakeFiles/rosbuild_precompile.dir/depend
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+cd /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/rosbuild_precompile.dir/DependInfo.cmake --color=
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/usr/bin/make -f CMakeFiles/rosbuild_precompile.dir/build.make CMakeFiles/rosbuild_precompile.dir/build
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+make[3]: Nothing to be done for 'CMakeFiles/rosbuild_precompile.dir/build'.
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+[  0%] Built target rosbuild_precompile
+/usr/bin/make -f CMakeFiles/MapPublisherTest.dir/build.make CMakeFiles/MapPublisherTest.dir/depend
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+cd /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/MapPublisherTest.dir/DependInfo.cmake --color=
+Dependee "/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/src/MapPublisherTest.cpp" is newer than depends file "/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/MapPublisherTest.dir/depend.internal".
+Clearing dependencies in "/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/MapPublisherTest.dir/depend.make".
+Scanning dependencies of target MapPublisherTest
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/usr/bin/make -f CMakeFiles/MapPublisherTest.dir/build.make CMakeFiles/MapPublisherTest.dir/build
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+[ 50%] Building CXX object CMakeFiles/MapPublisherTest.dir/src/MapPublisherTest.cpp.o
+/usr/bin/c++   -DROS_PACKAGE_NAME=\"CustomMapping\" -I/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/include -I/opt/ros/kinetic/include  -O2 -g -DNDEBUG   -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/MapPublisherTest.dir/src/MapPublisherTest.cpp.o -c /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/src/MapPublisherTest.cpp
+/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/src/MapPublisherTest.cpp: In function ‘int main(int, char**)’:
+/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/src/MapPublisherTest.cpp:36:11: error: no match for ‘operator=’ (operand types are ‘nav_msgs::OccupancyGrid_<std::allocator<void> >::_data_type {aka std::vector<signed char, std::allocator<signed char> >}’ and ‘unsigned char [200][200]’)
+  map.data = myMap;
+           ^
+In file included from /usr/include/c++/5/vector:69:0,
+                 from /usr/include/boost/format.hpp:17,
+                 from /usr/include/boost/math/policies/error_handling.hpp:31,
+                 from /usr/include/boost/math/special_functions/round.hpp:14,
+                 from /opt/ros/kinetic/include/ros/time.h:58,
+                 from /opt/ros/kinetic/include/ros/ros.h:38,
+                 from /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/src/MapPublisherTest.cpp:1:
+/usr/include/c++/5/bits/vector.tcc:167:5: note: candidate: std::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(const std::vector<_Tp, _Alloc>&) [with _Tp = signed char; _Alloc = std::allocator<signed char>]
+     vector<_Tp, _Alloc>::
+     ^
+/usr/include/c++/5/bits/vector.tcc:167:5: note:   no known conversion for argument 1 from ‘unsigned char [200][200]’ to ‘const std::vector<signed char, std::allocator<signed char> >&’
+CMakeFiles/MapPublisherTest.dir/build.make:86: recipe for target 'CMakeFiles/MapPublisherTest.dir/src/MapPublisherTest.cpp.o' failed
+make[3]: *** [CMakeFiles/MapPublisherTest.dir/src/MapPublisherTest.cpp.o] Error 1
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+CMakeFiles/Makefile2:709: recipe for target 'CMakeFiles/MapPublisherTest.dir/all' failed
+make[2]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+make[2]: *** [CMakeFiles/MapPublisherTest.dir/all] Error 2
+Makefile:127: recipe for target 'all' failed
+make[1]: *** [all] Error 2
+make[1]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+make: *** [all] Error 2
+/opt/ros/kinetic/share/mk/cmake.mk:7: recipe for target 'all' failed
+16:55:00 **** Incremental Build of project CustomMapping ****
+/usr/bin/make -j8 all 
+mkdir -p bin
+cd build && cmake -Wdev -DCMAKE_TOOLCHAIN_FILE=/opt/ros/kinetic/share/ros/core/rosbuild/rostoolchain.cmake  ..
+Re-run cmake no build system arguments
+[rosbuild] Building package CustomMapping
+[rosbuild] using multiarch 'x86_64-linux-gnu' for finding Boost
+-- Using CATKIN_DEVEL_PREFIX: /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/devel
+-- Using CMAKE_PREFIX_PATH: /opt/ros/kinetic
+-- This workspace overlays: /opt/ros/kinetic
+-- Using PYTHON_EXECUTABLE: /usr/bin/python
+-- Using Debian Python package layout
+-- Using empy: /usr/bin/empy
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Skip enable_testing() for dry packages
+-- Using CATKIN_TEST_RESULTS_DIR: /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/test_results
+-- Found gtest sources under '/usr/src/gtest': gtests will be built
+-- Using Python nosetests: /usr/bin/nosetests-2.7
+-- catkin 0.7.6
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+[rosbuild] Including /opt/ros/kinetic/share/roslisp/rosbuild/roslisp.cmake
+[rosbuild] Including /opt/ros/kinetic/share/roscpp/rosbuild/roscpp.cmake
+[rosbuild] Including /opt/ros/kinetic/share/rospy/rosbuild/rospy.cmake
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build
+cd build && /usr/bin/make 
+make[1]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/usr/bin/cmake -H/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping -B/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/progress.marks
+/usr/bin/make -f CMakeFiles/Makefile2 all
+make[2]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/usr/bin/make -f CMakeFiles/rospack_genmsg_libexe.dir/build.make CMakeFiles/rospack_genmsg_libexe.dir/depend
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+cd /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/rospack_genmsg_libexe.dir/DependInfo.cmake --color=
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/usr/bin/make -f CMakeFiles/rospack_genmsg_libexe.dir/build.make CMakeFiles/rospack_genmsg_libexe.dir/build
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+make[3]: Nothing to be done for 'CMakeFiles/rospack_genmsg_libexe.dir/build'.
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+[  0%] Built target rospack_genmsg_libexe
+/usr/bin/make -f CMakeFiles/rosbuild_precompile.dir/build.make CMakeFiles/rosbuild_precompile.dir/depend
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+cd /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/rosbuild_precompile.dir/DependInfo.cmake --color=
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/usr/bin/make -f CMakeFiles/rosbuild_precompile.dir/build.make CMakeFiles/rosbuild_precompile.dir/build
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+make[3]: Nothing to be done for 'CMakeFiles/rosbuild_precompile.dir/build'.
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+[  0%] Built target rosbuild_precompile
+/usr/bin/make -f CMakeFiles/MapPublisherTest.dir/build.make CMakeFiles/MapPublisherTest.dir/depend
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+cd /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/MapPublisherTest.dir/DependInfo.cmake --color=
+Dependee "/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/src/MapPublisherTest.cpp" is newer than depends file "/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/MapPublisherTest.dir/depend.internal".
+Clearing dependencies in "/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/MapPublisherTest.dir/depend.make".
+Scanning dependencies of target MapPublisherTest
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/usr/bin/make -f CMakeFiles/MapPublisherTest.dir/build.make CMakeFiles/MapPublisherTest.dir/build
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+[ 50%] Building CXX object CMakeFiles/MapPublisherTest.dir/src/MapPublisherTest.cpp.o
+/usr/bin/c++   -DROS_PACKAGE_NAME=\"CustomMapping\" -I/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/include -I/opt/ros/kinetic/include  -O2 -g -DNDEBUG   -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/MapPublisherTest.dir/src/MapPublisherTest.cpp.o -c /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/src/MapPublisherTest.cpp
+/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/src/MapPublisherTest.cpp: In function ‘int main(int, char**)’:
+/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/src/MapPublisherTest.cpp:36:11: error: no match for ‘operator=’ (operand types are ‘nav_msgs::OccupancyGrid_<std::allocator<void> >::_data_type {aka std::vector<signed char, std::allocator<signed char> >}’ and ‘char [200][200]’)
+  map.data = myMap;
+           ^
+In file included from /usr/include/c++/5/vector:69:0,
+                 from /usr/include/boost/format.hpp:17,
+                 from /usr/include/boost/math/policies/error_handling.hpp:31,
+                 from /usr/include/boost/math/special_functions/round.hpp:14,
+                 from /opt/ros/kinetic/include/ros/time.h:58,
+                 from /opt/ros/kinetic/include/ros/ros.h:38,
+                 from /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/src/MapPublisherTest.cpp:1:
+/usr/include/c++/5/bits/vector.tcc:167:5: note: candidate: std::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(const std::vector<_Tp, _Alloc>&) [with _Tp = signed char; _Alloc = std::allocator<signed char>]
+     vector<_Tp, _Alloc>::
+     ^
+/usr/include/c++/5/bits/vector.tcc:167:5: note:   no known conversion for argument 1 from ‘char [200][200]’ to ‘const std::vector<signed char, std::allocator<signed char> >&’
+make[3]: *** [CMakeFiles/MapPublisherTest.dir/src/MapPublisherTest.cpp.o] Error 1
+CMakeFiles/MapPublisherTest.dir/build.make:86: recipe for target 'CMakeFiles/MapPublisherTest.dir/src/MapPublisherTest.cpp.o' failed
+make[2]: *** [CMakeFiles/MapPublisherTest.dir/all] Error 2
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+make[1]: *** [all] Error 2
+CMakeFiles/Makefile2:709: recipe for target 'CMakeFiles/MapPublisherTest.dir/all' failed
+make[2]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+make: *** [all] Error 2
+Makefile:127: recipe for target 'all' failed
+make[1]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/opt/ros/kinetic/share/mk/cmake.mk:7: recipe for target 'all' failed
+16:55:12 **** Incremental Build of project CustomMapping ****
+/usr/bin/make -j8 all 
+mkdir -p bin
+cd build && cmake -Wdev -DCMAKE_TOOLCHAIN_FILE=/opt/ros/kinetic/share/ros/core/rosbuild/rostoolchain.cmake  ..
+Re-run cmake no build system arguments
+[rosbuild] Building package CustomMapping
+[rosbuild] using multiarch 'x86_64-linux-gnu' for finding Boost
+-- Using CATKIN_DEVEL_PREFIX: /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/devel
+-- Using CMAKE_PREFIX_PATH: /opt/ros/kinetic
+-- This workspace overlays: /opt/ros/kinetic
+-- Using PYTHON_EXECUTABLE: /usr/bin/python
+-- Using Debian Python package layout
+-- Using empy: /usr/bin/empy
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Skip enable_testing() for dry packages
+-- Using CATKIN_TEST_RESULTS_DIR: /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/test_results
+-- Found gtest sources under '/usr/src/gtest': gtests will be built
+-- Using Python nosetests: /usr/bin/nosetests-2.7
+-- catkin 0.7.6
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+[rosbuild] Including /opt/ros/kinetic/share/roslisp/rosbuild/roslisp.cmake
+[rosbuild] Including /opt/ros/kinetic/share/roscpp/rosbuild/roscpp.cmake
+[rosbuild] Including /opt/ros/kinetic/share/rospy/rosbuild/rospy.cmake
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build
+cd build && /usr/bin/make 
+make[1]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/usr/bin/cmake -H/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping -B/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/progress.marks
+/usr/bin/make -f CMakeFiles/Makefile2 all
+make[2]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/usr/bin/make -f CMakeFiles/rospack_genmsg_libexe.dir/build.make CMakeFiles/rospack_genmsg_libexe.dir/depend
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+cd /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/rospack_genmsg_libexe.dir/DependInfo.cmake --color=
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/usr/bin/make -f CMakeFiles/rospack_genmsg_libexe.dir/build.make CMakeFiles/rospack_genmsg_libexe.dir/build
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+make[3]: Nothing to be done for 'CMakeFiles/rospack_genmsg_libexe.dir/build'.
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+[  0%] Built target rospack_genmsg_libexe
+/usr/bin/make -f CMakeFiles/rosbuild_precompile.dir/build.make CMakeFiles/rosbuild_precompile.dir/depend
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+cd /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/rosbuild_precompile.dir/DependInfo.cmake --color=
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/usr/bin/make -f CMakeFiles/rosbuild_precompile.dir/build.make CMakeFiles/rosbuild_precompile.dir/build
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+make[3]: Nothing to be done for 'CMakeFiles/rosbuild_precompile.dir/build'.
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+[  0%] Built target rosbuild_precompile
+/usr/bin/make -f CMakeFiles/MapPublisherTest.dir/build.make CMakeFiles/MapPublisherTest.dir/depend
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+cd /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/MapPublisherTest.dir/DependInfo.cmake --color=
+Dependee "/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/src/MapPublisherTest.cpp" is newer than depends file "/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/MapPublisherTest.dir/depend.internal".
+Clearing dependencies in "/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/MapPublisherTest.dir/depend.make".
+Scanning dependencies of target MapPublisherTest
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/usr/bin/make -f CMakeFiles/MapPublisherTest.dir/build.make CMakeFiles/MapPublisherTest.dir/build
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+[ 50%] Building CXX object CMakeFiles/MapPublisherTest.dir/src/MapPublisherTest.cpp.o
+/usr/bin/c++   -DROS_PACKAGE_NAME=\"CustomMapping\" -I/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/include -I/opt/ros/kinetic/include  -O2 -g -DNDEBUG   -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/MapPublisherTest.dir/src/MapPublisherTest.cpp.o -c /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/src/MapPublisherTest.cpp
+/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/src/MapPublisherTest.cpp: In function ‘int main(int, char**)’:
+/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/src/MapPublisherTest.cpp:36:11: error: no match for ‘operator=’ (operand types are ‘nav_msgs::OccupancyGrid_<std::allocator<void> >::_data_type {aka std::vector<signed char, std::allocator<signed char> >}’ and ‘char [200][200]’)
+  map.data = myMap;
+           ^
+In file included from /usr/include/c++/5/vector:69:0,
+                 from /usr/include/boost/format.hpp:17,
+                 from /usr/include/boost/math/policies/error_handling.hpp:31,
+                 from /usr/include/boost/math/special_functions/round.hpp:14,
+                 from /opt/ros/kinetic/include/ros/time.h:58,
+                 from /opt/ros/kinetic/include/ros/ros.h:38,
+                 from /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/src/MapPublisherTest.cpp:1:
+/usr/include/c++/5/bits/vector.tcc:167:5: note: candidate: std::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(const std::vector<_Tp, _Alloc>&) [with _Tp = signed char; _Alloc = std::allocator<signed char>]
+     vector<_Tp, _Alloc>::
+     ^
+/usr/include/c++/5/bits/vector.tcc:167:5: note:   no known conversion for argument 1 from ‘char [200][200]’ to ‘const std::vector<signed char, std::allocator<signed char> >&’
+CMakeFiles/MapPublisherTest.dir/build.make:86: recipe for target 'CMakeFiles/MapPublisherTest.dir/src/MapPublisherTest.cpp.o' failed
+make[3]: *** [CMakeFiles/MapPublisherTest.dir/src/MapPublisherTest.cpp.o] Error 1
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+CMakeFiles/Makefile2:709: recipe for target 'CMakeFiles/MapPublisherTest.dir/all' failed
+make[2]: *** [CMakeFiles/MapPublisherTest.dir/all] Error 2
+make[2]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+make[1]: *** [all] Error 2
+Makefile:127: recipe for target 'all' failed
+make: *** [all] Error 2
+make[1]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/opt/ros/kinetic/share/mk/cmake.mk:7: recipe for target 'all' failed
+16:55:20 **** Incremental Build of project CustomMapping ****
+/usr/bin/make -j8 all 
+mkdir -p bin
+cd build && cmake -Wdev -DCMAKE_TOOLCHAIN_FILE=/opt/ros/kinetic/share/ros/core/rosbuild/rostoolchain.cmake  ..
+Re-run cmake no build system arguments
+[rosbuild] Building package CustomMapping
+[rosbuild] using multiarch 'x86_64-linux-gnu' for finding Boost
+-- Using CATKIN_DEVEL_PREFIX: /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/devel
+-- Using CMAKE_PREFIX_PATH: /opt/ros/kinetic
+-- This workspace overlays: /opt/ros/kinetic
+-- Using PYTHON_EXECUTABLE: /usr/bin/python
+-- Using Debian Python package layout
+-- Using empy: /usr/bin/empy
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Skip enable_testing() for dry packages
+-- Using CATKIN_TEST_RESULTS_DIR: /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/test_results
+-- Found gtest sources under '/usr/src/gtest': gtests will be built
+-- Using Python nosetests: /usr/bin/nosetests-2.7
+-- catkin 0.7.6
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+[rosbuild] Including /opt/ros/kinetic/share/roslisp/rosbuild/roslisp.cmake
+[rosbuild] Including /opt/ros/kinetic/share/roscpp/rosbuild/roscpp.cmake
+[rosbuild] Including /opt/ros/kinetic/share/rospy/rosbuild/rospy.cmake
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build
+cd build && /usr/bin/make 
+make[1]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/usr/bin/cmake -H/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping -B/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/progress.marks
+/usr/bin/make -f CMakeFiles/Makefile2 all
+make[2]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/usr/bin/make -f CMakeFiles/rospack_genmsg_libexe.dir/build.make CMakeFiles/rospack_genmsg_libexe.dir/depend
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+cd /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/rospack_genmsg_libexe.dir/DependInfo.cmake --color=
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/usr/bin/make -f CMakeFiles/rospack_genmsg_libexe.dir/build.make CMakeFiles/rospack_genmsg_libexe.dir/build
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+make[3]: Nothing to be done for 'CMakeFiles/rospack_genmsg_libexe.dir/build'.
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+[  0%] Built target rospack_genmsg_libexe
+/usr/bin/make -f CMakeFiles/rosbuild_precompile.dir/build.make CMakeFiles/rosbuild_precompile.dir/depend
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+cd /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/rosbuild_precompile.dir/DependInfo.cmake --color=
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/usr/bin/make -f CMakeFiles/rosbuild_precompile.dir/build.make CMakeFiles/rosbuild_precompile.dir/build
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+make[3]: Nothing to be done for 'CMakeFiles/rosbuild_precompile.dir/build'.
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+[  0%] Built target rosbuild_precompile
+/usr/bin/make -f CMakeFiles/MapPublisherTest.dir/build.make CMakeFiles/MapPublisherTest.dir/depend
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+cd /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/MapPublisherTest.dir/DependInfo.cmake --color=
+Dependee "/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/src/MapPublisherTest.cpp" is newer than depends file "/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/MapPublisherTest.dir/depend.internal".
+Clearing dependencies in "/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/MapPublisherTest.dir/depend.make".
+Scanning dependencies of target MapPublisherTest
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/usr/bin/make -f CMakeFiles/MapPublisherTest.dir/build.make CMakeFiles/MapPublisherTest.dir/build
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+[ 50%] Building CXX object CMakeFiles/MapPublisherTest.dir/src/MapPublisherTest.cpp.o
+/usr/bin/c++   -DROS_PACKAGE_NAME=\"CustomMapping\" -I/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/include -I/opt/ros/kinetic/include  -O2 -g -DNDEBUG   -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/MapPublisherTest.dir/src/MapPublisherTest.cpp.o -c /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/src/MapPublisherTest.cpp
+/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/src/MapPublisherTest.cpp: In function ‘int main(int, char**)’:
+/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/src/MapPublisherTest.cpp:36:11: error: no match for ‘operator=’ (operand types are ‘nav_msgs::OccupancyGrid_<std::allocator<void> >::_data_type {aka std::vector<signed char, std::allocator<signed char> >}’ and ‘char [200]’)
+  map.data = myMap[0];
+           ^
+In file included from /usr/include/c++/5/vector:69:0,
+                 from /usr/include/boost/format.hpp:17,
+                 from /usr/include/boost/math/policies/error_handling.hpp:31,
+                 from /usr/include/boost/math/special_functions/round.hpp:14,
+                 from /opt/ros/kinetic/include/ros/time.h:58,
+                 from /opt/ros/kinetic/include/ros/ros.h:38,
+                 from /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/src/MapPublisherTest.cpp:1:
+/usr/include/c++/5/bits/vector.tcc:167:5: note: candidate: std::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(const std::vector<_Tp, _Alloc>&) [with _Tp = signed char; _Alloc = std::allocator<signed char>]
+     vector<_Tp, _Alloc>::
+     ^
+/usr/include/c++/5/bits/vector.tcc:167:5: note:   no known conversion for argument 1 from ‘char [200]’ to ‘const std::vector<signed char, std::allocator<signed char> >&’
+CMakeFiles/MapPublisherTest.dir/build.make:86: recipe for target 'CMakeFiles/MapPublisherTest.dir/src/MapPublisherTest.cpp.o' failed
+make[3]: *** [CMakeFiles/MapPublisherTest.dir/src/MapPublisherTest.cpp.o] Error 1
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+CMakeFiles/Makefile2:709: recipe for target 'CMakeFiles/MapPublisherTest.dir/all' failed
+make[2]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+make[2]: *** [CMakeFiles/MapPublisherTest.dir/all] Error 2
+make[1]: *** [all] Error 2
+make: *** [all] Error 2
+Makefile:127: recipe for target 'all' failed
+make[1]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/opt/ros/kinetic/share/mk/cmake.mk:7: recipe for target 'all' failed
+16:56:40 **** Incremental Build of project CustomMapping ****
+/usr/bin/make -j8 all 
+mkdir -p bin
+cd build && cmake -Wdev -DCMAKE_TOOLCHAIN_FILE=/opt/ros/kinetic/share/ros/core/rosbuild/rostoolchain.cmake  ..
+Re-run cmake no build system arguments
+[rosbuild] Building package CustomMapping
+[rosbuild] using multiarch 'x86_64-linux-gnu' for finding Boost
+-- Using CATKIN_DEVEL_PREFIX: /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/devel
+-- Using CMAKE_PREFIX_PATH: /opt/ros/kinetic
+-- This workspace overlays: /opt/ros/kinetic
+-- Using PYTHON_EXECUTABLE: /usr/bin/python
+-- Using Debian Python package layout
+-- Using empy: /usr/bin/empy
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Skip enable_testing() for dry packages
+-- Using CATKIN_TEST_RESULTS_DIR: /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/test_results
+-- Found gtest sources under '/usr/src/gtest': gtests will be built
+-- Using Python nosetests: /usr/bin/nosetests-2.7
+-- catkin 0.7.6
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+[rosbuild] Including /opt/ros/kinetic/share/roslisp/rosbuild/roslisp.cmake
+[rosbuild] Including /opt/ros/kinetic/share/roscpp/rosbuild/roscpp.cmake
+[rosbuild] Including /opt/ros/kinetic/share/rospy/rosbuild/rospy.cmake
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build
+cd build && /usr/bin/make 
+make[1]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/usr/bin/cmake -H/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping -B/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/progress.marks
+/usr/bin/make -f CMakeFiles/Makefile2 all
+make[2]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/usr/bin/make -f CMakeFiles/rospack_genmsg_libexe.dir/build.make CMakeFiles/rospack_genmsg_libexe.dir/depend
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+cd /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/rospack_genmsg_libexe.dir/DependInfo.cmake --color=
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/usr/bin/make -f CMakeFiles/rospack_genmsg_libexe.dir/build.make CMakeFiles/rospack_genmsg_libexe.dir/build
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+make[3]: Nothing to be done for 'CMakeFiles/rospack_genmsg_libexe.dir/build'.
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+[  0%] Built target rospack_genmsg_libexe
+/usr/bin/make -f CMakeFiles/rosbuild_precompile.dir/build.make CMakeFiles/rosbuild_precompile.dir/depend
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+cd /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/rosbuild_precompile.dir/DependInfo.cmake --color=
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/usr/bin/make -f CMakeFiles/rosbuild_precompile.dir/build.make CMakeFiles/rosbuild_precompile.dir/build
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+make[3]: Nothing to be done for 'CMakeFiles/rosbuild_precompile.dir/build'.
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+[  0%] Built target rosbuild_precompile
+/usr/bin/make -f CMakeFiles/MapPublisherTest.dir/build.make CMakeFiles/MapPublisherTest.dir/depend
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+cd /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/MapPublisherTest.dir/DependInfo.cmake --color=
+Dependee "/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/src/MapPublisherTest.cpp" is newer than depends file "/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/MapPublisherTest.dir/depend.internal".
+Clearing dependencies in "/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/MapPublisherTest.dir/depend.make".
+Scanning dependencies of target MapPublisherTest
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/usr/bin/make -f CMakeFiles/MapPublisherTest.dir/build.make CMakeFiles/MapPublisherTest.dir/build
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+[ 50%] Building CXX object CMakeFiles/MapPublisherTest.dir/src/MapPublisherTest.cpp.o
+/usr/bin/c++   -DROS_PACKAGE_NAME=\"CustomMapping\" -I/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/include -I/opt/ros/kinetic/include  -O2 -g -DNDEBUG   -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/MapPublisherTest.dir/src/MapPublisherTest.cpp.o -c /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/src/MapPublisherTest.cpp
+/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/src/MapPublisherTest.cpp: In function ‘int main(int, char**)’:
+/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/src/MapPublisherTest.cpp:36:15: error: invalid types ‘signed char[int]’ for array subscript
+  map.data[1][1] = 1;
+               ^
+make[3]: *** [CMakeFiles/MapPublisherTest.dir/src/MapPublisherTest.cpp.o] Error 1
+CMakeFiles/MapPublisherTest.dir/build.make:86: recipe for target 'CMakeFiles/MapPublisherTest.dir/src/MapPublisherTest.cpp.o' failed
+make[2]: *** [CMakeFiles/MapPublisherTest.dir/all] Error 2
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+make[1]: *** [all] Error 2
+CMakeFiles/Makefile2:709: recipe for target 'CMakeFiles/MapPublisherTest.dir/all' failed
+make: *** [all] Error 2
+make[2]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+Makefile:127: recipe for target 'all' failed
+make[1]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/opt/ros/kinetic/share/mk/cmake.mk:7: recipe for target 'all' failed
+16:56:51 **** Incremental Build of project CustomMapping ****
+/usr/bin/make -j8 all 
+mkdir -p bin
+cd build && cmake -Wdev -DCMAKE_TOOLCHAIN_FILE=/opt/ros/kinetic/share/ros/core/rosbuild/rostoolchain.cmake  ..
+Re-run cmake no build system arguments
+[rosbuild] Building package CustomMapping
+[rosbuild] using multiarch 'x86_64-linux-gnu' for finding Boost
+-- Using CATKIN_DEVEL_PREFIX: /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/devel
+-- Using CMAKE_PREFIX_PATH: /opt/ros/kinetic
+-- This workspace overlays: /opt/ros/kinetic
+-- Using PYTHON_EXECUTABLE: /usr/bin/python
+-- Using Debian Python package layout
+-- Using empy: /usr/bin/empy
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Skip enable_testing() for dry packages
+-- Using CATKIN_TEST_RESULTS_DIR: /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/test_results
+-- Found gtest sources under '/usr/src/gtest': gtests will be built
+-- Using Python nosetests: /usr/bin/nosetests-2.7
+-- catkin 0.7.6
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+[rosbuild] Including /opt/ros/kinetic/share/roslisp/rosbuild/roslisp.cmake
+[rosbuild] Including /opt/ros/kinetic/share/roscpp/rosbuild/roscpp.cmake
+[rosbuild] Including /opt/ros/kinetic/share/rospy/rosbuild/rospy.cmake
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build
+cd build && /usr/bin/make 
+make[1]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/usr/bin/cmake -H/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping -B/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/progress.marks
+/usr/bin/make -f CMakeFiles/Makefile2 all
+make[2]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/usr/bin/make -f CMakeFiles/rospack_genmsg_libexe.dir/build.make CMakeFiles/rospack_genmsg_libexe.dir/depend
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+cd /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/rospack_genmsg_libexe.dir/DependInfo.cmake --color=
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/usr/bin/make -f CMakeFiles/rospack_genmsg_libexe.dir/build.make CMakeFiles/rospack_genmsg_libexe.dir/build
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+make[3]: Nothing to be done for 'CMakeFiles/rospack_genmsg_libexe.dir/build'.
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+[  0%] Built target rospack_genmsg_libexe
+/usr/bin/make -f CMakeFiles/rosbuild_precompile.dir/build.make CMakeFiles/rosbuild_precompile.dir/depend
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+cd /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/rosbuild_precompile.dir/DependInfo.cmake --color=
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/usr/bin/make -f CMakeFiles/rosbuild_precompile.dir/build.make CMakeFiles/rosbuild_precompile.dir/build
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+make[3]: Nothing to be done for 'CMakeFiles/rosbuild_precompile.dir/build'.
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+[  0%] Built target rosbuild_precompile
+/usr/bin/make -f CMakeFiles/MapPublisherTest.dir/build.make CMakeFiles/MapPublisherTest.dir/depend
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+cd /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/MapPublisherTest.dir/DependInfo.cmake --color=
+Dependee "/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/src/MapPublisherTest.cpp" is newer than depends file "/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/MapPublisherTest.dir/depend.internal".
+Clearing dependencies in "/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles/MapPublisherTest.dir/depend.make".
+Scanning dependencies of target MapPublisherTest
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/usr/bin/make -f CMakeFiles/MapPublisherTest.dir/build.make CMakeFiles/MapPublisherTest.dir/build
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+[ 50%] Building CXX object CMakeFiles/MapPublisherTest.dir/src/MapPublisherTest.cpp.o
+/usr/bin/c++   -DROS_PACKAGE_NAME=\"CustomMapping\" -I/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/include -I/opt/ros/kinetic/include  -O2 -g -DNDEBUG   -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/MapPublisherTest.dir/src/MapPublisherTest.cpp.o -c /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/src/MapPublisherTest.cpp
+/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/src/MapPublisherTest.cpp: In function ‘int main(int, char**)’:
+/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/src/MapPublisherTest.cpp:26:7: warning: variable ‘myMap’ set but not used [-Wunused-but-set-variable]
+  char myMap[200][200] = {0U};
+       ^
+[100%] Linking CXX executable ../bin/MapPublisherTest
+/usr/bin/cmake -E cmake_link_script CMakeFiles/MapPublisherTest.dir/link.txt --verbose=1
+/usr/bin/c++   -O2 -g -DNDEBUG   -pthread CMakeFiles/MapPublisherTest.dir/src/MapPublisherTest.cpp.o  -o ../bin/MapPublisherTest  -L/opt/ros/kinetic/lib -rdynamic -lroscpp -lpthread -lboost_signals -lboost_filesystem -lrosconsole -lrosconsole_log4cxx -lrosconsole_backend_interface -llog4cxx -lboost_regex -lroscpp_serialization -lrostime -lxmlrpcpp -lcpp_common -lboost_system -lboost_thread -lboost_chrono -lboost_date_time -lboost_atomic -lpthread -lconsole_bridge -Wl,-rpath,/opt/ros/kinetic/lib 
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+[100%] Built target MapPublisherTest
+make[2]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'
+/usr/bin/cmake -E cmake_progress_start /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build/CMakeFiles 0
+make[1]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/CustomMapping/build'

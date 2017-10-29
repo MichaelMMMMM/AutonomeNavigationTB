@@ -1,0 +1,34 @@
+#include "ros/ros.h"
+#include "nav_msgs/OccupancyGrid.h"
+#include <sstream>
+
+int main(int argc, char** argv)
+{
+	ros::init(argc, argv, "MapPublisherTest");
+	ros::NodeHandle n;
+	ros::Publisher chatter_pub = n.advertise<nav_msgs::OccupancyGrid>("CustomMap", 1000);
+	ros::Rate loop_rate(10);
+
+	nav_msgs::OccupancyGrid map;
+	map.info.map_load_time = ros::Time::now();
+	unsigned long seq(0U);
+
+	while(ros::ok())
+	{
+
+		map.header.seq = seq;
+		seq++;
+
+		map.info.map_load_time;
+
+		std::stringstream ss;
+		ss << "I am the Publisher-Node";
+		ss << "Index: ";
+		ss << index;
+		index++;
+		msg.data = ss.str();
+		chatter_pub.publish(msg);
+		ros::spinOnce();
+		loop_rate.sleep();
+	}
+}

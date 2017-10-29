@@ -1,0 +1,81 @@
+16:31:52 **** Incremental Build of project HelloEclipse ****
+/usr/bin/make -j8 all 
+mkdir -p bin
+cd build && cmake -Wdev -DCMAKE_TOOLCHAIN_FILE=/opt/ros/kinetic/share/ros/core/rosbuild/rostoolchain.cmake  ..
+Re-run cmake no build system arguments
+[rosbuild] Building package HelloEclipse
+[rosbuild] using multiarch 'x86_64-linux-gnu' for finding Boost
+-- Using CATKIN_DEVEL_PREFIX: /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build/devel
+-- Using CMAKE_PREFIX_PATH: /opt/ros/kinetic
+-- This workspace overlays: /opt/ros/kinetic
+-- Using PYTHON_EXECUTABLE: /usr/bin/python
+-- Using Debian Python package layout
+-- Using empy: /usr/bin/empy
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Skip enable_testing() for dry packages
+-- Using CATKIN_TEST_RESULTS_DIR: /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build/test_results
+-- Found gtest sources under '/usr/src/gtest': gtests will be built
+-- Using Python nosetests: /usr/bin/nosetests-2.7
+-- catkin 0.7.6
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+[rosbuild] Including /opt/ros/kinetic/share/roslisp/rosbuild/roslisp.cmake
+[rosbuild] Including /opt/ros/kinetic/share/roscpp/rosbuild/roscpp.cmake
+[rosbuild] Including /opt/ros/kinetic/share/rospy/rosbuild/rospy.cmake
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build
+cd build && /usr/bin/make 
+make[1]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build'
+/usr/bin/cmake -H/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse -B/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build --check-build-system CMakeFiles/Makefile.cmake 0
+/usr/bin/cmake -E cmake_progress_start /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build/CMakeFiles /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build/CMakeFiles/progress.marks
+/usr/bin/make -f CMakeFiles/Makefile2 all
+make[2]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build'
+/usr/bin/make -f CMakeFiles/rospack_genmsg_libexe.dir/build.make CMakeFiles/rospack_genmsg_libexe.dir/depend
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build'
+cd /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build/CMakeFiles/rospack_genmsg_libexe.dir/DependInfo.cmake --color=
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build'
+/usr/bin/make -f CMakeFiles/rospack_genmsg_libexe.dir/build.make CMakeFiles/rospack_genmsg_libexe.dir/build
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build'
+make[3]: Nothing to be done for 'CMakeFiles/rospack_genmsg_libexe.dir/build'.
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build'
+[  0%] Built target rospack_genmsg_libexe
+/usr/bin/make -f CMakeFiles/rosbuild_precompile.dir/build.make CMakeFiles/rosbuild_precompile.dir/depend
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build'
+cd /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build/CMakeFiles/rosbuild_precompile.dir/DependInfo.cmake --color=
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build'
+/usr/bin/make -f CMakeFiles/rosbuild_precompile.dir/build.make CMakeFiles/rosbuild_precompile.dir/build
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build'
+make[3]: Nothing to be done for 'CMakeFiles/rosbuild_precompile.dir/build'.
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build'
+[  0%] Built target rosbuild_precompile
+/usr/bin/make -f CMakeFiles/HelloEclipse.dir/build.make CMakeFiles/HelloEclipse.dir/depend
+/usr/bin/make -f CMakeFiles/PublisherTest.dir/build.make CMakeFiles/PublisherTest.dir/depend
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build'
+cd /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build/CMakeFiles/HelloEclipse.dir/DependInfo.cmake --color=
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build'
+cd /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build && /usr/bin/cmake -E cmake_depends "Unix Makefiles" /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build/CMakeFiles/PublisherTest.dir/DependInfo.cmake --color=
+Dependee "/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/src/PublisherTest.cpp" is newer than depender "CMakeFiles/PublisherTest.dir/src/PublisherTest.cpp.o".
+Clearing dependencies in "/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build/CMakeFiles/PublisherTest.dir/depend.make".
+Scanning dependencies of target PublisherTest
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build'
+/usr/bin/make -f CMakeFiles/PublisherTest.dir/build.make CMakeFiles/PublisherTest.dir/build
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build'
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build'
+/usr/bin/make -f CMakeFiles/HelloEclipse.dir/build.make CMakeFiles/HelloEclipse.dir/build
+make[3]: Entering directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build'
+make[3]: Nothing to be done for 'CMakeFiles/HelloEclipse.dir/build'.
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build'
+[ 25%] Building CXX object CMakeFiles/PublisherTest.dir/src/PublisherTest.cpp.o
+/usr/bin/c++   -DROS_PACKAGE_NAME=\"HelloEclipse\" -I/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/include -I/opt/ros/kinetic/include  -O2 -g -DNDEBUG   -W -Wall -Wno-unused-parameter -fno-strict-aliasing -pthread -o CMakeFiles/PublisherTest.dir/src/PublisherTest.cpp.o -c /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/src/PublisherTest.cpp
+[ 75%] Built target HelloEclipse
+[100%] Linking CXX executable ../bin/PublisherTest
+/usr/bin/cmake -E cmake_link_script CMakeFiles/PublisherTest.dir/link.txt --verbose=1
+/usr/bin/c++   -O2 -g -DNDEBUG   -pthread CMakeFiles/PublisherTest.dir/src/PublisherTest.cpp.o  -o ../bin/PublisherTest  -L/opt/ros/kinetic/lib -rdynamic -lroscpp -lpthread -lboost_signals -lboost_filesystem -lrosconsole -lrosconsole_log4cxx -lrosconsole_backend_interface -llog4cxx -lboost_regex -lroscpp_serialization -lrostime -lxmlrpcpp -lcpp_common -lboost_system -lboost_thread -lboost_chrono -lboost_date_time -lboost_atomic -lpthread -lconsole_bridge -Wl,-rpath,/opt/ros/kinetic/lib 
+make[3]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build'
+[100%] Built target PublisherTest
+make[2]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build'
+/usr/bin/cmake -E cmake_progress_start /home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build/CMakeFiles 0
+make[1]: Leaving directory '/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/HelloEclipse/build'
+
+16:31:57 Build Finished (took 4s.737ms)
+

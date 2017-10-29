@@ -1,0 +1,20 @@
+!SESSION 2017-10-29 15:42:23.512 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_111
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-10-29 15:43:24.892
+!MESSAGE Indexed 'HelloEclipse' (9 sources, 266 headers) in 13.7 sec: 41,122 declarations; 62,006 references; 0 unresolved inclusions; 5 syntax errors; 0 unresolved names (0%)
+!SESSION 2017-10-29 16:25:23.277 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_111
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-10-29 16:37:03.128
+!MESSAGE Indexed 'CustomMapping' (9 sources, 266 headers) in 7.11 sec: 41,122 declarations; 62,006 references; 0 unresolved inclusions; 5 syntax errors; 0 unresolved names (0%)
