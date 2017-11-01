@@ -14,8 +14,10 @@ r_min    = z_t.RangeMin;
 if( (phi < phi_max) && (phi > phi_min) )
     if( (r < r_max) && (r > r_min) )
          phi_sens   = (z_t.AngleMin:z_t.AngleIncrement:z_t.AngleMax)+x_t(3);
-         beam_index = find(min(abs(phi_sens-phi))==min(abs(phi_sens-phi)));
-         if( r < (z_t.Ranges(beam_index) - alpha/2) )
+         beam_index = find(min(abs(phi_sens-phi))==abs(phi_sens-phi));
+         
+         if( r < (z_t.Ranges(beam_index) - alpha/2) || ...
+                 (isnan(z_t.Ranges(beam_index))) )
              cell_state = 2;
              return
          else
