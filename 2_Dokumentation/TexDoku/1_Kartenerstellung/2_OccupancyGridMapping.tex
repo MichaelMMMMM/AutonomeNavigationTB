@@ -55,6 +55,7 @@ Im nächsten Schritt folgt der Quotient der beiden Verteilungen
 \end{equation}
 dessen Logarithmus das gesuchte Verhältnis liefert:
 \begin{equation}
+\label{eq_bayes_filter_2}
 \begin{split}
 l(m_i)_t &\equiv \myLog{ \frac{\condP{m_i}{\vec{z}_{1:t}}}{\condP{\neg m_i}{\vec{z}_{1:t}}} }  \\
 &= \underbrace{\myLog{ \frac{\condP{m_i}{\vec{z}_{1:t-1}}}{\condP{\neg m_i}{\vec{z}_{1:t-1}}} }}_{= l(m_i)_{t-1}} 
@@ -64,5 +65,13 @@ l(m_i)_t &\equiv \myLog{ \frac{\condP{m_i}{\vec{z}_{1:t}}}{\condP{\neg m_i}{\vec
 \end{equation}
 Somit setzt sich die gesuchte a posteriori Wahrscheinlichkeit aus drei Summanden zusammen. Bei dem Ersten handelt es sich um die Wahrscheinlichkeit $l(m_i)_{t-1}$ am vorherigen Abtastpunkt. Der Zweite gibt das Verhältnis der a priori Wahrscheinlichkeiten zum Zeitpunkt $t=0$ wider und der letzte Teil ergibt sich aus dem logarithmischen Verhältnis von $\condP{m_i}{\vec{z}_t}$, wobei es sich um ein inverses Messmodell handelt. Die Wahrscheinlichkeit $\condP{m_i}{\vec{z}_t}$ wird von dem Entwickler vorgegeben und basiert auf der Charakteristik der Sensorik.
 Als Beispiel dient an dieser Stelle ein rudimentäres Modell für einen Laserscanner. Der Sensor gibt einen Vektor von Distanzmessungen zurück, die jeweils einen Messwinkel $\varphi$ relativ zu dem Roboter zuzuordnen sind. Somit liegt ein Messbereich in Form eines Kegels mit dem Öffnungswinkel $\Delta \varphi$ vor, der durch die gemessenen Distanzen begrenzt wird.
-
-%Placeholder Bild
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.7\linewidth, trim={0cm 0cm 7cm 8cm}, clip]{img/Bilder_Karten_InvSensModel_1}
+\caption{Schematische Darstellung der Karten und des inversen Messmodells}
+\end{figure}
+Im inversen Messmodell werden nun drei Fälle unterschieden. Liegt eine Zelle außerhalb des Messkegels, kann keine Aussage über den Zustand der Zelle getroffen werden, weshalb der Wert $l_0$ zurückgegeben wird der in \ref{eq_bayes_filter_2} eingesetzt zu 
+\begin{equation}
+l(m_i)_t = l(m_i)_{t-1} + l_0 - l_0 = l(m_i)_{t-1}
+\end{equation}
+führt.In dem Fall, dass die Zelle innerhalb des Messkegels liegt, wird geprüft auf welchem Messstrahl und in welcher Distanz die Zelle sich befindet. Ist der Abstand zwischen der Zelle und der gemessenen Distanz kleiner als ein Toleranzmaß $\alpha$, wird angenommen, dass die Zelle belegt ist und ein entsprechender Wert $l_{\text{occupied}}$ zurückgegeben. Liegt die Zelle mehr als $\alpha$ Einheiten vor der gemessen Distanz, gilt sie als frei und das Modell liefert den Wert $l_{\text{free}}$.
