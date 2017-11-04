@@ -29,7 +29,7 @@ print_index = 0;
 while(true)
     %Receive current laserscan
     scan_msg = receive(scan_subscriber);
-
+    scan_msg.RangeMax = 5;
     %Receive current statequat 
     model_states_msg         = receive(model_states_subscriber);
     pos_msg                  = model_states_msg.Pose(10);

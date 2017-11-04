@@ -17,11 +17,12 @@ if( (phi < phi_max) && (phi > phi_min) )
          beam_index = find(min(abs(phi_sens-phi))==abs(phi_sens-phi));
          
          if( r < (z_t.Ranges(beam_index) - alpha/2) || ...
-                 (isnan(z_t.Ranges(beam_index))) )
+                 ( isnan(z_t.Ranges(beam_index)) && r < z_t.RangeMax ) )
              cell_state = 2;
              return
          else
-             if( r > (z_t.Ranges(beam_index) + alpha/2) )
+             if( r > (z_t.Ranges(beam_index) + alpha/2) || ...
+                 (isnan(z_t.Ranges(beam_index))))
                  cell_state = 1;
                  return;
              else
