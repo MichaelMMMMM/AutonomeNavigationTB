@@ -3,4 +3,6 @@
 \contentsline {section}{\numberline {1.1}Geschwindigkeitsbasiertes Bewegungsmodell }{3}{section.1.1}
 \contentsline {chapter}{\numberline {2}Kartenerstellung}{7}{chapter.2}
 \contentsline {section}{\numberline {2.1}Occupancy-Grid-Mapping}{7}{section.2.1}
-\contentsline {chapter}{Literaturverzeichnis}{11}{chapter*.4}
+\contentsline {chapter}{\numberline {3}ROS-Navigation-Stack}{11}{chapter.3}
+\contentsline {section}{\numberline {3.1}Funktionsprinzip des globalen Planers}{12}{section.3.1}
+\contentsline {chapter}{Literaturverzeichnis}{13}{chapter*.4}

@@ -1,0 +1,7 @@
+\chapter{ROS-Navigation-Stack}
+Bei dem ROS-Navigation-Stack handelt es sich um ein umfangreiches Software-Packet, das verschiedenste Funktionalitäten für das autonome Agieren eines Roboters bereitstellt. Von besonderem Interesse ist dabei das Paket \textit{move\_base}, welches bereits im Vorgängerprojekt für die Navigation des Roboters verwendet wurde. Funktional basiert das System auf einem zweischichtigen Planungskonzept: Zuerst berechnet ein globaler Planer anhand der vorgegebenen Karte einen optimalen Pfad zwischen Ausgangs- und Zielposition. Im Anschluss wird das Resultat an einen lokalen Planer übergeben, der die Stellgrößen des Roboters berechnet, um die geplante Trajektorie zu realisieren. Dabei werden neben dem optimalen Pfad ein lokaler Ausschnitt der Karte, Sensor- und Lokalisierungsdaten herangezogen, wodurch auch nicht vorhergesehene, dynamische Hindernisse bei der Planung beachtet werden können.
+
+Im Gesamtkonzept spielen der lokale und globale Planer die entscheidenden Rollen, weshalb deren zu Grunde liegenden Algorithmen im Anschluss näher erläutert werden. Bei der Konfiguration ..
+
+\newpage
+\input{1_GlobalPlaner}
