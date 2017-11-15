@@ -4,4 +4,6 @@
 \BOOKMARK [1][-]{section.2.1}{Occupancy-Grid-Mapping}{chapter.2}% 4
 \BOOKMARK [0][-]{chapter.3}{ROS-Navigation-Stack}{}% 5
 \BOOKMARK [1][-]{section.3.1}{Funktionsprinzip des globalen Planers}{chapter.3}% 6
-\BOOKMARK [0][-]{chapter*.4}{Literaturverzeichnis}{}% 7
+\BOOKMARK [1][-]{section.3.2}{Optimale Suche und Planung}{chapter.3}% 7
+\BOOKMARK [2][-]{subsection.3.2.1}{A*}{section.3.2}% 8
+\BOOKMARK [0][-]{chapter*.6}{Literaturverzeichnis}{}% 9
