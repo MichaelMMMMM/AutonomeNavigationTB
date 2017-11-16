@@ -21,6 +21,8 @@ end
 
 U = [ [1,0]; [-1, 0]; [0, 1]; [0, -1] ];
 %U = [ [-1,0]; [0, -1]; [1, 0]; [0, 1] ];
+%U = [ [-1,0]; [0,1]; [0, -1]; [1, 0] ]; 
+%U = [ [0,1]; [0, -1]; [-1, 0]; [1, 0]];
 
 Q = CLIFO();
 Q.push(x1);
@@ -50,6 +52,9 @@ end
 toc;
 
 show(map);
+emlXLabel('X in Meter');
+emlYLabel('Y in Meter');
+emlTitle('');
 
 path_cor = zeros(size(path));
 
@@ -57,6 +62,14 @@ for k = 1:size(path,1)
     path_cor(k,:) = map.grid2world(path(k,:)); 
 end
 
-hold on; plot(path_cor(:,1), path_cor(:,2)); hold off;
-hold on; plot(x1_cor(1), x1_cor(2), 'r*'); hold off;
-hold on; plot(xG_cor(1), xG_cor(2), 'g*'); hold off;
+hold on; plot(path_cor(:,1), path_cor(:,2), 'LineWidth', 3, 'Color', dark_grey_rgb); hold off;
+hold on; plot(x1_cor(1), x1_cor(2), 's', 'Linewidth', 2,...
+              'MarkerSize', 20,...
+              'MarkerEdgeColor', black_rgb,...
+              'MarkerFaceColor', orange_rgb); hold off;
+hold on; plot(xG_cor(1), xG_cor(2), 's', 'LineWidth', 2,...
+              'MarkerSize', 20,...
+              'MarkerEdgeColor', black_rgb,...
+              'MarkerFaceColor', dark_blue_rgb); hold off;
+emlLegend({'Geplanter Pfad', 'Startposition', 'Endposition'});
+print('img/KorridorBeispiel_img2.eps', '-depsc');

@@ -5,6 +5,8 @@
 \contentsline {section}{\numberline {2.1}Occupancy-Grid-Mapping}{7}{section.2.1}
 \contentsline {chapter}{\numberline {3}ROS-Navigation-Stack}{11}{chapter.3}
 \contentsline {section}{\numberline {3.1}Funktionsprinzip des globalen Planers}{12}{section.3.1}
-\contentsline {section}{\numberline {3.2}Optimale Suche und Planung}{15}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}A*}{15}{subsection.3.2.1}
-\contentsline {chapter}{Literaturverzeichnis}{17}{chapter*.6}
+\contentsline {subsection}{\numberline {3.1.1}Forward-Search: Breiten Suche}{13}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Forward-Search: Tiefensuche}{15}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Optimale Suche und Planung}{16}{subsection.3.1.3}
+\contentsline {subsubsection}{A*}{17}{section*.9}
+\contentsline {chapter}{Literaturverzeichnis}{19}{chapter*.11}
