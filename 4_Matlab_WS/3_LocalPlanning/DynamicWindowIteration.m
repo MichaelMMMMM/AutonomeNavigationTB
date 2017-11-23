@@ -5,6 +5,9 @@ function [u] = DynamicWindowIteration(vmax, wmax, v_d_max, w_d_max, Ta, nv, nw, 
     VV = zeros(size(V));
     for kv = 1:size(V, 2)
         for kw = 1:size(W,1)
+            if(kw == size(W,1))
+                bp = 23;
+            end
             h = heading(xG, x, [V(kw,kv), W(kw,kv)], Ta)/pi;
             vv = velocity(V(1,kv), W(kw,1))/vmax;
             G(kw,kv) = 0.8*h + 0.2*vv;
