@@ -7,6 +7,12 @@ for n = 1:size(map_arr,1)
     for k = 1:size(map_arr,2) 
         if(map_arr(n,k) == 1)
             cost_map(n,k) = inf;
+            if(n > 1) cost_map(n-1,k) = inf; cost_map(n-1, k+1) = inf; end
+            if(n < size(map_arr,1)) cost_map(n+1,k) = inf; end
+            if(k > 1) cost_map(n,k-1) = inf; cost_map(n+1,k-1) = inf; end
+            if(k < size(map_arr,2)) cost_map(n,k+1) = inf; end
+            cost_map(n+1,k+1) = inf;
+            if((n>1)&&(k>1)) cost_map(n-1,k-1) = inf; end
         end
     end
 end
