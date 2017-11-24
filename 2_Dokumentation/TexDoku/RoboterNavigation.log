@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.2)  21 NOV 2017 12:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.2)  24 NOV 2017 09:35
 entering extended mode
 **./RoboterNavigation.tex
 (RoboterNavigation.tex
@@ -899,7 +899,7 @@ Package: listings 2015/06/04 1.6 (Carsten Heinz)
 (0_Makros.tex)) (RoboterNavigation.aux
 (0_StochastischeMethoden/0_StochastischeMethoden.aux)
 (1_Kartenerstellung/1_Kartenerstellung.aux) (2_ROSNavigation/ROSNavigation.aux)
-(99_Literatur.aux))
+(3_StochastischeFilter/StochastischeFilter.aux) (99_Literatur.aux))
 \openout1 = `RoboterNavigation.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
@@ -921,7 +921,8 @@ LaTeX Font Info:    ... okay on input line 11.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
 LaTeX Font Info:    Try loading font information for T1+lmr on input line 11.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (C:\Users\ich\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
@@ -1130,7 +1131,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 20.
 
-<0_StochastischeMethoden/img/Bild_Kinematik_1.pdf, id=106, 963.6pt x 542.025pt>
+<0_StochastischeMethoden/img/Bild_Kinematik_1.pdf, id=118, 963.6pt x 542.025pt>
 File: 0_StochastischeMethoden/img/Bild_Kinematik_1.pdf Graphic file (type pdf)
 <use 0_StochastischeMethoden/img/Bild_Kinematik_1.pdf>
 Package pdftex.def Info: 0_StochastischeMethoden/img/Bild_Kinematik_1.pdf used 
@@ -1218,7 +1219,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 21.
 
 [7]
-<1_Kartenerstellung/img/Bilder_Karten_InvSensModel_1.pdf, id=193, 963.6pt x 542
+<1_Kartenerstellung/img/Bilder_Karten_InvSensModel_1.pdf, id=205, 963.6pt x 542
 .025pt>
 File: 1_Kartenerstellung/img/Bilder_Karten_InvSensModel_1.pdf Graphic file (typ
 e pdf)
@@ -1356,7 +1357,7 @@ ps>
 (epstopdf)             \includegraphics on input line 75.
 Package epstopdf Info: Output file is already uptodate.
 
-<2_ROSNavigation/img/KorridorBeispiel_img1-eps-converted-to.pdf, id=259, 622.32
+<2_ROSNavigation/img/KorridorBeispiel_img1-eps-converted-to.pdf, id=271, 622.32
 5pt x 544.0325pt>
 File: 2_ROSNavigation/img/KorridorBeispiel_img1-eps-converted-to.pdf Graphic fi
 le (type pdf)
@@ -1408,7 +1409,7 @@ ps>
 (epstopdf)             \includegraphics on input line 85.
 Package epstopdf Info: Output file is already uptodate.
 
-<2_ROSNavigation/img/KorridorBeispiel_img2-eps-converted-to.pdf, id=269, 343.28
+<2_ROSNavigation/img/KorridorBeispiel_img2-eps-converted-to.pdf, id=281, 343.28
 25pt x 292.09125pt>
 File: 2_ROSNavigation/img/KorridorBeispiel_img2-eps-converted-to.pdf Graphic fi
 le (type pdf)
@@ -1431,7 +1432,7 @@ ps>
 (epstopdf)             \includegraphics on input line 86.
 Package epstopdf Info: Output file is already uptodate.
 
-<2_ROSNavigation/img/KorridorBeispiel_img3-eps-converted-to.pdf, id=270, 343.28
+<2_ROSNavigation/img/KorridorBeispiel_img3-eps-converted-to.pdf, id=282, 343.28
 25pt x 292.09125pt>
 File: 2_ROSNavigation/img/KorridorBeispiel_img3-eps-converted-to.pdf Graphic fi
 le (type pdf)
@@ -1454,7 +1455,7 @@ ps>
 (epstopdf)             \includegraphics on input line 90.
 Package epstopdf Info: Output file is already uptodate.
 
-<2_ROSNavigation/img/KorridorBeispiel_img4-eps-converted-to.pdf, id=271, 343.28
+<2_ROSNavigation/img/KorridorBeispiel_img4-eps-converted-to.pdf, id=283, 343.28
 25pt x 292.09125pt>
 File: 2_ROSNavigation/img/KorridorBeispiel_img4-eps-converted-to.pdf Graphic fi
 le (type pdf)
@@ -1477,7 +1478,7 @@ ps>
 (epstopdf)             \includegraphics on input line 91.
 Package epstopdf Info: Output file is already uptodate.
 
-<2_ROSNavigation/img/KorridorBeispiel_img5-eps-converted-to.pdf, id=272, 343.28
+<2_ROSNavigation/img/KorridorBeispiel_img5-eps-converted-to.pdf, id=284, 343.28
 25pt x 292.09125pt>
 File: 2_ROSNavigation/img/KorridorBeispiel_img5-eps-converted-to.pdf Graphic fi
 le (type pdf)
@@ -1535,7 +1536,7 @@ ps>
 (epstopdf)             \includegraphics on input line 117.
 Package epstopdf Info: Output file is already uptodate.
 
-<2_ROSNavigation/img/KorridorBeispiel_img6-eps-converted-to.pdf, id=303, 335.25
+<2_ROSNavigation/img/KorridorBeispiel_img6-eps-converted-to.pdf, id=315, 335.25
 25pt x 308.15125pt>
 File: 2_ROSNavigation/img/KorridorBeispiel_img6-eps-converted-to.pdf Graphic fi
 le (type pdf)
@@ -1571,7 +1572,7 @@ ps>
 (epstopdf)             \includegraphics on input line 135.
 Package epstopdf Info: Output file is already uptodate.
 
-<2_ROSNavigation/img/KorridorBeispiel_img7-eps-converted-to.pdf, id=331, 622.32
+<2_ROSNavigation/img/KorridorBeispiel_img7-eps-converted-to.pdf, id=343, 622.32
 5pt x 545.03625pt>
 File: 2_ROSNavigation/img/KorridorBeispiel_img7-eps-converted-to.pdf Graphic fi
 le (type pdf)
@@ -1633,7 +1634,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 66.
 
-[20] <2_ROSNavigation/img/Distanz_img1.pdf, id=368, 963.72044pt x 542.025pt>
+[20] <2_ROSNavigation/img/Distanz_img1.pdf, id=380, 963.72044pt x 542.025pt>
 File: 2_ROSNavigation/img/Distanz_img1.pdf Graphic file (type pdf)
 
 <use 2_ROSNavigation/img/Distanz_img1.pdf>
@@ -1698,14 +1699,20 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 39.
 
 [24]
-\openout2 = `99_Literatur.aux'.
+\openout2 = `3_StochastischeFilter/StochastischeFilter.aux'.
 
- (99_Literatur.tex
+ (3_StochastischeFilter/StochastischeFilter.tex
+Kapitel 4.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
-)
+(3_StochastischeFilter/1_ContBayesFilter.tex
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+))
 Overfull \vbox (5.05856pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
@@ -1722,23 +1729,59 @@ Package babel Info: Redefining ngerman shorthand "~
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 43.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 43.
+\openout2 = `99_Literatur.aux'.
+
+ (99_Literatur.tex
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+
+[26
+
+
+
+]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+)
+Overfull \vbox (5.05856pt too high) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 43.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 43.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 43.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 43.
+
+[27]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 45.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 45.
  (RoboterNavigation.aux
 (0_StochastischeMethoden/0_StochastischeMethoden.aux)
 (1_Kartenerstellung/1_Kartenerstellung.aux) (2_ROSNavigation/ROSNavigation.aux)
-(99_Literatur.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 43.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 43.
+(3_StochastischeFilter/StochastischeFilter.aux) (99_Literatur.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 45.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 45.
 Package rerunfilecheck Info: File `RoboterNavigation.out' has not changed.
-(rerunfilecheck)             Checksum: AF558A58C825D7B7155716B1AF3229A4;885.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 43.
+(rerunfilecheck)             Checksum: 4236C8D01CD6312895D1C648AFCDBB47;1019.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 45.
  ) 
 Here is how much of TeX's memory you used:
- 13745 strings out of 493323
- 206010 string characters out of 3139072
- 336826 words of memory out of 3000000
- 16788 multiletter control sequences out of 15000+200000
+ 13775 strings out of 493323
+ 206830 string characters out of 3139072
+ 337521 words of memory out of 3000000
+ 16799 multiletter control sequences out of 15000+200000
  110403 words of font info for 82 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  54i,27n,56p,2091b,1117s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1763,9 +1806,9 @@ c/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C
 KTeX 2.9/fonts/type1/public/lm/lmsy9.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
 e1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
 urw/courier/ucrb8a.pfb>
-Output written on RoboterNavigation.pdf (27 pages, 1292642 bytes).
+Output written on RoboterNavigation.pdf (29 pages, 1298424 bytes).
 PDF statistics:
- 534 PDF objects out of 1000 (max. 8388607)
- 155 named destinations out of 1000 (max. 500000)
- 165 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 558 PDF objects out of 1000 (max. 8388607)
+ 162 named destinations out of 1000 (max. 500000)
+ 181 words of extra memory for PDF output out of 10000 (max. 10000000)
 
