@@ -1,5 +1,5 @@
 \section{Kontinuierliches Bayes Filter}
-In den späteren Anwendungsfallen werden stochastische Filter primär genutzt, um eine Schätzung der aktuellen Lage des Roboters zu treffen, wofür stochastische Filtermethoden genutzt werden. Die Grundlage bildet das so genannte Bayes-Filter für kontinuierlich verteilte Zustände. Als Beispiel für die Herleitung wird die Lokalisierungsaufgabe herangezogen, bei welcher die aktuelle Position $\mVec{x}\idx{t}$ des Roboters ermittelt werden soll. Die Schätzung stützt sich dabei auf die bisher gesammelten Messwerte $\mVec{z}\idx{1:t}$ und Stellgrößen $\mVec{u}\idx{1:t}$. Insofern kann die Lokalisierungsaufgabe als die Bestimmung der bedingten Wahrscheinlichkeit
+In der Robotik werden stochastische Filter genutzt, um anhand von gegebenen Information wie Mess- und Stellgrößen eine Schätzung über unbekannte Zustände des Systems zu treffen. Die Grundlage für derartige Methoden stellt das Bayes-Filter für kontinuierlich verteilte Zustände dar. Als Beispiel für die Herleitung und Illustration des Filters wird die Lokalisierungsaufgabe herangezogen, bei welcher die aktuelle Position $\mVec{x}\idx{t}$ des Roboters ermittelt werden soll. Die Schätzung stützt sich dabei auf die bisher gesammelten Messwerte $\mVec{z}\idx{1:t}$ und Stellgrößen $\mVec{u}\idx{1:t}$. Insofern kann die Lokalisierungsaufgabe als die Bestimmung der bedingten Wahrscheinlichkeit
 \begin{equation}
 \condP{\mVec{x}\idx{t}}{\mVec{z}\idx{1:t},\mVec{u}\idx{1:t}}
 \end{equation}
@@ -11,3 +11,57 @@ abgekürzt wird. Im Falle, dass der aktuelle Messwert $\mVec{z}\idx{t}$ bei der 
 \begin{equation}
 \pbel{\mVec{x}\idx{t}} \equiv \condP{\mVec{x}\idx{t}}{\mVec{z}\idx{1:t-1},\mVec{u}\idx{1:t}}\,.
 \end{equation}
+Für die Bestimmung der Filtergleichungen wird auf Bayes Theorem zurückgegriffen:
+\begin{equation}
+\begin{split}
+\bel{\mVec{x}\idx{t}} &= \condP{\mVec{x}\idx{t}}{\mVec{z}\idx{t},\mVec{z}\idx{1:t-1},\mVec{u}\idx{1:t}} = \frac{ \condP{\mVec{z}\idx{t}}{\mVec{x}\idx{t},\mVec{z}\idx{1:t-1},\mVec{u}\idx{1:t}}\cdot \condP{\mVec{x}\idx{t}}{\mVec{z}\idx{1:t-1},\mVec{u}\idx{1:t}}}{\condP{\mVec{z}\idx{t}}{\mVec{z}\idx{1:t-1}, \mVec{u}\idx{1:t}}}
+\\
+&= \mu \cdot \condP{\mVec{z}\idx{t}}{\mVec{x}\idx{t},\mVec{z}\idx{1:t-1},\mVec{u}\idx{1:t}}\cdot \condP{\mVec{x}\idx{t}}{\mVec{z}\idx{1:t-1},\mVec{u}\idx{1:t}}\,.
+\end{split}
+\end{equation}
+Der Einfluss der bedingte Wahrscheinlichkeit $\condP{\mVec{z}\idx{t}}{\mVec{z}\idx{1:t-1}, \mVec{u}\idx{1:t}}$ wird dabei durch den Faktor $\mu$ ersetzt, der für die Normalisierung reserviert wird, um sicherzustellen, dass es sich bei $\pbel{\mVec{x}\idx{t}}$ um eine legitime Wahrscheinlichkeitsverteilung handelt. Eine weitere Vereinfachung basiert auf der Annahme, dass $\mVec{x}\idx{t}$ einen so genannten vollständigen Zustand darstellt, das heißt $\mVec{x}\idx{t}$ beinhaltet bereits alle vergangen Information. Aus diesem Grund verändern zusätzliche Informationen aus vergangen Mess- und Stellgrößen eine mit $\mVec{x}\idx{t}$ bedingte Wahrscheinlichkeit nicht, woraus 
+\begin{equation}
+\condP{\mVec{z}\idx{t}}{\mVec{x}\idx{t},\mVec{z}\idx{1:t-1},\mVec{u}\idx{1:t}} = \condP{\mVec{z}\idx{t}}{\mVec{x}\idx{t}}
+\end{equation}
+resultiert. Wird dieses Ergebnis in die ursprüngliche Gleichung eingesetzt, ergibt sich
+\begin{equation}
+\label{eq_contbayes2}
+\begin{split}
+\bel{\mVec{x}\idx{t}} &= \mu \cdot \condP{\mVec{z}\idx{t}}{\mVec{x}\idx{t}}\cdot \condP{\mVec{x}\idx{t}}{\mVec{z}\idx{1:t-1},\mVec{u}\idx{1:t}} 
+\\
+&= \mu \cdot \condP{\mVec{z}\idx{t}}{\mVec{x}\idx{t}}\cdot \pbel{\mVec{x}\idx{t}}\,.
+\end{split}
+\end{equation}
+Mithilfe von weiteren Annahmen kann auch die Wahrscheinlichkeit $\pbel{\mVec{x}\idx{t}}$ ermittelt werden, wofür diese zunächst erweitert wird.
+\begin{equation}
+\label{eq_pbel}
+\begin{split}
+\pbel{\mVec{x}\idx{t}} &= \condP{\mVec{x}\idx{t}}{\mVec{z}\idx{1:t},\mVec{u}\idx{1:t}}
+\\
+&= \int \condP{\mVec{x}\idx{t}}{\mVec{x}\idx{t-1},\mVec{z}\idx{1:t-1},\mVec{u}\idx{1:t}}\cdot \condP{\mVec{x}\idx{t-1}}{\mVec{z}\idx{1:t-1},\mVec{u}\idx{1:t}}d\mVec{x}\idx{t-1}\,.
+\end{split}
+\end{equation}
+Falls $\mVec{x}\idx{t-1}$ ebenfalls ein vollständiger Zustand ist kann eine Vereinfachung der Form
+\begin{equation}
+\label{eq_sub1}
+\condP{\mVec{x}\idx{t}}{\mVec{x}\idx{t-1},\mVec{z}\idx{1:t-1},\mVec{u}\idx{1:t}}=\condP{\mVec{x}\idx{t}}{\mVec{x}\idx{t-1},\mVec{u}\idx{t}}
+\end{equation}
+durchgeführt werden. Wenn zusätzlich angenommen werden kann, dass $\mVec{u}\idx{t}$ zufällig gewählt wird und somit kein Zusammenhang zwischen $\mVec{x}\idx{t-1}$ und $\mVec{u}\idx{t}$ besteht, folgt
+\begin{equation}
+\label{eq_sub2}
+\condP{\mVec{x}\idx{t-1}}{\mVec{z}\idx{1:t-1},\mVec{u}\idx{1:t}} = \condP{\mVec{x}\idx{t-1}}{\mVec{z}\idx{1:t-1},\mVec{u}\idx{1:t-1}} = \bel{\mVec{x}\idx{t-1}}\,.
+\end{equation}
+Die Substitution der beiden Ergebnisse (\ref{eq_sub1}) und (\ref{eq_sub2}) in Gleichung (\ref{eq_pbel}) liefert
+\begin{equation}
+\label{eq_contbayes1}
+\pbel{\mVec{x}\idx{t}} = \int \condP{\mVec{x}\idx{t}}{\mVec{x}\idx{t-1},\mVec{u}\idx{t}}\cdot \bel{\mVec{x}\idx{t-1}}d\mVec{x}\idx{t-1}\,.
+\end{equation}
+Die Gleichungen (\ref{eq_contbayes1}) und (\ref{eq_contbayes2}) stellen simultan die Berechnungsvorschrift des Bayes-Filter dar.
+\begin{lstlisting}[mathescape=true, caption={Bayes-Filter}]
+Algorithm: BayesFilter($\bel{\mVec{x}\idx{t-1}},\mVec{u}\idx{t},\mVec{z}\idx{t}$):
+	for all $\mVec{x}\idx{t}$ do:
+		$\pbel{\mVec{x}\idx{t}} = \int \condP{\mVec{x}\idx{t}}{\mVec{x}\idx{t-1},\mVec{u}\idx{t}}\cdot \bel{\mVec{x}\idx{t-1}}d\mVec{x}\idx{t-1}$
+		$\bel{\mVec{x}\idx{t}} = \mu \cdot \condP{\mVec{z}\idx{t}}{\mVec{x}\idx{t}}\cdot \pbel{\mVec{x}\idx{t}}$
+	endfor
+	return $\bel{\mVec{x}\idx{t}}$
+\end{lstlisting}
