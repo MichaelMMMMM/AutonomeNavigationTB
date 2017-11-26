@@ -1,0 +1,15 @@
+\section{Diskretes Bayes-Filter und Histogramm-Filter}
+Das bisher betrachtete Filter kann lediglich für kontinuierlich verteilte Wahrscheinlichkeiten verwendet werden, weshalb es nicht rechnerfähig und somit von geringem praktischem Nutzen ist. Für den Fall einer diskret verteilten Zufallsvariable lässt sich ein diskretes Bayes-Filter recht leicht konstruieren, indem das Integral des kontinuierlichen Filter durch eine finite Summe ersetzt wird.
+\begin{lstlisting}[mathescape=true, caption={Diskretes Bayes-Filter},captionpos=b]
+Algorithm: DiscBayesFilter($\bel{\mVec{x}\idx{t-1}},\mVec{u}\idx{t},\mVec{z}\idx{t}$):
+	for all $\mVec{x}\idx{t}$ do:
+		$\pbel{\mVec{x}\idx{t}} = \sum \condP{\mVec{x}\idx{t}}{\mVec{x}\idx{t-1},\mVec{u}\idx{t}}\cdot \bel{\mVec{x}\idx{t-1}}$
+		$\bel{\mVec{x}\idx{t}} = \mu \cdot \condP{\mVec{z}\idx{t}}{\mVec{x}\idx{t}}\cdot \pbel{\mVec{x}\idx{t}}$
+	endfor
+	return $\bel{\mVec{x}\idx{t}}$
+\end{lstlisting}
+Als Beispiel kann ein Schätzer dienen, der den Zustand einer Tür ermitteln soll. Diese kann entweder offen oder geschlossen sein, weshalb sich der Zustandsraum auf zwei mögliche Werte beschränkt.
+
+In dem Fall, dass eine wertkontinuierliche Verteilung vorliegt, muss der Zustandsraum diskretisiert werden, um das diskrete Bayes-Filter applizieren zu können. Jedem Element $\mVec{x}\idx{t}$, das in in der selben Region $X\idx{k}$ des Zustandsraums liegt, wird dieselbe Wahrscheinlichkeit zugeordnet. Die diskretisierte Verteilung kann wiederum mit dem diskreten Bayes-Filter geschätzt werden, wobei in diesem Kontext von einem Histogramm-Filter gesprochen wird, um zu verdeutlichen, dass der diskreten Wahrscheinlichkeit ein wertkontinuierlicher Zustandsraum zu Grunde liegt.
+
+In dieser Form kann das Histogramm-Filter genutzt werden, um das Lokalisierungsproblem zu lösen. Der Ansatz wird als Grid-Localization bezeichnet, da der Raum in ein Gitterraster unterteilt wird. Das Filter ordnet jeder Zelle eine Wahrscheinlichkeit zu, mit der sich der Roboter in der Zelle befindet.

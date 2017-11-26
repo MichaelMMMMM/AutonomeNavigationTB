@@ -13,4 +13,5 @@
 \contentsline {subsection}{\numberline {3.2.1}Anwendungsbeispiel}{21}{subsection.3.2.1}
 \contentsline {chapter}{\numberline {4}Stochastische Filter}{25}{chapter.4}
 \contentsline {section}{\numberline {4.1}Kontinuierliches Bayes Filter}{25}{section.4.1}
+\contentsline {section}{\numberline {4.2}Diskretes Bayes-Filter und Histogramm-Filter}{30}{section.4.2}
 \contentsline {chapter}{Literaturverzeichnis}{31}{chapter*.13}

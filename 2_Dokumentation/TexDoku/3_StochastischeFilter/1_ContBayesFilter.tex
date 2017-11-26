@@ -57,7 +57,7 @@ Die Substitution der beiden Ergebnisse (\ref{eq_sub1}) und (\ref{eq_sub2}) in Gl
 \pbel{\mVec{x}\idx{t}} = \int \condP{\mVec{x}\idx{t}}{\mVec{x}\idx{t-1},\mVec{u}\idx{t}}\cdot \bel{\mVec{x}\idx{t-1}}d\mVec{x}\idx{t-1}
 \end{equation}
 und bildet zusammen mit Gleichung (\ref{eq_contbayes2}) die folgende Berechnungsvorschrift des Bayes-Filter.
-\begin{lstlisting}[mathescape=true, caption={Bayes-Filter}]
+\begin{lstlisting}[mathescape=true, caption={Bayes-Filter},captionpos=b]
 Algorithm: BayesFilter($\bel{\mVec{x}\idx{t-1}},\mVec{u}\idx{t},\mVec{z}\idx{t}$):
 	for all $\mVec{x}\idx{t}$ do:
 		$\pbel{\mVec{x}\idx{t}} = \int \condP{\mVec{x}\idx{t}}{\mVec{x}\idx{t-1},\mVec{u}\idx{t}}\cdot \bel{\mVec{x}\idx{t-1}}d\mVec{x}\idx{t-1}$
