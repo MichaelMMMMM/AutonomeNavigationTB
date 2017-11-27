@@ -1,0 +1,5 @@
+<launch>
+	<include file="$(find HectorSLAMTest)/launch/gazebo_corridor.launch"/>
+	<include file="$(find HectorSLAMTest)/launch/mapping.launch"/>
+	<include file="$(find HectorSLAMTest)/launch/rviz_display.launch"/>
+</launch>
