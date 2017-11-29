@@ -1,0 +1,15 @@
+<launch>
+	<!-- Map server -->
+	<arg name="map_file" default="/home/michael/Desktop/AutonomeNavigationTB/3_ROS_WS/Navigation/maps/test_map.yaml"/>
+	<arg name="3d_sensor" default="$(env TURTLEBOT_3D_SENSOR)"/>  <!-- r200, kinect, asus_xtion_pro -->
+
+	<node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+	
+	<!-- Static Transform from map to odom -->
+	<node pkg="tf" type="static_transform_publisher" name="odom_map_tf_broadcaster" args="0 0 0 0 0 0 1 map odom 50"/>	
+	
+	<!-- Move base -->
+	<include file="$(find turtlebot_navigation)/launch/includes/move_base.launch.xml"/>
+</launch>
+
+

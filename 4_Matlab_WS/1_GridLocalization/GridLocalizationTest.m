@@ -2,22 +2,35 @@
 
 load('corridor_map_fixed.mat');
 
-model_states_subscriber = rossubscriber('/gazebo/model_states');
-velocity_subscriber     = rossubscriber('/mobile_base/commands/velocity');
+bag     = rosbag('../../5_BagFiles/CorridorBag.bag');
+bag     = select(bag, 'Time', [2193.106, bag.EndTime]); %First-Scan is off
 
-%Receive current statequat 
-model_states_msg         = receive(model_states_subscriber);
-pos_msg                  = model_states_msg.Pose(10);
-eul = quat2eul([pos_msg.Orientation.X, pos_msg.Orientation.Y, pos_msg.Orientation.Z, pos_msg.Orientation.W]);
-x_tm1 = [pos_msg.Position.X, pos_msg.Position.Y, eul(3)];
+T       = bag.StartTime;
+Ta      = 0.2;
 
-while(true)
-    %Receive current statequat 
-    model_states_msg         = receive(model_states_subscriber);
-    pos_msg                  = model_states_msg.Pose(10);
-    eul = quat2eul([pos_msg.Orientation.X, pos_msg.Orientation.Y, pos_msg.Orientation.Z, pos_msg.Orientation.W]);
-    x_t = [pos_msg.Position.X, pos_msg.Position.Y, eul(3)];
-    
-    %Receive 
-    
+
+dx      = 1/map.Resolution; dy = dx;
+dTheta  = deg2rad(2);
+p_x     = 0.5*ones(map.GridSize(1), map.GridSize(2), 2*pi/dTheta);
+
+%Extract z_t
+subbag   = select(bag, 'Time', [T, T+Ta]);
+scanbag  = select(subbag, 'Topic', '/scan');
+scanmsgs = readMessages(scanbag);
+z_t      = scanmsgs{size(scanmsgs,1)};
+
+%Extract u_t
+v = 0; w = 0;
+odombag  = select(subbag, 'Topic', '/odom');
+odommsgs = readMessages(odombag);
+for k = 1:size(odommsgs,1)
+    v = v + odommsgs{k}.Twist.Twist.Linear.X;
+    w = w + odommsgs{k}.Twist.Twist.Angular.Z;
 end
+v = v/size(odommsgs,1); w = w/size(odommsgs,1);
+u_t = [v;w];
+
+%Run GridLocalization
+%tic;
+p_x = GridLocalization(p_x, u_t, z_t, map, Ta, dx, dy, dTheta);
+%toc;

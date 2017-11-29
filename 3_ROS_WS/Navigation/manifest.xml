@@ -1,0 +1,14 @@
+<package>
+  <description brief="Navigation">
+
+     Navigation
+
+  </description>
+  <author>michael</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/Navigation</url>
+
+</package>
+
+

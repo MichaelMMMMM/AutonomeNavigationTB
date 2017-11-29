@@ -1,0 +1,7 @@
+image: /home/michael/Desktop/AutonomeNavigationTB/5_BagFiles/test_map.pgm
+resolution: 0.250000
+origin: [-9.000000, -4.000000, -nan]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196
+
