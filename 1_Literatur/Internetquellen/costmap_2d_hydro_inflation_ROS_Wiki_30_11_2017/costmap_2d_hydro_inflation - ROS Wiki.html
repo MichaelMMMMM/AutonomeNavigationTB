@@ -1,0 +1,349 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+<meta name="google-site-verification" content="CjkdY6BqKWAVmQ78_iSq6J7ZZ9AoL7-CjFVBYGg9FU4">
+<link rel="shortcut icon" href="http://wiki.ros.org/custom/favicon.ico" type="image/ico">
+<link rel="stylesheet" href="costmap_2d_hydro_inflation%20-%20ROS%20Wiki-Dateien/bootstrap.css">
+<script type="text/javascript" src="costmap_2d_hydro_inflation%20-%20ROS%20Wiki-Dateien/4c8610d177"></script><script src="costmap_2d_hydro_inflation%20-%20ROS%20Wiki-Dateien/nr-1071.js"></script><script type="text/javascript" async="" src="costmap_2d_hydro_inflation%20-%20ROS%20Wiki-Dateien/ga.js"></script><script src="costmap_2d_hydro_inflation%20-%20ROS%20Wiki-Dateien/jquery-1.js"></script>
+<script src="costmap_2d_hydro_inflation%20-%20ROS%20Wiki-Dateien/bootstrap.js"></script>
+<script type="text/javascript" src="costmap_2d_hydro_inflation%20-%20ROS%20Wiki-Dateien/sorttable.js"></script>
+<script type="text/javascript" src="costmap_2d_hydro_inflation%20-%20ROS%20Wiki-Dateien/jquery.js"></script>                         
+<script type="text/javascript" src="costmap_2d_hydro_inflation%20-%20ROS%20Wiki-Dateien/seesaw.js"></script> 
+<script type="text/javascript" src="costmap_2d_hydro_inflation%20-%20ROS%20Wiki-Dateien/rosversion.js"></script> 
+<!--script type="text/javascript" src="/custom/libraries/RGraph.common.core.js" ></script Used for metrics only, should be conditional, not at the top-->
+<!--script type="text/javascript" src="/custom/libraries/RGraph.bar.js" ></script same as above -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17821189-2']);
+  _gaq.push(['_setDomainName', 'wiki.ros.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"4c8610d177","agent":"","transactionName":"NFZaMEVUV0ZVBkBeCQ0cbRZeGlpaRxFZVhY8AVxLHQ==","applicationID":"3371695","errorBeacon":"bam.nr-data.net","applicationTime":178}</script>
+<meta name="robots" content="index,nofollow">
+
+<title>costmap_2d/hydro/inflation - ROS Wiki</title>
+<script type="text/javascript" src="costmap_2d_hydro_inflation%20-%20ROS%20Wiki-Dateien/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Suche";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="costmap_2d_hydro_inflation%20-%20ROS%20Wiki-Dateien/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="costmap_2d_hydro_inflation%20-%20ROS%20Wiki-Dateien/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="costmap_2d_hydro_inflation%20-%20ROS%20Wiki-Dateien/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="costmap_2d_hydro_inflation%20-%20ROS%20Wiki-Dateien/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/rostheme/css/msie.css">
+<![endif]-->
+
+
+
+
+<link rel="canonical" href="http://wiki.ros.org/costmap_2d/hydro/inflation">
+
+<link rel="Start" href="http://wiki.ros.org/Documentation">
+<link rel="Alternate" title="Wiki Quelltext" href="http://wiki.ros.org/costmap_2d/hydro/inflation?action=raw">
+<link rel="Alternate" media="print" title="Druckansicht" href="http://wiki.ros.org/costmap_2d/hydro/inflation?action=print">
+<link rel="Up" href="http://wiki.ros.org/costmap_2d/hydro">
+<link rel="Search" href="http://wiki.ros.org/FindPage">
+<link rel="Index" href="http://wiki.ros.org/TitleIndex">
+<link rel="Glossary" href="http://wiki.ros.org/WordIndex">
+<link rel="Help" href="http://wiki.ros.org/HelpOnFormatting">
+</head>
+
+<body dir="ltr" lang="de">
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="costmap_2d_hydro_inflation%20-%20ROS%20Wiki-Dateien/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-5950817-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+if(f) f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+if(e) {
+  searchChange(e);
+  searchBlur(e);
+}
+
+function handleSubmit() {
+  var f = document.getElementById('searchform');
+  var t = document.getElementById('searchinput');
+  var r = document.getElementById('real_searchinput');
+
+  //alert("handleSubmit "+ t.value);
+  if(t.value.match(/review/)) {
+    r.value = t.value;
+  } else {
+    //r.value = t.value + " -PackageReviewCategory -StackReviewCategory -M3Review -DocReview -ApiReview -HelpOn -BadContent -LocalSpellingWords";
+    r.value = t.value + " -PackageReviewCategory -StackReviewCategory -DocReview -ApiReview";
+  }
+  //return validate(f);
+}
+//-->
+</script>
+
+<div id="dpage">
+  <div id="dpage-inner">
+    <div id="header"><div id="topnav">
+
+<!-- Alert box -->
+<!-- To enable/disable the alert box, uncomment/comment the block below and update the content below the button. -->
+<!--
+    <div class="alert alert-info alert-dismissable" style="text-align: center;">
+<script>
+jQuery(function( $ ){
+    alert_box_name = 'roswiki_roscon'
+    state = localStorage.getItem(alert_box_name);
+    if (!state) {
+      localStorage.setItem(alert_box_name, 'open');
+    }
+    state = localStorage.getItem(alert_box_name);
+    if (state == 'closed') {
+        $( '#topnav .alert' ).hide();
+    }
+    $( '.close' ).click(function () {
+	console.log('in .close.click');
+        localStorage.setItem(alert_box_name, 'closed');
+        $( '#topnav .alert' ).hide();
+  });
+});
+</script>
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <a href="http://roscon.ros.org">ROSCon 2017</a> will be in Vancouver, September 21-22! <br>
+      The last few years have sold out: register now and take advantage of discounted hotel rates</a>.
+    </div>
+-->
+<!-- End Alert box -->
+
+      <table id="topnav-table">
+        <tbody><tr>
+          <td width="300" valign="top"><a href="http://wiki.ros.org/"><img src="costmap_2d_hydro_inflation%20-%20ROS%20Wiki-Dateien/ros_org.png" alt="ros.org" width="238" height="51" border="0"></a></td>
+          <td width="500" valign="middle">
+            <a href="http://www.ros.org/about-ros">About</a>
+            |
+            <a href="http://wiki.ros.org/Support">Support</a>
+            |
+            <a href="http://discourse.ros.org/">Discussion Forum</a>
+            |
+            <a href="http://status.ros.org/">Service Status</a>
+            |
+            <a href="http://answers.ros.org/">Q&amp;A answers.ros.org</a>
+
+<!--<a href="http://roscon.ros.org/2016/"><img align="middle" style="padding-left: 15px;" src="http://ros.org/images/roscon_wiki_header.jpg" width="133" height="65" alt="ROSCon 2016" /></a>
+-->
+
+<!-- <a href="https://events.osrfoundation.org/ros-kong-2014/"><img align="middle" style="padding-left: 15px;" src="http://ros.org/images/ros_kong_2014_badge.png" width="133" height="38" alt="roskong" /></a>
+-->
+<!--a href="https://events.osrfoundation.org/ros-kong-2014/"><img align="middle" style="padding-left: 15px;" src="http://imgur.com/eMzUJVe.png" width="133" height="38" alt="roskong" /></a-->
+          </td>
+
+          <td align="right" valign="middle">
+
+<script language="Javascript">
+
+function Searchy(theButton){
+
+theForm = theButton.form;
+newID = theForm.input.value;
+theForm.q.value = newID;
+theForm.input.value=theForm.input.value
+
+}
+</script>
+
+
+<form action="http://www.ros.org/search/index.html" id="cse">
+  <div>
+    <label>Search:</label>
+    <input name="cx" value="018259903093183594226:txvzw9fat6w" type="hidden">
+    <input name="cof" value="FORID:11;NB:1" type="hidden">
+    <input name="filter" value="0" type="hidden">
+    <input name="num" value="10" type="hidden">
+
+    <input name="ie" value="UTF-8" type="hidden">
+    <input name="input" id="input" autocomplete="on" style="width: 35%" type="text">
+    <input name="q" value="" type="hidden">
+    <input name="sa" value="Submit" onclick="Searchy(this)" type="submit">
+
+  </div>
+</form>
+
+         </td>
+      </tr>
+      <tr>
+        <td colspan="3" width="1024" height="53"><nobr><img src="costmap_2d_hydro_inflation%20-%20ROS%20Wiki-Dateien/menu_left.png" alt="" width="17" height="53"><a href="http://wiki.ros.org/"><img src="costmap_2d_hydro_inflation%20-%20ROS%20Wiki-Dateien/menu_documentation.png" alt="Documentation" width="237" height="53" border="0"></a><img src="costmap_2d_hydro_inflation%20-%20ROS%20Wiki-Dateien/menu_spacer.png" width="69" height="53"><a href="http://www.ros.org/browse/"><img src="costmap_2d_hydro_inflation%20-%20ROS%20Wiki-Dateien/menu_browse_software.png" alt="Browse Software" width="268" height="53" border="0"></a><img src="costmap_2d_hydro_inflation%20-%20ROS%20Wiki-Dateien/menu_spacer.png" width="69" height="53"><a href="http://www.ros.org/news"><img src="costmap_2d_hydro_inflation%20-%20ROS%20Wiki-Dateien/menu_news.png" alt="News" width="84" height="53" border="0"></a><img src="costmap_2d_hydro_inflation%20-%20ROS%20Wiki-Dateien/menu_spacer.png" width="69" height="53"><a href="http://wiki.ros.org/ROS/Installation"><img src="costmap_2d_hydro_inflation%20-%20ROS%20Wiki-Dateien/menu_download.png" alt="Download" width="151" height="53" border="0"></a><img src="costmap_2d_hydro_inflation%20-%20ROS%20Wiki-Dateien/menu_right.png" width="60" height="53"></nobr></td>
+
+      </tr>
+    </tbody></table> <!-- topnav-table -->
+
+    </div> <!-- /#topav -->
+  </div> <!-- /#header -->
+
+
+<div id="header2">
+
+<ul id="pagelocation">
+<li><a href="http://wiki.ros.org/costmap_2d">costmap_2d</a></li><li><a href="http://wiki.ros.org/costmap_2d/hydro">hydro</a></li><li><a class="backlink" href="http://wiki.ros.org/action/fullsearch/costmap_2d/hydro/inflation?action=fullsearch&amp;context=180&amp;value=linkto%3A%22costmap_2d%2Fhydro%2Finflation%22" rel="nofollow" title="Hier klicken für eine Liste der Seiten, die auf diese verweisen">inflation</a></li>
+</ul>
+
+<div id="locationline">
+</div>
+</div>
+
+<div id="sidebar">
+<div class="sidepanel">
+<h1>Wiki</h1>
+
+<ul id="navibar">
+<li class="wikilink"><a href="http://wiki.ros.org/Distributions">Distributions</a></li><li class="wikilink"><a href="http://wiki.ros.org/ROS/Installation">ROS/Installation</a></li><li class="wikilink"><a href="http://wiki.ros.org/ROS/Tutorials">ROS/Tutorials</a></li><li class="wikilink"><a href="http://wiki.ros.org/RecentChanges">RecentChanges</a></li><li class="current"><a href="http://wiki.ros.org/costmap_2d/hydro/inflation">inflation</a></li>
+</ul>
+
+</div>
+<div class="sidepanel">
+<h1>Seite</h1>
+<ul class="editbar"><li><span class="disabled">Geschützte Seite</span></li><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onclick="toggleComments();return false;">Kommentare</a></li><li><a class="nbinfo" href="http://wiki.ros.org/action/info/costmap_2d/hydro/inflation?action=info" rel="nofollow">Info</a></li><li><a class="nbattachments" href="http://wiki.ros.org/action/AttachFile/costmap_2d/hydro/inflation?action=AttachFile" rel="nofollow">Dateianhänge</a></li><li>
+<form class="actionsmenu" method="GET" action="/costmap_2d/hydro/inflation">
+<div>
+    
+    <select name="action" onchange="if ((this.selectedIndex != 0) &amp;&amp;
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" selected="selected">Weitere Aktionen:</option><option value="raw">Rohform</option>
+<option value="print">Druckansicht</option>
+<option value="RenderAsDocbook">Als Docbook ausgeben</option>
+<option value="show" disabled="disabled" class="disabled">Cache löschen</option>
+<option value="show" disabled="disabled" class="disabled">-----------------------------------</option>
+<option value="SpellCheck">Rechtschreibung prüfen</option>
+<option value="LikePages">Ähnliche Seiten</option>
+<option value="LocalSiteMap">ÜbersichtsKarte</option>
+<option value="show" disabled="disabled" class="disabled">-----------------------------------</option>
+<option value="RenamePage" disabled="disabled" class="disabled">Seite umbenennen</option>
+<option value="CopyPage">Seite kopieren</option>
+<option value="DeletePage" disabled="disabled" class="disabled">Seite löschen</option>
+<option value="show" disabled="disabled" class="disabled">-----------------------------------</option>
+<option value="MyPages">Meine Seiten</option>
+<option value="show" disabled="disabled" class="disabled">Abo für Benutzer</option>
+<option value="show" disabled="disabled" class="disabled">-----------------------------------</option>
+<option value="show" disabled="disabled" class="disabled">Spam entfernen</option>
+<option value="show" disabled="disabled" class="disabled">Diese Revision restaurieren</option>
+<option value="PackagePages">Seiten einpacken</option>
+<option value="SyncPages">Seiten synchronisieren</option>
+<option value="show" disabled="disabled" class="disabled">-----------------------------------</option>
+<option value="CreatePdfDocument">CreatePdfDocument</option>
+<option value="Load">Laden</option>
+<option value="RawFile">RawFile</option>
+<option value="Save">Speichern</option>
+<option value="SlideShow">SlideShow</option>
+    </select>
+    
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('Weitere Aktionen:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+<div class="sidepanel">
+<h1>Benutzer</h1>
+<ul id="username"><li><a href="http://wiki.ros.org/action/login/costmap_2d/hydro/inflation?action=login" id="login" rel="nofollow">Anmelden</a></li></ul>
+</div>
+</div>
+
+<div id="page" dir="ltr" lang="en">
+
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867">
+</p><h2 id="Inflation_Costmap_Plugin">Inflation Costmap Plugin</h2>
+<span class="anchor" id="line-2"></span><span class="anchor" id="line-3"></span><p class="line867">
+</p><h3 id="Inflation">Inflation</h3>
+<span class="anchor" id="line-4"></span><p class="line867"><img alt="costmap_2d/costmapspec.png" class="attachment" src="costmap_2d_hydro_inflation%20-%20ROS%20Wiki-Dateien/costmap_2d.png" title="costmap_2d/costmapspec.png" width="100%"> <span class="anchor" id="line-5"></span><span class="anchor" id="line-6"></span></p><p class="line874">Inflation
+ is the process of propagating cost values out from occupied cells that 
+decrease with distance. For this purpose, we define 5 specific symbols 
+for costmap values as they relate to a robot. <span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span></p><ul><li>"Lethal"
+ cost means that there is an actual (workspace) obstacle in a cell. So 
+if the robot's center were in that cell, the robot would obviously be in
+ collision. <span class="anchor" id="line-9"></span><span class="anchor" id="line-10"></span></li><li class="gap">"Inscribed"
+ cost means that a cell is less than the robot's inscribed radius away 
+from an actual obstacle. So the robot is certainly in collision with 
+some obstacle if the robot center is in a cell that is at or above the 
+inscribed cost. <span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span></li><li class="gap">"Possibly
+ circumscribed" cost is similar to "inscribed", but using the robot's 
+circumscribed radius as cutoff distance. Thus, if the robot center lies 
+in a cell at or above this value, then it depends on the orientation of 
+the robot whether it collides with an obstacle or not. We use the term 
+"possibly" because it might be that it is not really an obstacle cell, 
+but some user-preference, that put that particular cost value into the 
+map. For example, if a user wants to express that a robot should attempt
+ to avoid a particular area of a building, they may inset their own 
+costs into the costmap for that region independent of any obstacles. <span class="anchor" id="line-13"></span><span class="anchor" id="line-14"></span></li><li class="gap">"Freespace" cost is assumed to be zero, and it means that there is nothing that should keep the robot from going there. <span class="anchor" id="line-15"></span><span class="anchor" id="line-16"></span></li><li class="gap">"Unknown" cost means there is no information about a given cell. The user of the costmap can interpret this as they see fit. <span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span></li><li class="gap">All
+ other costs are assigned a value between "Freespace" and "Possibly 
+circumscribed" depending on their distance from a "Lethal" cell and the 
+decay function provided by the user. <span class="anchor" id="line-19"></span><span class="anchor" id="line-20"></span></li></ul><p class="line874">The
+ rationale behind these definitions is that we leave it up to planner 
+implementations to care or not about the exact footprint, yet give them 
+enough information that they can incur the cost of tracing out the 
+footprint only in situations where the orientation actually matters. <span class="anchor" id="line-21"></span><span class="anchor" id="line-22"></span></p><p class="line867">
+</p><h3 id="ROS_API">ROS API</h3>
+<span class="anchor" id="line-23"></span><p class="line867">
+</p><h4 id="Parameters">Parameters</h4>
+<span class="anchor" id="line-24"></span><p class="line867"><span class="anchor" id="line-25"></span><span class="anchor" id="line-26"></span><span class="anchor" id="line-27"></span><span class="anchor" id="line-28"></span><span class="anchor" id="line-29"></span><span class="anchor" id="line-30"></span><span class="anchor" id="line-31"></span><span class="anchor" id="line-32"></span><span class="anchor" id="line-33"></span><span class="anchor" id="line-34"></span><span class="anchor" id="line-35"></span><span class="anchor" id="line-36"></span><span class="anchor" id="line-37"></span><span class="anchor" id="line-1-1"></span><span class="anchor" id="line-2-1"></span><span class="anchor" id="line-3-1"></span><span class="anchor" id="line-4-1"></span><span class="anchor" id="line-5-1"></span><span class="anchor" id="line-6-1"></span><span class="anchor" id="line-7-1"></span><span class="anchor" id="line-8-1"></span><span class="anchor" id="line-9-1"></span><span class="anchor" id="line-10-1"></span><span class="anchor" id="line-11-1"></span><span class="anchor" id="line-12-1"></span><span class="anchor" id="line-13-1"></span><span class="anchor" id="line-14-1"></span><span class="anchor" id="line-15-1"></span><span class="anchor" id="line-16-1"></span><span class="anchor" id="line-17-1"></span><span class="anchor" id="line-18-1"></span><span class="anchor" id="line-19-1"></span><span class="anchor" id="line-20-1"></span><span class="anchor" id="line-21-1"></span><span class="anchor" id="line-22-1"></span><span class="anchor" id="line-23-1"></span><span class="anchor" id="line-24-1"></span><span class="anchor" id="line-25-1"></span><span class="anchor" id="line-26-1"></span><span class="anchor" id="line-27-1"></span><span class="anchor" id="line-28-1"></span><span class="anchor" id="line-29-1"></span><span class="anchor" id="line-30-1"></span><span class="anchor" id="line-31-1"></span><span class="anchor" id="line-32-1"></span><span class="anchor" id="line-33-1"></span><span class="anchor" id="line-34-1"></span><span class="anchor" id="line-35-1"></span><span class="anchor" id="line-36-1"></span><span class="anchor" id="line-37-1"></span><span class="anchor" id="line-38"></span><span class="anchor" id="line-39"></span><span class="anchor" id="line-40"></span><span class="anchor" id="line-41"></span><span class="anchor" id="line-42"></span><span class="anchor" id="line-43"></span><span class="anchor" id="line-44"></span><span class="anchor" id="line-45"></span><span class="anchor" id="line-46"></span><span class="anchor" id="line-47"></span><span class="anchor" id="line-48"></span><span class="anchor" id="line-49"></span><span class="anchor" id="line-50"></span><span class="anchor" id="line-51"></span><span class="anchor" id="line-52"></span><span class="anchor" id="line-53"></span><span class="anchor" id="line-54"></span><span class="anchor" id="line-55"></span><span class="anchor" id="line-56"></span><span class="anchor" id="line-57"></span><span class="anchor" id="line-58"></span><span class="anchor" id="line-59"></span><span class="anchor" id="line-60"></span><span class="anchor" id="line-61"></span><span class="anchor" id="line-62"></span><span class="anchor" id="line-63"></span><span class="anchor" id="line-64"></span><span class="anchor" id="line-65"></span><span class="anchor" id="line-66"></span><span class="anchor" id="line-67"></span><span class="anchor" id="line-68"></span><span class="anchor" id="line-69"></span><span class="anchor" id="line-70"></span><span class="anchor" id="line-71"></span><span class="anchor" id="line-72"></span><span class="anchor" id="line-73"></span><span class="anchor" id="line-74"></span><span class="anchor" id="line-75"></span><span class="anchor" id="line-76"></span><span class="anchor" id="line-77"></span><span class="anchor" id="line-78"></span><span class="anchor" id="line-79"></span><span class="anchor" id="line-80"></span><span class="anchor" id="line-81"></span><span class="anchor" id="line-82"></span><span class="anchor" id="line-83"></span><span class="anchor" id="line-84"></span><span class="anchor" id="line-85"></span><span class="anchor" id="line-86"></span><span class="anchor" id="line-87"></span><span class="anchor" id="line-88"></span><span class="anchor" id="line-89"></span><span class="anchor" id="line-90"></span><span class="anchor" id="line-91"></span><span class="anchor" id="line-92"></span><span class="anchor" id="line-93"></span><span class="anchor" id="line-94"></span><span class="anchor" id="line-95"></span><span class="anchor" id="line-96"></span><span class="anchor" id="line-97"></span><span class="anchor" id="line-98"></span><span class="anchor" id="line-99"></span><span class="anchor" id="line-100"></span><span class="anchor" id="line-101"></span><span class="anchor" id="line-102"></span><span class="anchor" id="line-103"></span><span class="anchor" id="line-104"></span><span class="anchor" id="line-105"></span><span class="anchor" id="line-106"></span><span class="anchor" id="line-107"></span><span class="anchor" id="line-108"></span><span class="anchor" id="line-109"></span><span class="anchor" id="line-110"></span><span class="anchor" id="line-111"></span><span class="anchor" id="line-112"></span><span class="anchor" id="line-113"></span><span class="anchor" id="line-114"></span><span class="anchor" id="line-115"></span><span class="anchor" id="line-116"></span><span class="anchor" id="line-117"></span><span class="anchor" id="line-118"></span><span class="anchor" id="line-119"></span><span class="anchor" id="line-120"></span><span class="anchor" id="line-121"></span><span class="anchor" id="line-122"></span><span class="anchor" id="line-123"></span><span class="anchor" id="line-124"></span><span class="anchor" id="line-125"></span><span class="anchor" id="line-126"></span><span class="anchor" id="line-127"></span><span class="anchor" id="line-128"></span><span class="anchor" id="line-129"></span><span class="anchor" id="line-130"></span><span class="anchor" id="line-131"></span><span class="anchor" id="line-132"></span><span class="anchor" id="line-133"></span><span class="anchor" id="line-134"></span><span class="anchor" id="line-135"></span><span class="anchor" id="line-136"></span><span class="anchor" id="line-137"></span><span class="anchor" id="line-138"></span><span class="anchor" id="line-139"></span><span class="anchor" id="line-140"></span><span class="anchor" id="line-141"></span><span class="anchor" id="line-142"></span><span class="anchor" id="line-143"></span><span class="anchor" id="line-144"></span><span class="anchor" id="line-145"></span><span class="anchor" id="line-146"></span><span class="anchor" id="line-147"></span><span class="anchor" id="line-148"></span><span class="anchor" id="line-149"></span><span class="anchor" id="line-150"></span><span class="anchor" id="line-151"></span><span class="anchor" id="line-152"></span><span class="anchor" id="line-153"></span><span class="anchor" id="line-154"></span><span class="anchor" id="line-155"></span><span class="anchor" id="line-156"></span><span class="anchor" id="line-157"></span><span class="anchor" id="line-158"></span><span class="anchor" id="line-159"></span><span class="anchor" id="line-160"></span><span class="anchor" id="line-161"></span><span class="anchor" id="line-162"></span><span class="anchor" id="line-163"></span><span class="anchor" id="line-164"></span><span class="anchor" id="line-165"></span><span class="anchor" id="line-166"></span><span class="anchor" id="line-167"></span><span class="anchor" id="line-168"></span><span class="anchor" id="line-169"></span><span class="anchor" id="line-170"></span><span class="anchor" id="line-171"></span><span class="anchor" id="line-172"></span><span class="anchor" id="line-173"></span><span class="anchor" id="line-174"></span><span class="anchor" id="line-175"></span><span class="anchor" id="line-176"></span><span class="anchor" id="line-177"></span><span class="anchor" id="line-178"></span><span class="anchor" id="line-179"></span><span class="anchor" id="line-180"></span><span class="anchor" id="line-181"></span><span class="anchor" id="line-182"></span><span class="anchor" id="line-183"></span><span class="anchor" id="line-184"></span><span class="anchor" id="line-185"></span><span class="anchor" id="line-186"></span><span class="anchor" id="line-187"></span><span class="anchor" id="line-188"></span><span class="anchor" id="line-189"></span><span class="anchor" id="line-190"></span><span class="anchor" id="line-191"></span><span class="anchor" id="line-192"></span><span class="anchor" id="line-193"></span><span class="anchor" id="line-194"></span><span class="anchor" id="line-195"></span><span class="anchor" id="line-196"></span><span class="anchor" id="line-197"></span><span class="anchor" id="line-198"></span><span class="anchor" id="line-199"></span><span class="anchor" id="line-200"></span><span class="anchor" id="line-201"></span><span class="anchor" id="line-202"></span><span class="anchor" id="line-203"></span><span class="anchor" id="line-204"></span><span class="anchor" id="line-205"></span><span class="anchor" id="line-206"></span><span class="anchor" id="line-207"></span><span class="anchor" id="line-208"></span><span class="anchor" id="line-209"></span><span class="anchor" id="line-210"></span><span class="anchor" id="line-211"></span><span class="anchor" id="line-212"></span><span class="anchor" id="line-213"></span><span class="anchor" id="line-214"></span><span class="anchor" id="line-215"></span><span class="anchor" id="line-216"></span><span class="anchor" id="line-217"></span><span class="anchor" id="line-218"></span><span class="anchor" id="line-219"></span><tt class="backtick">~&lt;name&gt;/inflation_radius</tt> (<tt class="backtick">double</tt>, default: 0.55) <span class="anchor" id="line-220"></span></p><ul><li style="list-style-type:none">The radius in meters to which the map inflates obstacle cost values. <span class="anchor" id="line-221"></span><span class="anchor" id="line-222"></span><span class="anchor" id="line-223"></span><span class="anchor" id="line-224"></span></li></ul><tt class="backtick">~&lt;name&gt;/cost_scaling_factor</tt> (<tt class="backtick">double</tt>, default: 10.0) <span class="anchor" id="line-225"></span><ul><li style="list-style-type:none">A
+ scaling factor to apply to cost values during inflation. The cost 
+function is computed as follows for all cells in the costmap further 
+than the inscribed radius distance and closer than the inflation radius 
+distance away from an actual obstacle: <tt class="backtick">exp(-1.0&nbsp;*&nbsp;cost_scaling_factor&nbsp;*&nbsp;(distance_from_obstacle&nbsp;-&nbsp;inscribed_radius))&nbsp;*&nbsp;(costmap_2d::INSCRIBED_INFLATED_OBSTACLE&nbsp;-&nbsp;1)</tt>,
+ where costmap_2d::INSCRIBED_INFLATED_OBSTACLE is currently 254.  NOTE: 
+since the cost_scaling_factor is multiplied by a negative in the 
+formula, increasing the factor will decrease the resulting cost values. <span class="anchor" id="line-226"></span><span class="anchor" id="line-227"></span><span class="anchor" id="line-228"></span><span class="anchor" id="line-229"></span><span class="anchor" id="line-230"></span><span class="anchor" id="line-231"></span><span class="anchor" id="line-232"></span><span class="anchor" id="line-233"></span><span class="anchor" id="line-234"></span><span class="anchor" id="line-235"></span><span class="anchor" id="line-236"></span><span class="anchor" id="line-237"></span><span class="anchor" id="line-238"></span><span class="anchor" id="line-239"></span><span class="anchor" id="line-240"></span><span class="anchor" id="line-241"></span><span class="anchor" id="line-242"></span></li></ul><span class="anchor" id="line-38-1"></span><span class="anchor" id="bottom"></span></div></div>
+<div id="pagebottom"></div>
+</div>
+
+<p id="pageinfo" class="info" dir="ltr" lang="de">Wiki: costmap_2d/hydro/inflation  (zuletzt geändert am 2013-04-25 00:17:00 durch <span title="David Lu!! @ admin998.cec.wustl.edu[128.252.20.193]"><a class="mailto" href="mailto:davidlu@wustl.edu" title="David Lu!! @ admin998.cec.wustl.edu[128.252.20.193]">DavidLu</a></span>)</p>
+
+
+
+
+<div style="margin-top: 9px;" class="footer">
+Except where otherwise noted, the ROS wiki is licensed under the <br><a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a> | <a href="https://plus.google.com/113789706402978299308" rel="publisher">Find us on Google+</a>
+<hr style="margin-top: 10px;">
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+<a href="http://www.osrfoundation.org/"><img style="margin-top: -1px;" src="costmap_2d_hydro_inflation%20-%20ROS%20Wiki-Dateien/brought_by_horiz.png"><p></p></a>
+  </div>
+</div>
+</div>
+
+  </div> <!-- /#dpage-inner, /#dpage -->
+
+
+
+
+
+</body></html>

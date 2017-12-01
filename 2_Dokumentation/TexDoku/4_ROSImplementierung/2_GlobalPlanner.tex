@@ -1,0 +1,30 @@
+\section{Globaler Planer}
+Für die Umsetzung der globalen Plannung wird das ROS-Paket \lstinline{global_planner} \cite{WikiGlobalPlanner} verwendet. Die Funktion der Aktionsgewichtung $f(\mVec{x}\idx{t}, \mVec{u}\idx{t})$ wird von einer Kostenkarte erfüllt, wobei es sich um ein Occupancy-Grid handelt, also einer ortsdiskreten Gitterdarstellung. Die Kostenkarte ordnet jeder Zelle einen Aufwand zu, der aufgebracht werden muss, um die Zelle zu passieren. In dem ROS-Paket kann konfiguriert werden, ob zur Lösung des diskreten Planungsproblems Dijkstras Algorithmus oder $A*$ verwendet werden soll. 
+
+Insgesamt können bei dem Planer sieben Paramter konfiguriert werden \cite{global_planner}, wobei lediglich die folgenden für den Anwenungsfall von Interesse sind:
+\newline
+
+\lstinline{allow_unkown (bool, default: true)}{}
+
+Mit dem Paramter wird bestimmt, ob auch Pfade durch Zellen geplant werden soll, bei deren Zustand nicht bekannt ist.
+\newline
+
+\lstinline{default_tolerance (double, default: 0.0)}{}
+
+Toleranzabstand mit dem der geplante Pfad die Zielposition erreichen soll. Da bei der Planung eine diskrete Darstellung verwendet wird, entsteht durch die Default-Toleranz von 0 kein Problem.
+\newline
+
+\lstinline{use_dijkstra (bool, default:true)}{}
+
+Flag ob Dijkstra oder $A*$ verwendet werden soll. Der Grund für die Standardeinstellung ist, dass $A*$ nach \cite{WikiGlobalPlanner} auf suboptimale Ergebnisse führen kann. Eine mögliche Erklärung für dieses Verhalten besteht darin, dass es sich bei der Heuristik für die Kostenrechnung um keine Unterschätzung des wirklichen Aufwandes handelt.
+\newline
+
+\lstinline{use_quadratic (bool, default:true)}{}
+
+Bei diesem Parameter kommt der Internetcharakter der ROS-Dokumentation das erste Mal zum Tragen. Nach \cite{WikiGlobalPlanner} führt das Flag dazu, dass eine quadratische Approximation des Potentials - synonym für die Kosten - genutzt wird. Im Folgesatz schreiben die Autoren dennoch: "Of what, the maintainer of this package has no idea" \cite{WikiGlobalPlanner}. Nach weiterer Internetquelle .. {\color{red} Wie der Paramter genau funktioniert ist hier nicht wirklich relevant, eigentlich sollte man erst darauf eingehen, wenn das wichtig wird}
+\newline
+
+\lstinline{use_grid_path (bool, default:false)}{}
+
+Wenn auf \lstinline{true}{} gestellt, folgt der Pfad wie in den obigen Beispielen den Zellen, was dazu führt, dass der Roboter sich nur in acht Richtungen bewegen kann - durch \lstinline{ues_quadratic}{} wird die schräge Bewegung ermöglicht. Der Standardwert des Parameters führt zu einer Glättung des Pfades, woraus rundere Bahnen resultieren.
+
