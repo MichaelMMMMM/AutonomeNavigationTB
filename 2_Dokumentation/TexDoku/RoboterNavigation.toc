@@ -1,23 +1,24 @@
 \select@language {ngerman}
 \contentsline {chapter}{\numberline {1}Stochastische Modelle in der Robotik}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Geschwindigkeitsbasiertes Bewegungsmodell }{3}{section.1.1}
-\contentsline {chapter}{\numberline {2}Kartenerstellung}{7}{chapter.2}
-\contentsline {section}{\numberline {2.1}Occupancy-Grid-Mapping}{7}{section.2.1}
-\contentsline {chapter}{\numberline {3}ROS-Navigation-Stack}{11}{chapter.3}
-\contentsline {section}{\numberline {3.1}Funktionsprinzip des globalen Planers}{12}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Forward-Search: Breiten Suche}{13}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Forward-Search: Tiefensuche}{15}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Optimale Suche und Planung}{16}{subsection.3.1.3}
-\contentsline {subsubsection}{A*}{17}{section*.9}
-\contentsline {section}{\numberline {3.2}Lokaler Planer: Dynamic Window Appraoch}{19}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Anwendungsbeispiel}{21}{subsection.3.2.1}
-\contentsline {chapter}{\numberline {4}Stochastische Filter}{25}{chapter.4}
-\contentsline {section}{\numberline {4.1}Kontinuierliches Bayes Filter}{25}{section.4.1}
-\contentsline {section}{\numberline {4.2}Diskretes Bayes-Filter und Histogramm-Filter}{30}{section.4.2}
-\contentsline {section}{\numberline {4.3}Partikel-Filter}{31}{section.4.3}
-\contentsline {chapter}{\numberline {5}ROS-Implementierung}{33}{chapter.5}
-\contentsline {section}{\numberline {5.1}\IeC {\"U}berblick und Gesamtkonzept}{34}{section.5.1}
-\contentsline {section}{\numberline {5.2}Globaler Planer}{35}{section.5.2}
-\contentsline {section}{\numberline {5.3}Kostenkarten}{36}{section.5.3}
-\contentsline {section}{\numberline {5.4}Lokaler Planer}{37}{section.5.4}
-\contentsline {chapter}{Literaturverzeichnis}{39}{chapter*.13}
+\contentsline {section}{\numberline {1.2}Messmodell}{6}{section.1.2}
+\contentsline {chapter}{\numberline {2}Kartenerstellung}{9}{chapter.2}
+\contentsline {section}{\numberline {2.1}Occupancy-Grid-Mapping}{9}{section.2.1}
+\contentsline {chapter}{\numberline {3}ROS-Navigation-Stack}{13}{chapter.3}
+\contentsline {section}{\numberline {3.1}Funktionsprinzip des globalen Planers}{14}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Forward-Search: Breiten Suche}{15}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Forward-Search: Tiefensuche}{17}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Optimale Suche und Planung}{18}{subsection.3.1.3}
+\contentsline {subsubsection}{A*}{19}{section*.9}
+\contentsline {section}{\numberline {3.2}Lokaler Planer: Dynamic Window Appraoch}{21}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Anwendungsbeispiel}{23}{subsection.3.2.1}
+\contentsline {chapter}{\numberline {4}Stochastische Filter}{27}{chapter.4}
+\contentsline {section}{\numberline {4.1}Kontinuierliches Bayes Filter}{27}{section.4.1}
+\contentsline {section}{\numberline {4.2}Diskretes Bayes-Filter und Histogramm-Filter}{32}{section.4.2}
+\contentsline {section}{\numberline {4.3}Partikel-Filter}{33}{section.4.3}
+\contentsline {chapter}{\numberline {5}ROS-Implementierung}{35}{chapter.5}
+\contentsline {section}{\numberline {5.1}\IeC {\"U}berblick und Gesamtkonzept}{36}{section.5.1}
+\contentsline {section}{\numberline {5.2}Globaler Planer}{37}{section.5.2}
+\contentsline {section}{\numberline {5.3}Kostenkarten}{38}{section.5.3}
+\contentsline {section}{\numberline {5.4}Lokaler Planer}{39}{section.5.4}
+\contentsline {chapter}{Literaturverzeichnis}{41}{chapter*.13}
