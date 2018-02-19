@@ -1,0 +1,24 @@
+\chapter{Stochastische Modelle in der Robotik}\pdfcomment{Zusammenhangsloser Quatsch}
+Jede elaborierte Methoden erfordert einen Rahmen, in dem sie erarbeitet, formuliert und optimiert werden kann. In technischen Aufgabenstellung erfüllt die Mathematik diese Forderungen, weshalb die Gegebenheiten und Probleme des hiesigen Anwendungsfall zunächst in einem mathematischen Kontext dargestellt werden. Denn nur von dieser Basis ausgehend, besteht die Aussicht auf eine elegante und ansprechende Lösung.
+
+Wie alle Probleme der Robotik, kann auch die autonome Navigation im entferntesten Sinne als Interaktion eines Roboters mit seiner Umwelt aufgefasst werden. Anhand von gesammelten Informationen muss das System eine Entscheidung über seine zukünftigen Aktionen treffen, wobei ein entferntes Ziel ohne ungewollte Kollisionen angesteuert werden soll. Für diese Aufgaben spielen drei Größen eine fundamentale Rolle. Zunächst muss die Position des Roboters beachtet werden, welche in dem Positionsvektor $\mVec{x}(t) \equiv \mVec{x}_t$ erfasst wird. Mithilfe von Sensoren sammelt der Roboter Informationen über seine Umgebung, die in dem Messvektor $\mVec{z}_t$ zusammengefasst werden. Anhand der Mess- und Positionsvektoren wird über die nächste Aktion des Roboters entschieden, die in dem Steuervektor $\mVec{u}_t$ ausgedrückt wird. Die exakte Form der Positions-, Mess- und Steuervektoren hängt von dem gegebenen Anwendungsfall und gewählten Modellformen ab, die im Folgenden näher erläutert werden.
+
+In anderen Fachgebieten, die sich mit der Planung von Steuersignalen bzw. -sequenzen beschäftigen - wie z.B. die Regelungstechnik -, haben sich modellbasierte Methoden bewährt. Zunächst wird auf Basis von physikalischen Gegebenheiten der Zusammenhang zwischen Steuer-, Zustands- und Messvektor hergeleitet, der anschließend genutzt wird, um eine Regelstrategie zu formulieren. Der resultierende Algorithmus berechnet die Stellgröße $\mVec{u}_t$, wofür die aktuellen Mess- und Zustandsvektoren herangezogen werden. Insofern liegt es nahe modellbasierte Ansätze auch bei Problemen der Robotik zu verfolgen. Allerdings kommt dort die ungemeine Komplexität der Problemstellung zu tragen, die sich recht leicht am Beispiel der Navigation illustrieren lässt: Als erstes muss ein Modell für den Einfluss des Stellvektors $\mVec{u}_t$ auf den Positionsvektor $\mVec{x}_t$ erstellt werden. Bei mobilen Roboterplattformen handelt es sich um mechanische Systeme mit mehreren Freiheitsgraden, womit die analytische Modellbildung zwar möglich, jedoch mit einem beachtlichen Aufwand verbunden ist. Spätestens bei der Modelierung der Sensoren werden die Grenzen des Möglichen erreicht: Soll beispielsweise die Position des Roboters mithilfe von Stereokameras erfasst werden kann praktisch kaum ein exaktes, deterministisches Modell für diesen Vorgang erfasst werden, da er von zu vielen unbekannten Einflussfaktoren betroffen ist. Zuletzt kann die Pfadplanung per Definition nicht anhand eines deterministischen Modell erfolgen, da der Roboter dynamischen Hindernissen ausweichen soll, deren Form und Bewegung in der Aufgabenstellung nicht näher spezifiziert werden.
+
+Aus diesen Gründen haben sich in der Robotik stochastische Modellformen etabliert, wobei recht simple Ausgangsmodelle verwendet werden, die um Zufallsvariablen ergänzt werden, um die Ungenauigkeiten und Ungewissheiten des Modells zu repräsentieren. Das Ziel besteht nicht mehr darin, konkrete Aussagen über den Verlauf von Zustandsgrößen zu treffen, wie dies z.B. bei einer Zustandsraumdarstellung der Form
+\begin{equation}
+\mVec{x}(n+1) = \mat{{A}}\cdot \mVec{x}(n) + \mat{B}\cdot \mVec{\mathbf{u}}(n)
+\end{equation}
+erfolgt. Vielmehr soll mithilfe des Modells eine bedingte Wahrscheinlichkeit
+\begin{equation}
+\condP{\mVec{x}(n+1)}{\mVec{x}(n), \mVec{u}(n)}
+\end{equation}
+berechnet werden. Im Anschluss können die Methoden der Wahrscheinlichkeitstheorie genutzt werden, um Filter- und Planungsalgorithmen zu entwerfen.\pdfcomment{Wiederholung der um.. Konstruktion} Um einen ersten Eindruck für diese Modellformen zu erhalten, werden im Anschluss rudimentäre Ansätze für ein Bewegungs- und Sensormodell vorgestellt.
+
+
+\newpage
+\input{1_MotionModel}
+\newpage
+\input{2_SensorModel}
+\newpage
+\input{3_ContBayesFilter}

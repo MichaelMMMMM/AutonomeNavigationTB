@@ -1,0 +1,53 @@
+\section{Messmodell}
+Als weiteres Beispiel wird ein stochastisches Messmodell vorgestellt, das später bei der Lokalisierung wiederverwendet wird. Das Ziel des Messmodells ist es den Zusammenhang zwischen einem Zustandsvektor $\mVec{x}\idx{t}$ und einem Messvektor $\mVec{z}\idx{t}$ in Form der bedingten Wahrscheinlichkeit
+\begin{equation}
+\condP{\mVec{z}\idx{t}}{\mVec{x}\idx{t}}
+\end{equation}
+herzustellen. Die Verteilung sagt aus, mit welcher Wahrscheinlichkeit ein Messvektor $\mVec{z}\idx{t}$ von einer vorgegebenen Position $\mVec{x}\idx{t}$ aus erzielt wird. Das Messmodell dient als Paradebeispiel dafür, wie heuristische Argumente in stochastische Modelle einfließen können. Unabhängig von dem exakten Sensor wird angenommen, dass es sich um ein auf Messstrahlen basiertes Messprinzip handelt. Das heißt der Messvektor $\mVec{z}\idx{t}$ setzt sich aus mehreren Messwerten $z^k\idx{t}$ zusammen, die jeweils die auf einem Strahl gemessene Distanz wiedergeben. 
+
+Als erste Störgröße wird ein gewöhnliches Messrauschen eingeführt, das als normal verteilt angenommen wird. Der Mittelwert der Verteilung sie die tatsächliche Distanz auf dem Messstrahl, die mit $z^{k*}\idx{t}$ denotiert wird. Als zweiter Parameter muss die Varianz $\sigma\idx{hit}$ festgelegt werden, die angibt wie stark der Messwert von dem Rauschen beeinflusst wird. Somit ergibt sich als Modell für das Sensorrauschen
+\begin{equation}
+p\idx{hit}\left( z^{k}\idx{t} \mCond \mVec{x}\idx{t} \right) = \left\{ \begin{array}{cl}
+\eta \cdot \mathcal{N}(z^k\idx{t}, z^{k*}\idx{t}, \sigma^2\idx{hit}) & \hspace{5mm}\forall z^k\idx{t} \in \left[0, z\idx{max}\right] \\
+0 & \hspace{5mm} \forall z^k\idx{t} \notin \left[0, z\idx{max}\right]
+\end{array}\right. \,.
+\end{equation}
+Die Messwerte werden außerdem von unerwarteten Objekten beeinflusst. Angenommen es liegt eine Karte der Umgebung vor und es bewegt sich ein Mensch innerhalb des Raumes. Wenn der Mensch nun die Messstrahlen unterbricht tritt ein geringerer Messwert als anhand der Karte erwartet ein. Im Allgemeinen gilt, dass im Falle von Störungen durch unerwartete Objekte die Messwerte lediglich kleiner, aber niemals größer werden. Des Weiteren nimmt die Wahrscheinlichkeit, dass ein Messwert von einem Objekt beeinflusst wird mit zunehmendem Messdistanz ab. Für das Modell wird eine exponentiell abfallende Verteilung
+\begin{equation}
+\renewcommand*{\arraystretch}{1.3}
+p\idx{short}\left( z^k\idx{t} \mCond \mVec{x}\idx{t} \right) = \left\{ \begin{array}{cl}
+\eta \cdot \lambda\idx{short}\cdot e^{-\lambda\idx{short}\cdot z^{k}\idx{t}} & \hspace{5mm} \forall z^{k}\idx{t} \in \left[0, z^{k*}\idx{t}\right] \\
+0 & \hspace{5mm} \forall z^{k}\idx{t} \notin \left[0, z^{k*}\idx{t}\right]
+\end{array}\right. 
+\end{equation}
+gewählt, wobei $\lambda\idx{short}$ als wählbarer Parameter die Häufigkeit der Störungen widerspiegelt.
+
+Als dritte Ursache für Messfehler wird das sporadische Versagen des Sensors herangezogen. Derartige Phänomene können bei Laserscannern auftreten, wenn beispielsweise schwarze Oberflächen die Strahlen vollständig absorbieren. Ähnliche Probleme werden bei Sonarsensoren durch Interferenz oder schallabsorbierende Medien hervorgerufen. Unabhängig von dem Messprinzip des Sensors werden in all den beschriebenen Fällen - fälschlicherweise - maximale Distanzen gemessen, wodurch die Verteilung
+\begin{equation}
+p\idx{max}\left(z^k\idx{t} \mCond \mVec{x}\idx{t}\right) = \left\{ \begin{array}{cl}
+1 & \hspace{5mm} \forall z = z\idx{max} \\
+0 & \hspace{5mm} \forall z  \neq z\idx{max}
+\end{array}\right.
+\end{equation}
+motiviert wird. {\color{red} Die Aussage von dieser Verteilung ist ein bisschen Banane, wenn wenn der Messwert den maximal Möglichen anzeigt, ist die dass 100 Prozent der Fall, ansonsten nicht? Oder ist es so zu verstehen, dass ein maximaler Messwert zu 100 Prozent den Fall von Messfehler bedeutet? Dann müsste ich die Interpretation der anderen Verteilungen nochmal überdenken}
+
+Als letzter und absurdester Fall werden rein zufällig falsche Phänomene betrachtet. Als Argument dient die Beobachtung, dass es unerklärliche Messwerte gibt, die - zu Gunsten der Simplizität - durch eine Gleichverteilung der Form
+\begin{equation}
+\renewcommand*{\arraystretch}{1.3}
+p\idx{rand}\left( z^k\idx{t} \mCond \mVec{x}\idx{t}\right) = \left\{ \begin{array}{cl}
+\frac{1}{z\idx{max}} & \hspace{5mm} \forall z^k\idx{t} \in \left[0, z\idx{max}\right] 
+\\
+0 & \hspace{5mm} \forall z^k\idx{t} \notin \left[0, z\idx{max}\right]
+\end{array} \right.
+\end{equation}
+repräsentiert werden. Es liegt schließlich nahe das komplexeste aller Probleme durch die simpelste aller Darstellung zu beschreiben. An diesem Beispiel wird deutlich, dass heuristische Einflüsse in stochastischen Modellen auch mit variierendem Elan verteidigt werden.
+
+Die gesuchte Wahrscheinlichkeit $\condP{z^k\idx{t}}{\mVec{x}\idx{t}}$ wird aus Summe der vier Verteilung berechnet, wobei diese mit den Faktoren $z\idx{hit}$, $z\idx{short}$, $z\idx{max}$ und $z\idx{rand}$ gewichtet werden. Die Gewichtung erlauben es dem Anwender, die Heuristiken nach ihrer Glaubhaftigkeit zu bewerten.
+\begin{equation}
+\condP{z^k\idx{t}}{\mVec{x}\idx{t}} = \begin{bmatrix} z\idx{hit} & z\idx{short} & z\idx{max} z\idx{rand} \end{bmatrix} \cdot \begin{bmatrix}
+p\idx{hit}\left( z^{k}\idx{t} \mCond \mVec{x}\idx{t} \right) \\
+p\idx{short}\left( z^k\idx{t} \mCond \mVec{x}\idx{t} \right) \\
+p\idx{max}\left(z^k\idx{t} \mCond \mVec{x}\idx{t}\right) \\
+p\idx{rand}\left( z^k\idx{t} \mCond \mVec{x}\idx{t}\right)
+\end{bmatrix}\,.
+\end{equation}
