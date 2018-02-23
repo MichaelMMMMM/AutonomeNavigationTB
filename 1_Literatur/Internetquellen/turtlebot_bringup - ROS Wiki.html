@@ -1,0 +1,351 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+
+<meta name="google-site-verification" content="CjkdY6BqKWAVmQ78_iSq6J7ZZ9AoL7-CjFVBYGg9FU4">
+<link rel="shortcut icon" href="http://wiki.ros.org/custom/favicon.ico" type="image/ico">
+<link rel="stylesheet" href="turtlebot_bringup%20-%20ROS%20Wiki_files/bootstrap.css">
+<script type="text/javascript" src="turtlebot_bringup%20-%20ROS%20Wiki_files/4c8610d177"></script><script src="turtlebot_bringup%20-%20ROS%20Wiki_files/nr-1071.js"></script><script type="text/javascript" async="" src="turtlebot_bringup%20-%20ROS%20Wiki_files/ga.js"></script><script src="turtlebot_bringup%20-%20ROS%20Wiki_files/jquery-1.js"></script>
+<script src="turtlebot_bringup%20-%20ROS%20Wiki_files/bootstrap.js"></script>
+<script type="text/javascript" src="turtlebot_bringup%20-%20ROS%20Wiki_files/sorttable.js"></script>
+<script type="text/javascript" src="turtlebot_bringup%20-%20ROS%20Wiki_files/jquery.js"></script>                         
+<script type="text/javascript" src="turtlebot_bringup%20-%20ROS%20Wiki_files/seesaw.js"></script> 
+<script type="text/javascript" src="turtlebot_bringup%20-%20ROS%20Wiki_files/rosversion.js"></script> 
+<!--script type="text/javascript" src="/custom/libraries/RGraph.common.core.js" ></script Used for metrics only, should be conditional, not at the top-->
+<!--script type="text/javascript" src="/custom/libraries/RGraph.bar.js" ></script same as above -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17821189-2']);
+  _gaq.push(['_setDomainName', 'wiki.ros.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"4c8610d177","agent":"","transactionName":"NFZaMEVUV0ZVBkBeCQ0cbRZeGk1ARhFYUgQMR2cGRVxXUkEV","applicationID":"3371695","errorBeacon":"bam.nr-data.net","applicationTime":1065}</script>
+<meta name="robots" content="index,nofollow">
+
+<title>turtlebot_bringup - ROS Wiki</title>
+<script type="text/javascript" src="turtlebot_bringup%20-%20ROS%20Wiki_files/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="turtlebot_bringup%20-%20ROS%20Wiki_files/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="turtlebot_bringup%20-%20ROS%20Wiki_files/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="turtlebot_bringup%20-%20ROS%20Wiki_files/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="turtlebot_bringup%20-%20ROS%20Wiki_files/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static197/rostheme/css/msie.css">
+<![endif]-->
+
+
+
+
+<link rel="canonical" href="http://wiki.ros.org/turtlebot_bringup">
+
+<link rel="Start" href="http://wiki.ros.org/Documentation">
+<link rel="Alternate" title="Wiki Markup" href="http://wiki.ros.org/turtlebot_bringup?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="http://wiki.ros.org/turtlebot_bringup?action=print">
+<link rel="Search" href="http://wiki.ros.org/FindPage">
+<link rel="Index" href="http://wiki.ros.org/TitleIndex">
+<link rel="Glossary" href="http://wiki.ros.org/WordIndex">
+<link rel="Help" href="http://wiki.ros.org/HelpOnFormatting">
+</head>
+
+<body dir="ltr" lang="en">
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="turtlebot_bringup%20-%20ROS%20Wiki_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-5950817-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+if(f) f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+if(e) {
+  searchChange(e);
+  searchBlur(e);
+}
+
+function handleSubmit() {
+  var f = document.getElementById('searchform');
+  var t = document.getElementById('searchinput');
+  var r = document.getElementById('real_searchinput');
+
+  //alert("handleSubmit "+ t.value);
+  if(t.value.match(/review/)) {
+    r.value = t.value;
+  } else {
+    //r.value = t.value + " -PackageReviewCategory -StackReviewCategory -M3Review -DocReview -ApiReview -HelpOn -BadContent -LocalSpellingWords";
+    r.value = t.value + " -PackageReviewCategory -StackReviewCategory -DocReview -ApiReview";
+  }
+  //return validate(f);
+}
+//-->
+</script>
+
+<div id="dpage">
+  <div id="dpage-inner">
+    <div id="header"><div id="topnav">
+
+<!-- Alert box -->
+<!-- To enable/disable the alert box, uncomment/comment the block below and update the content below the button. -->
+<!--
+    <div class="alert alert-info alert-dismissable" style="text-align: center;">
+<script>
+jQuery(function( $ ){
+    alert_box_name = 'roswiki_roscon'
+    state = localStorage.getItem(alert_box_name);
+    if (!state) {
+      localStorage.setItem(alert_box_name, 'open');
+    }
+    state = localStorage.getItem(alert_box_name);
+    if (state == 'closed') {
+        $( '#topnav .alert' ).hide();
+    }
+    $( '.close' ).click(function () {
+	console.log('in .close.click');
+        localStorage.setItem(alert_box_name, 'closed');
+        $( '#topnav .alert' ).hide();
+  });
+});
+</script>
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <a href="http://roscon.ros.org">ROSCon 2017</a> will be in Vancouver, September 21-22! <br>
+      The last few years have sold out: register now and take advantage of discounted hotel rates</a>.
+    </div>
+-->
+<!-- End Alert box -->
+
+      <table id="topnav-table">
+        <tbody><tr>
+          <td width="300" valign="top"><a href="http://wiki.ros.org/"><img src="turtlebot_bringup%20-%20ROS%20Wiki_files/ros_org.png" alt="ros.org" border="0" width="238" height="51"></a></td>
+          <td width="500" valign="middle">
+            <a href="http://www.ros.org/about-ros">About</a>
+            |
+            <a href="http://wiki.ros.org/Support">Support</a>
+            |
+            <a href="http://discourse.ros.org/">Discussion Forum</a>
+            |
+            <a href="http://status.ros.org/">Service Status</a>
+            |
+            <a href="http://answers.ros.org/">Q&amp;A answers.ros.org</a>
+
+<!--<a href="http://roscon.ros.org/2016/"><img align="middle" style="padding-left: 15px;" src="http://ros.org/images/roscon_wiki_header.jpg" width="133" height="65" alt="ROSCon 2016" /></a>
+-->
+
+<!-- <a href="https://events.osrfoundation.org/ros-kong-2014/"><img align="middle" style="padding-left: 15px;" src="http://ros.org/images/ros_kong_2014_badge.png" width="133" height="38" alt="roskong" /></a>
+-->
+<!--a href="https://events.osrfoundation.org/ros-kong-2014/"><img align="middle" style="padding-left: 15px;" src="http://imgur.com/eMzUJVe.png" width="133" height="38" alt="roskong" /></a-->
+          </td>
+
+          <td valign="middle" align="right">
+
+<script language="Javascript">
+
+function Searchy(theButton){
+
+theForm = theButton.form;
+newID = theForm.input.value;
+theForm.q.value = newID;
+theForm.input.value=theForm.input.value
+
+}
+</script>
+
+
+<form action="http://www.ros.org/search/index.html" id="cse">
+  <div>
+    <label>Search:</label>
+    <input name="cx" value="018259903093183594226:txvzw9fat6w" type="hidden">
+    <input name="cof" value="FORID:11;NB:1" type="hidden">
+    <input name="filter" value="0" type="hidden">
+    <input name="num" value="10" type="hidden">
+
+    <input name="ie" value="UTF-8" type="hidden">
+    <input name="input" id="input" autocomplete="on" style="width: 35%" type="text">
+    <input name="q" value="" type="hidden">
+    <input name="sa" value="Submit" onclick="Searchy(this)" type="submit">
+
+  </div>
+</form>
+
+         </td>
+      </tr>
+      <tr>
+        <td colspan="3" width="1024" height="53"><nobr><img src="turtlebot_bringup%20-%20ROS%20Wiki_files/menu_left.png" alt="" width="17" height="53"><a href="http://wiki.ros.org/"><img src="turtlebot_bringup%20-%20ROS%20Wiki_files/menu_documentation.png" alt="Documentation" border="0" width="237" height="53"></a><img src="turtlebot_bringup%20-%20ROS%20Wiki_files/menu_spacer.png" width="69" height="53"><a href="http://www.ros.org/browse/"><img src="turtlebot_bringup%20-%20ROS%20Wiki_files/menu_browse_software.png" alt="Browse Software" border="0" width="268" height="53"></a><img src="turtlebot_bringup%20-%20ROS%20Wiki_files/menu_spacer.png" width="69" height="53"><a href="http://www.ros.org/news"><img src="turtlebot_bringup%20-%20ROS%20Wiki_files/menu_news.png" alt="News" border="0" width="84" height="53"></a><img src="turtlebot_bringup%20-%20ROS%20Wiki_files/menu_spacer.png" width="69" height="53"><a href="http://wiki.ros.org/ROS/Installation"><img src="turtlebot_bringup%20-%20ROS%20Wiki_files/menu_download.png" alt="Download" border="0" width="151" height="53"></a><img src="turtlebot_bringup%20-%20ROS%20Wiki_files/menu_right.png" width="60" height="53"></nobr></td>
+
+      </tr>
+    </tbody></table> <!-- topnav-table -->
+
+    </div> <!-- /#topav -->
+  </div> <!-- /#header -->
+
+
+<div id="header2">
+
+<ul id="pagelocation">
+<li><a class="backlink" href="http://wiki.ros.org/action/fullsearch/turtlebot_bringup?action=fullsearch&amp;context=180&amp;value=linkto%3A%22turtlebot_bringup%22" rel="nofollow" title="Click to do a full-text search for this title">turtlebot_bringup</a></li>
+</ul>
+
+<div id="locationline">
+</div>
+</div>
+
+<div id="sidebar">
+<div class="sidepanel">
+<h1>Wiki</h1>
+
+<ul id="navibar">
+<li class="wikilink"><a href="http://wiki.ros.org/Distributions">Distributions</a></li><li class="wikilink"><a href="http://wiki.ros.org/ROS/Installation">ROS/Installation</a></li><li class="wikilink"><a href="http://wiki.ros.org/ROS/Tutorials">ROS/Tutorials</a></li><li class="wikilink"><a href="http://wiki.ros.org/RecentChanges">RecentChanges</a></li><li class="current"><a href="http://wiki.ros.org/turtlebot_bringup">turtlebot_bringup</a></li>
+</ul>
+
+</div>
+<div class="sidepanel">
+<h1>Page</h1>
+<ul class="editbar"><li><span class="disabled">Immutable Page</span></li><li class="toggleCommentsButton" style="display:none;"><a href="#" class="nbcomment" onclick="toggleComments();return false;">Comments</a></li><li><a class="nbinfo" href="http://wiki.ros.org/action/info/turtlebot_bringup?action=info" rel="nofollow">Info</a></li><li><a class="nbattachments" href="http://wiki.ros.org/action/AttachFile/turtlebot_bringup?action=AttachFile" rel="nofollow">Attachments</a></li><li>
+<form class="actionsmenu" method="GET" action="/turtlebot_bringup">
+<div>
+    
+    <select name="action" onchange="if ((this.selectedIndex != 0) &amp;&amp;
+                      (this.options[this.selectedIndex].disabled == false)) {
+                this.form.submit();
+            }
+            this.selectedIndex = 0;">
+        <option value="show" selected="selected">More Actions:</option><option value="raw">Raw Text</option>
+<option value="print">Print View</option>
+<option value="RenderAsDocbook">Render as Docbook</option>
+<option value="show" disabled="disabled" class="disabled">Delete Cache</option>
+<option value="show" disabled="disabled" class="disabled">------------------------</option>
+<option value="SpellCheck">Check Spelling</option>
+<option value="LikePages">Like Pages</option>
+<option value="LocalSiteMap">Local Site Map</option>
+<option value="show" disabled="disabled" class="disabled">------------------------</option>
+<option value="RenamePage" disabled="disabled" class="disabled">Rename Page</option>
+<option value="CopyPage">Copy Page</option>
+<option value="DeletePage" disabled="disabled" class="disabled">Delete Page</option>
+<option value="show" disabled="disabled" class="disabled">------------------------</option>
+<option value="MyPages">My Pages</option>
+<option value="show" disabled="disabled" class="disabled">Subscribe User</option>
+<option value="show" disabled="disabled" class="disabled">------------------------</option>
+<option value="show" disabled="disabled" class="disabled">Remove Spam</option>
+<option value="show" disabled="disabled" class="disabled">Revert to this revision</option>
+<option value="PackagePages">Package Pages</option>
+<option value="SyncPages">Sync Pages</option>
+<option value="show" disabled="disabled" class="disabled">------------------------</option>
+<option value="CreatePdfDocument">CreatePdfDocument</option>
+<option value="Load">Load</option>
+<option value="RawFile">RawFile</option>
+<option value="Save">Save</option>
+<option value="SlideShow">SlideShow</option>
+    </select>
+    
+    
+</div>
+<script type="text/javascript">
+<!--// Init menu
+actionsMenuInit('More Actions:');
+//-->
+</script>
+</form>
+</li></ul>
+
+</div>
+<div class="sidepanel">
+<h1>User</h1>
+<ul id="username"><li><a href="http://wiki.ros.org/action/login/turtlebot_bringup?action=login" id="login" rel="nofollow">Login</a></li></ul>
+</div>
+</div>
+
+<div id="page" dir="ltr" lang="en">
+
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+<span class="anchor" id="line-1"></span><p class="line867"><span id="rosversion_selector" class="btn-group">
+<button id="electric" class="btn btn-default" onclick="Version({show:['electric_and_newer', 'electric_and_older', 'fuerte_and_older', 'groovy_and_older', 'hydro_and_older', 'indigo_and_older', 'kinetic_and_older', 'electric'], hide:['electric_and_newer', 'fuerte_and_newer', 'groovy_and_newer', 'hydro_and_newer', 'indigo_and_newer', 'kinetic_and_newer', 'electric_and_older', 'fuerte', 'groovy', 'hydro', 'indigo', 'kinetic'], target_ros_distro:'electric'});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('fuerte').style.background='#e6e6e6';document.getElementById('fuerte').style.color='#3e4f6e';document.getElementById('groovy').style.background='#e6e6e6';document.getElementById('groovy').style.color='#3e4f6e';document.getElementById('hydro').style.background='#e6e6e6';document.getElementById('hydro').style.color='#3e4f6e';document.getElementById('indigo').style.background='#e6e6e6';document.getElementById('indigo').style.color='#3e4f6e';document.getElementById('kinetic').style.background='#e6e6e6';document.getElementById('kinetic').style.color='#3e4f6e';return false" style="background: rgb(230, 230, 230) none repeat scroll 0% 0%; color: rgb(62, 79, 110);"> electric </button>
+<button id="fuerte" class="btn btn-default" onclick="Version({show:['electric_and_newer', 'fuerte_and_newer', 'fuerte_and_older', 'groovy_and_older', 'hydro_and_older', 'indigo_and_older', 'kinetic_and_older', 'fuerte'], hide:['fuerte_and_newer', 'groovy_and_newer', 'hydro_and_newer', 'indigo_and_newer', 'kinetic_and_newer', 'electric_and_older', 'fuerte_and_older', 'electric', 'groovy', 'hydro', 'indigo', 'kinetic'], target_ros_distro:'fuerte'});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('electric').style.background='#e6e6e6';document.getElementById('electric').style.color='#3e4f6e';document.getElementById('groovy').style.background='#e6e6e6';document.getElementById('groovy').style.color='#3e4f6e';document.getElementById('hydro').style.background='#e6e6e6';document.getElementById('hydro').style.color='#3e4f6e';document.getElementById('indigo').style.background='#e6e6e6';document.getElementById('indigo').style.color='#3e4f6e';document.getElementById('kinetic').style.background='#e6e6e6';document.getElementById('kinetic').style.color='#3e4f6e';return false" style="background: rgb(230, 230, 230) none repeat scroll 0% 0%; color: rgb(62, 79, 110);"> fuerte </button>
+<button id="groovy" class="btn btn-default" onclick="Version({show:['electric_and_newer', 'fuerte_and_newer', 'groovy_and_newer', 'groovy_and_older', 'hydro_and_older', 'indigo_and_older', 'kinetic_and_older', 'groovy'], hide:['groovy_and_newer', 'hydro_and_newer', 'indigo_and_newer', 'kinetic_and_newer', 'electric_and_older', 'fuerte_and_older', 'groovy_and_older', 'electric', 'fuerte', 'hydro', 'indigo', 'kinetic'], target_ros_distro:'groovy'});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('electric').style.background='#e6e6e6';document.getElementById('electric').style.color='#3e4f6e';document.getElementById('fuerte').style.background='#e6e6e6';document.getElementById('fuerte').style.color='#3e4f6e';document.getElementById('hydro').style.background='#e6e6e6';document.getElementById('hydro').style.color='#3e4f6e';document.getElementById('indigo').style.background='#e6e6e6';document.getElementById('indigo').style.color='#3e4f6e';document.getElementById('kinetic').style.background='#e6e6e6';document.getElementById('kinetic').style.color='#3e4f6e';return false" style="background: rgb(230, 230, 230) none repeat scroll 0% 0%; color: rgb(62, 79, 110);"> groovy </button>
+<button id="hydro" class="btn btn-default" onclick="Version({show:['electric_and_newer', 'fuerte_and_newer', 'groovy_and_newer', 'hydro_and_newer', 'hydro_and_older', 'indigo_and_older', 'kinetic_and_older', 'hydro'], hide:['hydro_and_newer', 'indigo_and_newer', 'kinetic_and_newer', 'electric_and_older', 'fuerte_and_older', 'groovy_and_older', 'hydro_and_older', 'electric', 'fuerte', 'groovy', 'indigo', 'kinetic'], target_ros_distro:'hydro'});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('electric').style.background='#e6e6e6';document.getElementById('electric').style.color='#3e4f6e';document.getElementById('fuerte').style.background='#e6e6e6';document.getElementById('fuerte').style.color='#3e4f6e';document.getElementById('groovy').style.background='#e6e6e6';document.getElementById('groovy').style.color='#3e4f6e';document.getElementById('indigo').style.background='#e6e6e6';document.getElementById('indigo').style.color='#3e4f6e';document.getElementById('kinetic').style.background='#e6e6e6';document.getElementById('kinetic').style.color='#3e4f6e';return false" style="background: rgb(230, 230, 230) none repeat scroll 0% 0%; color: rgb(62, 79, 110);"> hydro </button>
+<button id="indigo" class="btn btn-default" onclick="Version({show:['electric_and_newer', 'fuerte_and_newer', 'groovy_and_newer', 'hydro_and_newer', 'indigo_and_newer', 'indigo_and_older', 'kinetic_and_older', 'indigo'], hide:['indigo_and_newer', 'kinetic_and_newer', 'electric_and_older', 'fuerte_and_older', 'groovy_and_older', 'hydro_and_older', 'indigo_and_older', 'electric', 'fuerte', 'groovy', 'hydro', 'kinetic'], target_ros_distro:'indigo'});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('electric').style.background='#e6e6e6';document.getElementById('electric').style.color='#3e4f6e';document.getElementById('fuerte').style.background='#e6e6e6';document.getElementById('fuerte').style.color='#3e4f6e';document.getElementById('groovy').style.background='#e6e6e6';document.getElementById('groovy').style.color='#3e4f6e';document.getElementById('hydro').style.background='#e6e6e6';document.getElementById('hydro').style.color='#3e4f6e';document.getElementById('kinetic').style.background='#e6e6e6';document.getElementById('kinetic').style.color='#3e4f6e';return false" style="background: rgb(230, 230, 230) none repeat scroll 0% 0%; color: rgb(62, 79, 110);"> indigo </button>
+
+<button id="kinetic" class="btn btn-default" onclick="Version({show:['electric_and_newer', 'fuerte_and_newer', 'groovy_and_newer', 'hydro_and_newer', 'indigo_and_newer', 'kinetic_and_newer', 'kinetic_and_older', 'kinetic'], hide:['kinetic_and_newer', 'electric_and_older', 'fuerte_and_older', 'groovy_and_older', 'hydro_and_older', 'indigo_and_older', 'kinetic_and_older', 'electric', 'fuerte', 'groovy', 'hydro', 'indigo'], target_ros_distro:'kinetic'});this.style.color='#e6e6e6';this.style.background='#3e4f6e';document.getElementById('electric').style.background='#e6e6e6';document.getElementById('electric').style.color='#3e4f6e';document.getElementById('fuerte').style.background='#e6e6e6';document.getElementById('fuerte').style.color='#3e4f6e';document.getElementById('groovy').style.background='#e6e6e6';document.getElementById('groovy').style.color='#3e4f6e';document.getElementById('hydro').style.background='#e6e6e6';document.getElementById('hydro').style.color='#3e4f6e';document.getElementById('indigo').style.background='#e6e6e6';document.getElementById('indigo').style.color='#3e4f6e';return false" style="color: rgb(230, 230, 230); background: rgb(62, 79, 110) none repeat scroll 0% 0%;"> kinetic </button>
+
+
+</span><span style="text-align:left">&nbsp;&nbsp;<a href="javascript:toggleDocStatus()">Documentation Status</a></span></p><div id="doc_status" style="background:#CCCCCC;display:none;margin-top:0px;margin-bottom:0px;padding-top:0px"><ul style="padding-top:5px;margin-top:0px;margin-bottom:0px;padding-bottom:5px;"><li><b>electric:</b> <i>Documentation generated on March 02, 2013 at 02:02 PM</i></li><br><li><b>fuerte:</b> <i>Documentation generated on December 06, 2013 at 08:48 PM</i></li><br><li><b>groovy:</b> <i>Documentation generated on October 06, 2014 at 08:01 AM</i></li><br><li><b>hydro:</b> <i>Documentation generated on August 28, 2015 at 01:25 PM</i><span style="font-size:10px"> (<a href="http://jenkins.ros.org/job/doc-hydro-turtlebot/">doc job</a>).</span></li><br><li><b>indigo:</b> <i>Documentation generated on November 23, 2017 at 11:26 AM</i><span style="font-size:10px"> (<a href="http://build.ros.org/view/Idoc/job/Idoc__turtlebot__ubuntu_trusty_amd64">doc job</a>).</span></li><br><li><b>jade:</b> Cannot load information on <strong>name: turtlebot_bringup, distro: jade</strong>, which means that it is not yet in our index. Please see <a href="http://wiki.ros.org/rosdistro/Tutorials/Indexing%20Your%20ROS%20Repository%20for%20Documentation%20Generation">this page</a> for information on how to submit your repository to our index.</li><br><li><b>kinetic:</b> <i>Documentation generated on January 04, 2018 at 11:50 AM</i><span style="font-size:10px"> (<a href="http://build.ros.org/view/Kdoc/job/Kdoc__turtlebot__ubuntu_xenial_amd64">doc job</a>).</span></li><br><li><b>lunar:</b> Cannot load information on <strong>name: turtlebot_bringup, distro: lunar</strong>, which means that it is not yet in our index. Please see <a href="http://wiki.ros.org/rosdistro/Tutorials/Indexing%20Your%20ROS%20Repository%20for%20Documentation%20Generation">this page</a> for information on how to submit your repository to our index.</li><br><li><b>melodic:</b> Cannot load information on <strong>name: turtlebot_bringup, distro: melodic</strong>, which means that it is not yet in our index. Please see <a href="http://wiki.ros.org/rosdistro/Tutorials/Indexing%20Your%20ROS%20Repository%20for%20Documentation%20Generation">this page</a> for information on how to submit your repository to our index.</li><br></ul></div><div class="version electric" style="display: none;"><em><strong><a href="http://wiki.ros.org/turtlebot?distro=electric">turtlebot</a></strong>: <a href="http://wiki.ros.org/pointcloud_to_laserscan?distro=electric">pointcloud_to_laserscan</a> | turtlebot_bringup | <a href="http://wiki.ros.org/turtlebot_description?distro=electric">turtlebot_description</a> | <a href="http://wiki.ros.org/turtlebot_driver?distro=electric">turtlebot_driver</a> | <a href="http://wiki.ros.org/turtlebot_node?distro=electric">turtlebot_node</a></em><br><div class="package-links"><strong>Package Links</strong><ul><li><strong><a href="http://ros.org/doc/electric/api/turtlebot_bringup/html">Code API</a></strong></li><li><a href="http://wiki.ros.org/turtlebot_bringup/Tutorials">Tutorials</a></li><li><a href="http://answers.ros.org/questions/scope:all/sort:activity-desc/tags:turtlebot_bringup/page:1/">FAQ</a></li><li><a href="http://wiki.ros.org/turtlebot/ChangeList">Change List</a></li><li><a class="nonexistent" href="http://wiki.ros.org/turtlebot_bringup/Reviews">Reviews</a></li></ul><script type="text/javascript" src="turtlebot_bringup%20-%20ROS%20Wiki_files/roswiki.js"></script><strong><a href="#" onclick="toggleExpandable('electricdependencies-list'); return false;">Dependencies</a> (9)</strong><br><div id="electricdependencies-list" style="display:none"><ul><li><a href="http://wiki.ros.org/app_manager?distro=electric">app_manager</a></li><li><a href="http://wiki.ros.org/compressed_image_transport?distro=electric">compressed_image_tra...</a></li><li><a href="http://wiki.ros.org/joy?distro=electric">joy</a></li><li><a href="http://wiki.ros.org/openni_camera?distro=electric">openni_camera</a></li><li><a href="http://wiki.ros.org/pointcloud_to_laserscan?distro=electric">pointcloud_to_lasers...</a></li><li><a href="http://wiki.ros.org/robot_state_publisher?distro=electric">robot_state_publishe...</a></li><li><a href="http://wiki.ros.org/turtlebot_description?distro=electric">turtlebot_descriptio...</a></li><li><a href="http://wiki.ros.org/turtlebot_driver?distro=electric">turtlebot_driver</a></li><li><a href="http://wiki.ros.org/turtlebot_node?distro=electric">turtlebot_node</a></li></ul></div></div><h1>Package Summary</h1><p><span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Documented</span></p><p id="package-info">
+
+     turtlebot_bringup provides roslaunch scripts for starting the TurtleBot base functionality. 
+
+  </p><p id="package-info-1"></p><ul><li>Author: Tully Foote</li><li>License: BSD</li><li>Source: hg <a href="https://kforge.ros.org/turtlebot/turtlebot">https://kforge.ros.org/turtlebot/turtlebot</a> (branch: electric-devel)</li></ul></div>
+<div class="version fuerte" style="display: none;"><em><strong><a href="http://wiki.ros.org/turtlebot?distro=fuerte">turtlebot</a></strong>: <a href="http://wiki.ros.org/pointcloud_to_laserscan?distro=fuerte">pointcloud_to_laserscan</a> | turtlebot_bringup | <a href="http://wiki.ros.org/turtlebot_description?distro=fuerte">turtlebot_description</a> | <a href="http://wiki.ros.org/turtlebot_driver?distro=fuerte">turtlebot_driver</a> | <a href="http://wiki.ros.org/turtlebot_node?distro=fuerte">turtlebot_node</a></em><br><div class="package-links"><strong>Package Links</strong><ul><li><strong><a href="http://docs.ros.org/fuerte/api/turtlebot_bringup/html">Code API</a></strong></li><li><a href="http://wiki.ros.org/turtlebot_bringup/Tutorials">Tutorials</a></li><li><a href="http://answers.ros.org/questions/scope:all/sort:activity-desc/tags:turtlebot_bringup/page:1/">FAQ</a></li><li><a href="http://wiki.ros.org/turtlebot/ChangeList">Change List</a></li><li><a class="nonexistent" href="http://wiki.ros.org/turtlebot_bringup/Reviews">Reviews</a></li></ul><script type="text/javascript" src="turtlebot_bringup%20-%20ROS%20Wiki_files/roswiki.js"></script><strong><a href="#" onclick="toggleExpandable('fuertedependencies-list'); return false;">Dependencies</a> (9)</strong><br><div id="fuertedependencies-list" style="display:none"><ul><li><a href="http://wiki.ros.org/app_manager?distro=fuerte">app_manager</a></li><li><a href="http://wiki.ros.org/compressed_image_transport?distro=fuerte">compressed_image_tra...</a></li><li><a href="http://wiki.ros.org/joy?distro=fuerte">joy</a></li><li><a href="http://wiki.ros.org/openni_camera?distro=fuerte">openni_camera</a></li><li><a href="http://wiki.ros.org/pointcloud_to_laserscan?distro=fuerte">pointcloud_to_lasers...</a></li><li><a href="http://wiki.ros.org/robot_state_publisher?distro=fuerte">robot_state_publishe...</a></li><li><a href="http://wiki.ros.org/turtlebot_description?distro=fuerte">turtlebot_descriptio...</a></li><li><a href="http://wiki.ros.org/turtlebot_driver?distro=fuerte">turtlebot_driver</a></li><li><a href="http://wiki.ros.org/turtlebot_node?distro=fuerte">turtlebot_node</a></li></ul></div><strong><a href="#" onclick="toggleExpandable('fuerteused-by-list'); return false;">Used by</a> (1)</strong><br><div id="fuerteused-by-list" style="display:none"><ul><li><a href="http://wiki.ros.org/mini_max_defs?distro=fuerte">mini_max_defs</a></li></ul></div></div><h1>Package Summary</h1><p><span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Documented</span></p><p id="package-info-2">
+
+     turtlebot_bringup provides roslaunch scripts for starting the TurtleBot base functionality. 
+
+  </p><p id="package-info-3"></p><ul><li>Author: Tully Foote</li><li>License: BSD</li><li>Source: hg <a href="https://kforge.ros.org/turtlebot/turtlebot">https://kforge.ros.org/turtlebot/turtlebot</a> (branch: default)</li></ul></div>
+<div class="version groovy" style="display: none;"><em><strong><a href="http://wiki.ros.org/turtlebot?distro=groovy">turtlebot</a></strong>: <a href="http://wiki.ros.org/linux_hardware?distro=groovy">linux_hardware</a> | <a href="http://wiki.ros.org/turtlebot_app_manager?distro=groovy">turtlebot_app_manager</a> | turtlebot_bringup | <a href="http://wiki.ros.org/turtlebot_description?distro=groovy">turtlebot_description</a></em><br><div class="package-links"><strong>Package Links</strong><ul><li><strong><a href="http://docs.ros.org/groovy/api/turtlebot_bringup/html">Code API</a></strong></li><li><a href="http://wiki.ros.org/turtlebot_bringup/Tutorials">Tutorials</a></li><li><a href="http://answers.ros.org/questions/scope:all/sort:activity-desc/tags:turtlebot_bringup/page:1/">FAQ</a></li><li><a href="http://wiki.ros.org/turtlebot/ChangeList">Change List</a></li><li><a class="nonexistent" href="http://wiki.ros.org/turtlebot_bringup/Reviews">Reviews</a></li></ul><script type="text/javascript" src="turtlebot_bringup%20-%20ROS%20Wiki_files/roswiki.js"></script><strong><a href="#" onclick="toggleExpandable('groovydependencies-list'); return false;">Dependencies</a> (13)</strong><br><div id="groovydependencies-list" style="display:none"><ul><li><a href="http://wiki.ros.org/create_description?distro=groovy">create_description</a></li><li><a href="http://wiki.ros.org/create_node?distro=groovy">create_node</a></li><li><a href="http://wiki.ros.org/depthimage_to_laserscan?distro=groovy">depthimage_to_lasers...</a></li><li><a href="http://wiki.ros.org/diagnostic_aggregator?distro=groovy">diagnostic_aggregato...</a></li><li><a href="http://wiki.ros.org/kobuki_bumper2pc?distro=groovy">kobuki_bumper2pc</a></li><li><a href="http://wiki.ros.org/kobuki_description?distro=groovy">kobuki_description</a></li><li><a href="http://wiki.ros.org/kobuki_node?distro=groovy">kobuki_node</a></li><li><a href="http://wiki.ros.org/kobuki_safety_controller?distro=groovy">kobuki_safety_contro...</a></li><li><a href="http://wiki.ros.org/linux_hardware?distro=groovy">linux_hardware</a></li><li><a href="http://wiki.ros.org/openni_camera?distro=groovy">openni_camera</a></li><li><a href="http://wiki.ros.org/robot_state_publisher?distro=groovy">robot_state_publishe...</a></li><li><a href="http://wiki.ros.org/turtlebot_app_manager?distro=groovy">turtlebot_app_manage...</a></li><li><a href="http://wiki.ros.org/zeroconf_avahi?distro=groovy">zeroconf_avahi</a></li></ul></div><strong><a href="#" onclick="toggleExpandable('groovyused-by-list'); return false;">Used by</a> (9)</strong><br><div id="groovyused-by-list" style="display:none"><ul><li><a href="http://wiki.ros.org/mini_max_defs?distro=groovy">mini_max_defs</a></li><li><a href="http://wiki.ros.org/turtlebot_actions?distro=groovy">turtlebot_actions</a></li><li><a href="http://wiki.ros.org/turtlebot_calibration?distro=groovy">turtlebot_calibratio...</a></li><li><a href="http://wiki.ros.org/turtlebot_core_apps?distro=groovy">turtlebot_core_apps</a></li><li><a href="http://wiki.ros.org/turtlebot_follower?distro=groovy">turtlebot_follower</a></li><li><a href="http://wiki.ros.org/turtlebot_gazebo?distro=groovy">turtlebot_gazebo</a></li><li><a href="http://wiki.ros.org/turtlebot_navigation?distro=groovy">turtlebot_navigation...</a></li><li><a href="http://wiki.ros.org/turtlebot_panorama?distro=groovy">turtlebot_panorama</a></li><li><a href="http://wiki.ros.org/turtlebot_teleop?distro=groovy">turtlebot_teleop</a></li></ul></div></div><h1>Package Summary</h1><p><span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Documented</span></p><p id="package-info-4">
+
+     turtlebot_bringup provides roslaunch scripts for starting the TurtleBot base functionality. 
+
+  </p><p id="package-info-5"></p><ul><li>Author: Tully Foote</li><li>License: BSD</li><li>Source: git <a href="https://github.com/turtlebot/turtlebot">https://github.com/turtlebot/turtlebot.git</a> (branch: groovy)</li></ul></div>
+<div class="version hydro" style="display: none;"><em><strong><a href="http://wiki.ros.org/turtlebot?distro=hydro">turtlebot</a></strong>: <a href="http://wiki.ros.org/linux_hardware?distro=hydro">linux_hardware</a> | turtlebot_bringup | <a href="http://wiki.ros.org/turtlebot_description?distro=hydro">turtlebot_description</a></em><br><div class="package-links"><strong>Package Links</strong><ul><li><strong><a href="http://docs.ros.org/hydro/api/turtlebot_bringup/html">Code API</a></strong></li><li><a href="http://wiki.ros.org/turtlebot_bringup/Tutorials">Tutorials</a></li><li><a href="http://answers.ros.org/questions/scope:all/sort:activity-desc/tags:turtlebot_bringup/page:1/">FAQ</a></li><li><a href="http://docs.ros.org/hydro/changelogs/turtlebot_bringup/changelog.html">Changelog</a></li><li><a href="http://wiki.ros.org/turtlebot/ChangeList">Change List</a></li><li><a class="nonexistent" href="http://wiki.ros.org/turtlebot_bringup/Reviews">Reviews</a></li></ul><script type="text/javascript" src="turtlebot_bringup%20-%20ROS%20Wiki_files/roswiki.js"></script><strong><a href="#" onclick="toggleExpandable('hydrodependencies-list'); return false;">Dependencies</a> (15)</strong><br><div id="hydrodependencies-list" style="display:none"><ul><li><a href="http://wiki.ros.org/catkin?distro=hydro">catkin</a></li><li><a href="http://wiki.ros.org/create_node?distro=hydro">create_node</a></li><li><a href="http://wiki.ros.org/depthimage_to_laserscan?distro=hydro">depthimage_to_lasers...</a></li><li><a href="http://wiki.ros.org/diagnostic_aggregator?distro=hydro">diagnostic_aggregato...</a></li><li><a href="http://wiki.ros.org/kobuki_bumper2pc?distro=hydro">kobuki_bumper2pc</a></li><li><a href="http://wiki.ros.org/kobuki_node?distro=hydro">kobuki_node</a></li><li><a href="http://wiki.ros.org/kobuki_safety_controller?distro=hydro">kobuki_safety_contro...</a></li><li><a href="http://wiki.ros.org/linux_hardware?distro=hydro">linux_hardware</a></li><li><a href="http://wiki.ros.org/openni_launch?distro=hydro">openni_launch</a></li><li><a href="http://wiki.ros.org/robot_pose_ekf?distro=hydro">robot_pose_ekf</a></li><li><a href="http://wiki.ros.org/robot_state_publisher?distro=hydro">robot_state_publishe...</a></li><li><a href="http://wiki.ros.org/rocon_app_manager?distro=hydro">rocon_app_manager</a></li><li><a href="http://wiki.ros.org/turtlebot_description?distro=hydro">turtlebot_descriptio...</a></li><li><a href="http://wiki.ros.org/yocs_cmd_vel_mux?distro=hydro">yocs_cmd_vel_mux</a></li><li><a href="http://wiki.ros.org/zeroconf_avahi?distro=hydro">zeroconf_avahi</a></li></ul></div><strong><a href="#" onclick="toggleExpandable('hydroused-by-list'); return false;">Used by</a> (15)</strong><br><div id="hydroused-by-list" style="display:none"><ul><li><a href="http://wiki.ros.org/roomba_robin_bringup?distro=hydro">roomba_robin_bringup...</a></li><li><a href="http://wiki.ros.org/roomba_robin_gazebo?distro=hydro">roomba_robin_gazebo</a></li><li><a href="http://wiki.ros.org/roomba_robin_interactive_markers?distro=hydro">roomba_robin_interac...</a></li><li><a href="http://wiki.ros.org/roomba_robin_rviz_launchers?distro=hydro">roomba_robin_rviz_la...</a></li><li><a href="http://wiki.ros.org/turtlebot?distro=hydro">turtlebot</a></li><li><a href="http://wiki.ros.org/turtlebot_actions?distro=hydro">turtlebot_actions</a></li><li><a href="http://wiki.ros.org/turtlebot_calibration?distro=hydro">turtlebot_calibratio...</a></li><li><a href="http://wiki.ros.org/turtlebot_core_apps?distro=hydro">turtlebot_core_apps</a></li><li><a href="http://wiki.ros.org/turtlebot_follower?distro=hydro">turtlebot_follower</a></li><li><a href="http://wiki.ros.org/turtlebot_gazebo?distro=hydro">turtlebot_gazebo</a></li><li><a href="http://wiki.ros.org/turtlebot_interactive_markers?distro=hydro">turtlebot_interactiv...</a></li><li><a href="http://wiki.ros.org/turtlebot_navigation?distro=hydro">turtlebot_navigation...</a></li><li><a href="http://wiki.ros.org/turtlebot_panorama?distro=hydro">turtlebot_panorama</a></li><li><a href="http://wiki.ros.org/turtlebot_rviz_launchers?distro=hydro">turtlebot_rviz_launc...</a></li><li><a href="http://wiki.ros.org/turtlebot_teleop?distro=hydro">turtlebot_teleop</a></li></ul></div></div><h1>Package Summary</h1><p><span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Released</span>
+<span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Continuous integration</span>
+<span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Documented</span></p><p id="package-info-6">turtlebot_bringup provides roslaunch scripts for starting the TurtleBot base functionality.</p><p id="package-info-7"></p><ul><li>Maintainer status: developed</li><li>Maintainer: Daniel Stonier &lt;d.stonier AT gmail DOT com&gt;</li><li>Author: Tully Foote</li><li>License: BSD</li><li>Bug / feature tracker:  <a href="https://github.com/turtlebot/turtlebot/issues">https://github.com/turtlebot/turtlebot/issues</a></li><li>Source: git <a href="https://github.com/turtlebot/turtlebot">https://github.com/turtlebot/turtlebot.git</a> (branch: hydro)</li></ul></div>
+<div class="version indigo" style="display: none;"><em><strong><a href="http://wiki.ros.org/turtlebot?distro=indigo">turtlebot</a></strong>: turtlebot_bringup | <a href="http://wiki.ros.org/turtlebot_capabilities?distro=indigo">turtlebot_capabilities</a> | <a href="http://wiki.ros.org/turtlebot_description?distro=indigo">turtlebot_description</a> | <a href="http://wiki.ros.org/turtlebot_teleop?distro=indigo">turtlebot_teleop</a></em><br><div class="package-links"><strong>Package Links</strong><ul><li><strong><a href="http://docs.ros.org/indigo/api/turtlebot_bringup/html">Code API</a></strong></li><li><a href="http://wiki.ros.org/turtlebot_bringup/Tutorials">Tutorials</a></li><li><a href="http://answers.ros.org/questions/scope:all/sort:activity-desc/tags:turtlebot_bringup/page:1/">FAQ</a></li><li><a href="http://docs.ros.org/indigo/changelogs/turtlebot_bringup/changelog.html">Changelog</a></li><li><a href="http://wiki.ros.org/turtlebot/ChangeList">Change List</a></li><li><a class="nonexistent" href="http://wiki.ros.org/turtlebot_bringup/Reviews">Reviews</a></li></ul><script type="text/javascript" src="turtlebot_bringup%20-%20ROS%20Wiki_files/roswiki.js"></script><strong><a href="#" onclick="toggleExpandable('indigodependencies-list'); return false;">Dependencies</a> (21)</strong><br><div id="indigodependencies-list" style="display:none"><ul><li><a href="http://wiki.ros.org/astra_launch?distro=indigo">astra_launch</a></li><li><a href="http://wiki.ros.org/catkin?distro=indigo">catkin</a></li><li><a href="http://wiki.ros.org/create_node?distro=indigo">create_node</a></li><li><a href="http://wiki.ros.org/depthimage_to_laserscan?distro=indigo">depthimage_to_lasers...</a></li><li><a href="http://wiki.ros.org/diagnostic_aggregator?distro=indigo">diagnostic_aggregato...</a></li><li><a href="http://wiki.ros.org/freenect_launch?distro=indigo">freenect_launch</a></li><li><a href="http://wiki.ros.org/kobuki_bumper2pc?distro=indigo">kobuki_bumper2pc</a></li><li><a href="http://wiki.ros.org/kobuki_capabilities?distro=indigo">kobuki_capabilities</a></li><li><a href="http://wiki.ros.org/kobuki_node?distro=indigo">kobuki_node</a></li><li><a href="http://wiki.ros.org/kobuki_safety_controller?distro=indigo">kobuki_safety_contro...</a></li><li><a href="http://wiki.ros.org/laptop_battery_monitor?distro=indigo">laptop_battery_monit...</a></li><li><a href="http://wiki.ros.org/openni2_launch?distro=indigo">openni2_launch</a></li><li><a href="http://wiki.ros.org/realsense_camera?distro=indigo">realsense_camera</a></li><li><a href="http://wiki.ros.org/robot_pose_ekf?distro=indigo">robot_pose_ekf</a></li><li><a href="http://wiki.ros.org/robot_state_publisher?distro=indigo">robot_state_publishe...</a></li><li><a href="http://wiki.ros.org/rocon_app_manager?distro=indigo">rocon_app_manager</a></li><li><a href="http://wiki.ros.org/rocon_bubble_icons?distro=indigo">rocon_bubble_icons</a></li><li><a href="http://wiki.ros.org/turtlebot_capabilities?distro=indigo">turtlebot_capabiliti...</a></li><li><a href="http://wiki.ros.org/turtlebot_description?distro=indigo">turtlebot_descriptio...</a></li><li><a href="http://wiki.ros.org/yocs_cmd_vel_mux?distro=indigo">yocs_cmd_vel_mux</a></li><li><a href="http://wiki.ros.org/zeroconf_avahi?distro=indigo">zeroconf_avahi</a></li></ul></div><strong><a href="#" onclick="toggleExpandable('indigoused-by-list'); return false;">Used by</a> (14)</strong><br><div id="indigoused-by-list" style="display:none"><ul><li><a href="http://wiki.ros.org/cartographer_turtlebot?distro=indigo">cartographer_turtleb...</a></li><li><a href="http://wiki.ros.org/turtlebot?distro=indigo">turtlebot</a></li><li><a href="http://wiki.ros.org/turtlebot_actions?distro=indigo">turtlebot_actions</a></li><li><a href="http://wiki.ros.org/turtlebot_calibration?distro=indigo">turtlebot_calibratio...</a></li><li><a href="http://wiki.ros.org/turtlebot_follower?distro=indigo">turtlebot_follower</a></li><li><a href="http://wiki.ros.org/turtlebot_gazebo?distro=indigo">turtlebot_gazebo</a></li><li><a href="http://wiki.ros.org/turtlebot_interactive_markers?distro=indigo">turtlebot_interactiv...</a></li><li><a href="http://wiki.ros.org/turtlebot_navigation?distro=indigo">turtlebot_navigation...</a></li><li><a href="http://wiki.ros.org/turtlebot_panorama?distro=indigo">turtlebot_panorama</a></li><li><a href="http://wiki.ros.org/turtlebot_rapps?distro=indigo">turtlebot_rapps</a></li><li><a href="http://wiki.ros.org/turtlebot_rviz_launchers?distro=indigo">turtlebot_rviz_launc...</a></li><li><a href="http://wiki.ros.org/turtlebot_stage?distro=indigo">turtlebot_stage</a></li><li><a href="http://wiki.ros.org/turtlebot_stdr?distro=indigo">turtlebot_stdr</a></li><li><a href="http://wiki.ros.org/turtlebot_teleop?distro=indigo">turtlebot_teleop</a></li></ul></div><script type="text/javascript" src="turtlebot_bringup%20-%20ROS%20Wiki_files/roswiki.js"></script><strong><a href="#" onclick="toggleExpandableJenkins('stack-indigojenkins-list'); return false;">Jenkins jobs</a> (6)</strong><br><div id="stack-indigojenkins-list" style="display:none"><ul><li><a href="http://build.ros.org/view/Isrc_uT/job/Isrc_uT__turtlebot_bringup__ubuntu_trusty__source">source ubuntu trusty</a></li><li><a href="http://build.ros.org/view/Ibin_arm_uThf/job/Ibin_arm_uThf__turtlebot_bringup__ubuntu_trusty_armhf__binary">binary ubuntu trusty armhf</a></li><li><a href="http://build.ros.org/view/Ibin_uT32/job/Ibin_uT32__turtlebot_bringup__ubuntu_trusty_i386__binary">binary ubuntu trusty i386</a></li><li><a href="http://build.ros.org/view/Ibin_uT64/job/Ibin_uT64__turtlebot_bringup__ubuntu_trusty_amd64__binary">binary ubuntu trusty amd64</a></li><li><a href="http://build.ros.org/view/Idev/job/Idev__turtlebot__ubuntu_trusty_amd64">devel ubuntu trusty amd64</a></li><li><a href="http://build.ros.org/view/Idoc/job/Idoc__turtlebot__ubuntu_trusty_amd64">doc</a></li></ul></div></div><h1>Package Summary</h1><p><span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Released</span>
+<span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Continuous integration</span>
+<span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Documented</span></p><p id="package-info-8">turtlebot_bringup provides roslaunch scripts for starting the TurtleBot base functionality.</p><p id="package-info-9"></p><ul><li>Maintainer status: developed</li><li>Maintainer: Daniel Stonier &lt;d.stonier AT gmail DOT com&gt;</li><li>Author: Tully Foote</li><li>License: BSD</li><li>Bug / feature tracker:  <a href="https://github.com/turtlebot/turtlebot/issues">https://github.com/turtlebot/turtlebot/issues</a></li><li>Source: git <a href="https://github.com/turtlebot/turtlebot">https://github.com/turtlebot/turtlebot.git</a> (branch: indigo)</li></ul></div>
+<div class="version jade" style="display: none;">Cannot load information on <strong>name: turtlebot_bringup, distro: jade</strong>, which means that it is not yet in our index. Please see <a href="http://wiki.ros.org/rosdistro/Tutorials/Indexing%20Your%20ROS%20Repository%20for%20Documentation%20Generation">this page</a> for information on how to submit your repository to our index.</div>
+<div class="version kinetic" style="display: block;"><em><strong><a href="http://wiki.ros.org/turtlebot?distro=kinetic">turtlebot</a></strong>: turtlebot_bringup | <a href="http://wiki.ros.org/turtlebot_capabilities?distro=kinetic">turtlebot_capabilities</a> | <a href="http://wiki.ros.org/turtlebot_description?distro=kinetic">turtlebot_description</a> | <a href="http://wiki.ros.org/turtlebot_teleop?distro=kinetic">turtlebot_teleop</a></em><br><div class="package-links"><strong>Package Links</strong><ul><li><strong><a href="http://docs.ros.org/kinetic/api/turtlebot_bringup/html">Code API</a></strong></li><li><a href="http://wiki.ros.org/turtlebot_bringup/Tutorials">Tutorials</a></li><li><a href="http://answers.ros.org/questions/scope:all/sort:activity-desc/tags:turtlebot_bringup/page:1/">FAQ</a></li><li><a href="http://docs.ros.org/kinetic/changelogs/turtlebot_bringup/changelog.html">Changelog</a></li><li><a href="http://wiki.ros.org/turtlebot/ChangeList">Change List</a></li><li><a class="nonexistent" href="http://wiki.ros.org/turtlebot_bringup/Reviews">Reviews</a></li></ul><script type="text/javascript" src="turtlebot_bringup%20-%20ROS%20Wiki_files/roswiki.js"></script><strong><a href="#" onclick="toggleExpandable('kineticdependencies-list'); return false;">Dependencies</a> (21)</strong><br><div id="kineticdependencies-list" style="display:none"><ul><li><a href="http://wiki.ros.org/astra_launch?distro=kinetic">astra_launch</a></li><li><a href="http://wiki.ros.org/catkin?distro=kinetic">catkin</a></li><li><a href="http://wiki.ros.org/create_node?distro=kinetic">create_node</a></li><li><a href="http://wiki.ros.org/depthimage_to_laserscan?distro=kinetic">depthimage_to_lasers...</a></li><li><a href="http://wiki.ros.org/diagnostic_aggregator?distro=kinetic">diagnostic_aggregato...</a></li><li><a href="http://wiki.ros.org/freenect_launch?distro=kinetic">freenect_launch</a></li><li><a href="http://wiki.ros.org/kobuki_bumper2pc?distro=kinetic">kobuki_bumper2pc</a></li><li><a href="http://wiki.ros.org/kobuki_capabilities?distro=kinetic">kobuki_capabilities</a></li><li><a href="http://wiki.ros.org/kobuki_node?distro=kinetic">kobuki_node</a></li><li><a href="http://wiki.ros.org/kobuki_safety_controller?distro=kinetic">kobuki_safety_contro...</a></li><li><a href="http://wiki.ros.org/laptop_battery_monitor?distro=kinetic">laptop_battery_monit...</a></li><li><a href="http://wiki.ros.org/openni2_launch?distro=kinetic">openni2_launch</a></li><li><a href="http://wiki.ros.org/realsense_camera?distro=kinetic">realsense_camera</a></li><li><a href="http://wiki.ros.org/robot_pose_ekf?distro=kinetic">robot_pose_ekf</a></li><li><a href="http://wiki.ros.org/robot_state_publisher?distro=kinetic">robot_state_publishe...</a></li><li><a href="http://wiki.ros.org/rocon_app_manager?distro=kinetic">rocon_app_manager</a></li><li><a href="http://wiki.ros.org/rocon_bubble_icons?distro=kinetic">rocon_bubble_icons</a></li><li><a href="http://wiki.ros.org/turtlebot_capabilities?distro=kinetic">turtlebot_capabiliti...</a></li><li><a href="http://wiki.ros.org/turtlebot_description?distro=kinetic">turtlebot_descriptio...</a></li><li><a href="http://wiki.ros.org/yocs_cmd_vel_mux?distro=kinetic">yocs_cmd_vel_mux</a></li><li><a href="http://wiki.ros.org/zeroconf_avahi?distro=kinetic">zeroconf_avahi</a></li></ul></div><strong><a href="#" onclick="toggleExpandable('kineticused-by-list'); return false;">Used by</a> (12)</strong><br><div id="kineticused-by-list" style="display:none"><ul><li><a href="http://wiki.ros.org/turtlebot?distro=kinetic">turtlebot</a></li><li><a href="http://wiki.ros.org/turtlebot_actions?distro=kinetic">turtlebot_actions</a></li><li><a href="http://wiki.ros.org/turtlebot_calibration?distro=kinetic">turtlebot_calibratio...</a></li><li><a href="http://wiki.ros.org/turtlebot_follower?distro=kinetic">turtlebot_follower</a></li><li><a href="http://wiki.ros.org/turtlebot_gazebo?distro=kinetic">turtlebot_gazebo</a></li><li><a href="http://wiki.ros.org/turtlebot_interactive_markers?distro=kinetic">turtlebot_interactiv...</a></li><li><a href="http://wiki.ros.org/turtlebot_navigation?distro=kinetic">turtlebot_navigation...</a></li><li><a href="http://wiki.ros.org/turtlebot_rapps?distro=kinetic">turtlebot_rapps</a></li><li><a href="http://wiki.ros.org/turtlebot_rviz_launchers?distro=kinetic">turtlebot_rviz_launc...</a></li><li><a href="http://wiki.ros.org/turtlebot_stage?distro=kinetic">turtlebot_stage</a></li><li><a href="http://wiki.ros.org/turtlebot_stdr?distro=kinetic">turtlebot_stdr</a></li><li><a href="http://wiki.ros.org/turtlebot_teleop?distro=kinetic">turtlebot_teleop</a></li></ul></div><script type="text/javascript" src="turtlebot_bringup%20-%20ROS%20Wiki_files/roswiki.js"></script><strong><a href="#" onclick="toggleExpandableJenkins('stack-kineticjenkins-list'); return false;">Jenkins jobs</a> (10)</strong><br><div id="stack-kineticjenkins-list" style="display:none"><ul><li><a href="http://build.ros.org/view/Ksrc_uX/job/Ksrc_uX__turtlebot_bringup__ubuntu_xenial__source">source ubuntu xenial</a></li><li><a href="http://build.ros.org/view/Ksrc_dJ/job/Ksrc_dJ__turtlebot_bringup__debian_jessie__source">source debian jessie</a></li><li><a href="http://build.ros.org/view/Kbin_uX64/job/Kbin_uX64__turtlebot_bringup__ubuntu_xenial_amd64__binary">binary ubuntu xenial amd64</a></li><li><a href="http://build.ros.org/view/Kbin_uX32/job/Kbin_uX32__turtlebot_bringup__ubuntu_xenial_i386__binary">binary ubuntu xenial i386</a></li><li><a href="http://build.ros.org/view/Kbin_dj_dJ64/job/Kbin_dj_dJ64__turtlebot_bringup__debian_jessie_amd64__binary">binary debian jessie amd64</a></li><li><a href="http://build.ros.org/view/Kbin_djv8_dJv8/job/Kbin_djv8_dJv8__turtlebot_bringup__debian_jessie_arm64__binary">binary debian jessie arm64</a></li><li><a href="http://build.ros.org/view/Kbin_uxhf_uXhf/job/Kbin_uxhf_uXhf__turtlebot_bringup__ubuntu_xenial_armhf__binary">binary ubuntu xenial armhf</a></li><li><a href="http://build.ros.org/view/Kbin_uxv8_uXv8/job/Kbin_uxv8_uXv8__turtlebot_bringup__ubuntu_xenial_arm64__binary">binary ubuntu xenial arm64</a></li><li><a href="http://build.ros.org/view/Kdev/job/Kdev__turtlebot__ubuntu_xenial_amd64">devel ubuntu xenial amd64</a></li><li><a href="http://build.ros.org/view/Kdoc/job/Kdoc__turtlebot__ubuntu_xenial_amd64">doc</a></li></ul></div></div><h1>Package Summary</h1><p><span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Released</span>
+<span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Continuous integration</span>
+<span class="badge" style="background-color: #5cb85c;"><span class="glyphicon glyphicon-ok" style="color: white;"></span> Documented</span></p><p id="package-info-10">turtlebot_bringup provides roslaunch scripts for starting the TurtleBot base functionality.</p><p id="package-info-11"></p><ul><li>Maintainer status: maintained</li><li>Maintainer: Daniel Stonier &lt;d.stonier AT gmail DOT com&gt;</li><li>Author: Tully Foote</li><li>License: BSD</li><li>Bug / feature tracker:  <a href="https://github.com/turtlebot/turtlebot/issues">https://github.com/turtlebot/turtlebot/issues</a></li><li>Source: git <a href="https://github.com/turtlebot/turtlebot">https://github.com/turtlebot/turtlebot.git</a> (branch: kinetic)</li></ul></div>
+<div class="version lunar" style="display: none;">Cannot load information on <strong>name: turtlebot_bringup, distro: lunar</strong>, which means that it is not yet in our index. Please see <a href="http://wiki.ros.org/rosdistro/Tutorials/Indexing%20Your%20ROS%20Repository%20for%20Documentation%20Generation">this page</a> for information on how to submit your repository to our index.</div>
+<div class="version melodic" style="display: none;">Cannot load information on <strong>name: turtlebot_bringup, distro: melodic</strong>, which means that it is not yet in our index. Please see <a href="http://wiki.ros.org/rosdistro/Tutorials/Indexing%20Your%20ROS%20Repository%20for%20Documentation%20Generation">this page</a> for information on how to submit your repository to our index.</div><p class="line874"> <span class="anchor" id="line-2"></span></p><div class="table-of-contents"><p class="table-of-contents-heading">Contents</p><ol><li>
+<a href="#TurtleBot_Bringup">TurtleBot Bringup</a></li><li>
+<a href="#Launch_Files">Launch Files</a></li></ol></div><p class="line874"> <span class="anchor" id="line-3"></span><span class="anchor" id="line-4"></span><span class="anchor" id="line-5"></span></p><p class="line867">
+</p><h2 id="TurtleBot_Bringup">TurtleBot Bringup</h2>
+<span class="anchor" id="line-6"></span><p class="line862">Follow the <a class="nonexistent" href="http://wiki.ros.org/turtlebot_bringup/Tutorials/TurtleBot%20Bringup">bringup tutorial</a> to start your TurtleBot. <span class="anchor" id="line-7"></span><span class="anchor" id="line-8"></span></p><p class="line867">
+</p><h2 id="Launch_Files">Launch Files</h2>
+<span class="anchor" id="line-9"></span><ul><li><p class="line891"><strong>minimal.launch</strong> - The base launch file for TurtleBot. Starts the basic nodes (<a href="http://wiki.ros.org/kobuki_node">kobuki_node</a> or <a href="http://wiki.ros.org/create_node">create_node</a>), <a class="http" href="http://www.ros.org/wiki/turtlebot_node#laptop_battery_monitor">laptop_battery_monitor</a>, <a href="http://wiki.ros.org/robot_state_publisher">robot_state_publisher</a>, <a href="http://wiki.ros.org/diagnostic_aggregator">diagnostic_aggregator</a>, and <a href="http://wiki.ros.org/robot_pose_ekf">robot_pose_ekf</a>. Includes app_manager.launch. <span class="anchor" id="line-10"></span></p></li></ul><p class="line867"><span class="anchor" id="line-11"></span><span class="anchor" id="line-12"></span></p><div class="version electric fuerte" style="display: none;"><span class="anchor" id="line-1-1"></span><ul><li><p class="line891"><strong>kinect.launch</strong> - The kinect launch file. Starts all the nodes/nodelets required to use the kinect as a laser scanner and camera, <a href="http://wiki.ros.org/openni_camera">openni_camera</a>, <a class="http" href="http://www.ros.org/wiki/pointcloud_to_laserscan#cloud_to_scan">cloud_to_scan</a>, and <a class="http" href="http://www.ros.org/wiki/pointcloud_to_laserscan#cloud_throttle">cloud_throttle</a>. </p></li></ul></div><span class="anchor" id="line-13"></span><p class="line867"><span class="anchor" id="line-14"></span><span class="anchor" id="line-15"></span></p><div class="version groovy" style="display: none;"><span class="anchor" id="line-1-2"></span><ul><li><p class="line891"><strong>3dsensor.launch</strong>
+ - The 3D sensor launch file. Starts all the nodes/nodelets required to 
+use the Microsoft Kinect or ASUS Xtion as a laser scanner and camera: <a href="http://wiki.ros.org/openni_camera">openni_camera</a> and <a class="http" href="http://www.ros.org/wiki/depthimage_to_laserscan">depthimage_to_laserscan</a>. </p></li></ul></div><span class="anchor" id="line-16"></span><ul><li><p class="line891"><strong>app_manager.launch</strong> - Starts the TurtleBot app managers and loads the TurtleBot app list.  <span class="anchor" id="line-17"></span><span class="anchor" id="line-18"></span></p></li></ul><p class="line867"><span class="anchor" id="line-19"></span></p><p class="line867"><span class="anchor" id="line-20"></span><span class="anchor" id="bottom"></span></p></div></div>
+<div id="pagebottom"></div>
+</div>
+
+<p id="pageinfo" class="info" dir="ltr" lang="en">Wiki: turtlebot_bringup  (last edited 2013-06-21 00:23:13 by <span title="jihoonl @ 106.240.238.35[106.240.238.35]"><a href="http://wiki.ros.org/jihoonl" title="jihoonl @ 106.240.238.35[106.240.238.35]">jihoonl</a></span>)</p>
+
+
+
+
+<div style="margin-top: 9px;" class="footer">
+Except where otherwise noted, the ROS wiki is licensed under the <br><a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a> | <a href="https://plus.google.com/113789706402978299308" rel="publisher">Find us on Google+</a>
+<hr style="margin-top: 10px;">
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+<a href="http://www.osrfoundation.org/"><img style="margin-top: -1px;" src="turtlebot_bringup%20-%20ROS%20Wiki_files/brought_by_horiz.png"><p></p></a>
+  </div>
+</div>
+</div>
+
+  </div> <!-- /#dpage-inner, /#dpage -->
+
+
+
+
+
+</body></html>
