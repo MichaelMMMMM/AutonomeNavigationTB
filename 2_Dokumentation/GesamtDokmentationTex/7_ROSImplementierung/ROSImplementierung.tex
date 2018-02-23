@@ -1,0 +1,16 @@
+\chapter{ROS Implementierung}
+Nachdem in den vorherigen Kapiteln die theoretischen Grundlagen der Navigationsalgorithmen erläutert wurden, widmet sich dieser Teil der Arbeit der Umsetzung der Konzepte in ROS. Zunächst wird der Aufbau des Systems, Anordnung der Rechner und die Netzwerkkonfiguration betrachtet. Im Anschluss werden die Roboter schrittweise in Betrieb genommen, wobei die relevanten Dateien erklärt werden und  ein Schritt für Schritt Anleitung gezeigt wird.
+
+Als erste Demonstration wird die Fernsteuerung der Roboter betrachtet, wofür eine Launch-Datei zur Initialisierung der Turtlebots angelegt wird. Außerdem wird auf dem Master eine Anwendung ausgeführt, um den Roboter per Tastatur zu steuern.
+Im nächsten Schritt wird die Kartenaufzeichnung implementiert. Hier wird auf dem Master-PC zusätzlich das Paket \lstinline{hector_mapping}{} ausgeführt, welches die Karte erstellt. Außerdem wird \lstinline{Rviz}{} verwendet, um die aktuelle Karte und Roboterposition zu visualisieren.
+Im dritten Anwendungsbeispiel wird die zuvor aufgezeichnete Karte für die autonome Navigation genutzt. Hierfür wird auf Seite des Master die vollständigen Navigationsalgorithmen konfiguriert und ausgeführt. Außerdem zeigt \lstinline{Rviz}{} in diesem Beispiel nicht nur die Karte und den Roboter an, sondern dient auch als Eingabemöglichkeit für die Zielposition.
+
+Im Anschluss wird der Endszenario diskutiert, in dem zwei Robotern simultan navigieren. Hier entsteht auf ROS-Seite das Problem, dass Konflikte in der Namensgebung von Nachrichten und Topics entstehen. Eine mögliche Lösung stellen die unter ROS verfügbaren Namensräume dar, wodurch die Daten der beiden Roboter entkoppelt werden können. Allerdings sind in der Umsetzung dieses Lösungsansatzes Probleme mit der Lokalisierung aufgetreten, die bisher noch nicht erklärt bzw. gelöst werden konnten. An dieser Stelle wird der Fehlerfall aufgezeigt und mögliche Lösungen analysiert.
+
+Als eine Lösung für das Problem werden unterschiedliche Launch-Dateien für die beiden Robotern angelegt, in denen die Nachrichtennamen den Robotern angepasst werden. Hierbei handelt es sich um eine recht umständliche und unflexible Lösung, die allerdings funktioniert. \pdfcomment{Nicht gut; aber geht}
+
+\newpage
+\input{1_Systemstruktur}
+
+\newpage
+\input{2_Inbetriebnahme}
