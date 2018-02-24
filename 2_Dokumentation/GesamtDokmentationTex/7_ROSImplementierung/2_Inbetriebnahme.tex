@@ -225,3 +225,116 @@ Um die Navigation auszuführen, muss die beiden Launch-Dateien auf Slave und Mas
 [S] roslaunch EML_Navigation_Slave  EML_Navigation_Slave.launch
 [M] roslaunch EML_Navigation_Master EML_Navigation_Master.launch
 \end{lstlisting}
+
+\subsection{Navigation mehrerer Roboter}
+Das Endziel dieser Arbeit besteht darin, dass zwei Roboter sich simultan durch einen Raum bewegen. Dabei kommunizieren beide Geräte über dasselbe ROS-Netzwerk, weshalb Namenskonflikte bei der Nachrichtenkommunikation auftreten. Beispielsweise wird die Topic \lstinline{scan}{}, welche die Laserscandaten enthält, von beiden Robotern veröffentlicht, wenn die obige Launch-Datei auf beiden Slave-PCs ausgeführt wird. So kann bei der Auswertung der Sensordaten nicht mehr zwischen den beiden Robotern differenziert werden.
+
+Eine mögliche Lösung stellen die \lstinline{group}{}-Tags \cite{WikiGroup} unter ROS dar, mit denen jeder ROS-Node ein Namensraum zugeordnet werden kann. Als erstes Beispiel dient die Launch-Datei \lstinline{EML_NS_Hardware_Init_Slave.launch}{} auf dem Slave, welche die Hardware unter der Verwendung eines Namensraum initialisiert.
+\begin{lstlisting}[caption={EML\_NS\_Hardware\_Init\_Slave.launch},captionpos=b]
+<launch>
+        <arg name="namespace" default="Robot"/>
+        <group ns="$(arg namespace)">
+                <!-- Basis-Initialisierung -->
+                <include file="$(find turtlebot_bringup)/ ...
+                		launch/minimal.launch"/>
+
+                <!-- Initialisierung des SICK-TIM551 -->
+                <param name="robot_description" command= ...
+                		"$(find xacro)/xacro.py '$(find  ...
+                		sick_tim)/urdf/example.urdf.xacro'"/>
+                <include file="$(find turtlebot_chor_ ...
+                		navigation)/launch/include/   ...
+                		sick_tim551_2050001_timefix.launch"/>
+        </group>
+</launch>
+\end{lstlisting}
+Die Launch-Datei kann mit dem zusätzlichen Argument \lstinline{namespace}{} gestartet werden, wodurch der Namensraum der Knoten festgelegt wird. So führt der Befehl
+\begin{lstlisting}
+roslaunch EML_Navigation_Slave  ...
+		EML_NS_Hardware_Init_Slave.launch namespace:="R4"
+\end{lstlisting}
+dazu, dass jeder Topic der Präfix \lstinline{/R4/}{} hinzugefügt wird, wodurch eine klare Zuordnung zwischen Nachricht und Roboter erfolgt. Auf dem zweiten Roboter muss lediglich der \lstinline{namespace}{}-Parameter angepasst werden.
+
+Ebenso wird auf dem Master die Launch-Datei \lstinline{EML_NS_Teleop_Master.launch}{} angelegt, womit die Fernsteuerung der Roboter unter Namensräumen erfolgen kann.
+\begin{lstlisting}[caption={EML\_NS\_Teleop\_Master.launch},captionpos=b]
+<launch>
+        <arg name="namespace" default="Robot"/>
+        <group ns="$(arg namespace)">
+                <include file="$(find turtlebot_teleop)/ ...
+                		launch/keyboard_teleop.launch"/>
+        </group>
+</launch>
+\end{lstlisting}
+Prinzipiell sollte es möglich sein, die Navigation nach demselben Ansatz mit einem Namensraum zu versehen und dadurch die beiden Roboter zu entkoppeln. Hierfür wird die Slave-Datei \lstinline{EML_NS_Navigation_Slave.launch}{} angelegt.
+\begin{lstlisting}[caption={EML\_NS\_Navigation\_Slave.launch},captionpos=b]
+<launch>
+	<arg name="namespace" default="Robot"/>
+    <group ns="$(arg namespace)">
+    	<!-- Map-Server -->
+        <arg name="map_file" default="$(find EML_Navigation_ ...
+        	Master)/maps/test_map.yaml"/>
+        <node name="map_server" pkg="map_server" ...
+        	type="map_server" args="$(arg map_file)"/>
+
+		<!-- AMC-Localization -->
+        <arg name="3d_sensor" default="$ ...
+        	(env TURTLEBOT_3D_SENSOR)"/>
+        <arg name="initial_pose_x" default="0.0"/>
+        <arg name="initial_pose_y" default="0.0"/>
+        <arg name="initial_pose_a" default="0.0"/>
+        <arg name="custom_amcl_launch_file" ...
+        	default="$(find turtlebot_navigation)/launch/ ...
+        	includes/amcl/$(arg 3d_sensor)_amcl.launch.xml"/>
+
+        <include file="$(arg custom_amcl_launch_file)">
+        <arg name="initial_pose_x" value= ...
+        	"$(arg initial_pose_x)"/>
+        <arg name="initial_pose_y" value= ...
+        	"$(arg initial_pose_y)"/>
+        <arg name="initial_pose_a" value= ...
+        	"$(arg initial_pose_a)"/>
+        <arg name="odom_frame_id" value="odom"/>
+        <arg name="base_frame_id" value="base_footprint"/>
+        <arg name="global_frame_id" value="map"/>
+        <!-- arg name="scan_topic" value= ...
+        	"$(arg namespace)/scan"/-->
+        <!-- param name="tf_prefix" value=...
+        	"$(arg namespace)"/-->
+        <arg name="use_map_topic" value="true"/>
+        </include>
+
+		<!-- Static Transform from base_footprint to base_link -->
+        <node pkg="tf" type="static_transform_publisher" ...
+        	name="base_link_footprint_tf_broadcaster"    ...
+        	args="0 0 .5 0 0 0 1 base_footprint base_link 100"/>
+
+        <!-- Rviz -->
+        <node name="rviz" pkg="rviz" type="rviz" args="-d ...
+        	$(find turtlebot_rviz_launchers)/ ...
+        	rviz/navigation.rviz"/>
+
+        <!-- move_base -->
+        <include file="$(find EML_Navigation_Master)/launch/...
+        	include/eml_move_base.launch"/>
+	</group>
+</launch>
+\end{lstlisting}
+An dieser Stelle entsteht das Problem, dass in der \lstinline{Rviz}{}-Konfiguration festgelegt wird, unter welchen Namen die relevanten Nachrichten veröffentlicht werden. Daraus folgt, dass ein Weg gefunden werden muss, die \lstinline{Rviz}{}-Konfiguration ebenfalls mit einem Namensraum zu parametrisieren.
+Diese Problematik kann gelöst werden, indem über die Benutzeroberfläche die fehlende Präfixe nachträglich eingefügt werden. Somit ist es möglich \lstinline{Rviz}{} an beliebige Namensräume anzupassen. Aus praktikablen Gründen bietet es sich an, die Konfigurationen zu speichern und nach Programmstart manuell zu laden, um den Aufwand einer manuellen Rekonfiguration zu ersparen.
+
+Als zweites Problem sind die \lstinline{tf}{}-Transformationen zu nennen, bei denen ebenfalls Namenskonflikte entstehen. ROS verwendet einen so genannten Transformation-Tree bzw. \lstinline{tf}{}-Tree, um die Position von Objekten darzustellen. Bei einer Transformation - kurz \lstinline{tf}{} - handelt es sich um eine Abbildung zwischen zwei Bezugssystemen, die im Kontex von ROS als \lstinline{frames}{} bezeichnet werden. Für gewöhnlich fungiert die Karte als Intertialsystem bzw. \lstinline{fixed frame}{}. Eine Transformation gibt dann den Zusammenhang zwischen den Systemen \lstinline{map}{} und \lstinline{robot}{} wieder, wodurch die Position des Roboters festgelegt wird. Offensichtlich übernimmt diese Aufgabe die AMC-Lokalisierung. An dieser Stelle treten wieder dieselben Namenskonflikte wie bei den ROS-Nachrichten auf. Jeder Roboter benötigt einen Transformationsbaum, der von dem des anderen Roboters entkoppelt ist.
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.4\linewidth, trim={3.5cm 1cm 1cm 5cm},clip]{img/TF_Tree_no_NS.pdf}
+\caption{Transformationsbaum von Roboter 4}
+\end{figure}
+An dieser Stelle sei auf das ROS-Werkzeug \lstinline{tf}{} hingewiesen, das es ermöglicht mittels dem Befehl
+\begin{lstlisting}
+rosrun tf view_frames
+\end{lstlisting}
+Grafiken wie die obige zu generieren, wodurch die Fehlerfindung erleichtert wird. In dem aktuellen Transformationsbaum wird zuerst von \lstinline{map}{} nach \lstinline{odom}{} transformiert, wofür der AMCL-Knoten verantwortlich ist. Anschließend veröffentlicht der Knoten \lstinline{mobile_base_nodelet_manager}{} eine Transformation von \lstinline{odom}{} zu \lstinline{base_footprint}{}. Von \lstinline{base_footprint}{} wird wiederum in \lstinline{base_link}{} überführt. Veröffentlicht wird diese Transformation von \lstinline{base_link_footprint_tf_broadcaster}{}. Zuletzt erfolgt die Transformation von \lstinline{base_link}{} zu \lstinline{laser}{}, wofür der Knoten \lstinline{robot_state_publisher} \lstinline{_no_ns}{} zuständig ist. In dem Bezugssystem \lstinline{laser}{} werden die Daten des Laserscanners interpretiert. Bei \lstinline{base_footprint}{} und \lstinline{base_link}{} handelt es sich jeweils um körperfeste Bezugssysteme des Roboters, deren relative Ausrichtung zueinander konstant ist.
+
+Die Knoten \lstinline{base_link_footprint_tf_broadcaster}{} und \lstinline{robot_state_}  \lstinline{publisher_no_ns}{} werden jeweils über das Slave-Skript gestartet; \lstinline{mobile_base_}{} \lstinline{nodelet_manager}{} und \lstinline{amcl}{} von der Master-Datei aus.
+
+Ein Ansatz, um die Namenskonflikte aufzulösen, besteht darin, den Parameter \lstinline{tf_prefix}{} zu nutzen, womit ähnlich zum \lstinline{group}{}-Tag Präfixe an die Bezugssysteme der Roboter angefügt werden können.
+
