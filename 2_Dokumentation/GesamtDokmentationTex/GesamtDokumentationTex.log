@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.2)  23 FEB 2018 15:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.11.2)  24 FEB 2018 08:45
 entering extended mode
 **./GesamtDokumentationTex.tex
 (GesamtDokumentationTex.tex
@@ -1273,6 +1273,10 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 8.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 8.
+
+
+LaTeX Warning: Citation `SICK' on page 2 undefined on input line 8.
+
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 10.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1310,12 +1314,6 @@ File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/pcr/b/n' tried instead on input line 12.
 
-Overfull \hbox (25.24382pt too wide) in paragraph at lines 12--13
-[]| [][][] \T1/lmr/m/n/12 Die im Vor-gän-ger-pro-jekt er-ar-bei-te-te Na-vi-ga-
-ti-ons-lö-sung ba-siert auf dem ROS-Navigation-
- []
-
-
 Overfull \vbox (6.59328pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
@@ -1341,29 +1339,17 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 14.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 16.
+(babel)             in language  on input line 19.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 16.
+(babel)             in language  on input line 19.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 16.
+(babel)             in language  on input line 19.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 16.
+(babel)             in language  on input line 19.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 16.
+(babel)             in language  on input line 19.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 16.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 18.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 18.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 18.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 18.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 18.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 18.
+(babel)             in language  on input line 19.
 )
 Overfull \vbox (6.59328pt too high) has occurred while \output is active []
 
@@ -1744,7 +1730,7 @@ Beispiel_img1-eps-converted-to.pdf 2_GlobalPlaner/img/KorridorBeispiel_img1.eps
 (epstopdf)             \includegraphics on input line 75.
 Package epstopdf Info: Output file is already uptodate.
 
-<2_GlobalPlaner/img/KorridorBeispiel_img1-eps-converted-to.pdf, id=272, 622.325
+<2_GlobalPlaner/img/KorridorBeispiel_img1-eps-converted-to.pdf, id=282, 622.325
 pt x 544.0325pt>
 File: 2_GlobalPlaner/img/KorridorBeispiel_img1-eps-converted-to.pdf Graphic fil
 e (type pdf)
@@ -1820,7 +1806,7 @@ Beispiel_img2-eps-converted-to.pdf 2_GlobalPlaner/img/KorridorBeispiel_img2.eps
 (epstopdf)             \includegraphics on input line 85.
 Package epstopdf Info: Output file is already uptodate.
 
-<2_GlobalPlaner/img/KorridorBeispiel_img2-eps-converted-to.pdf, id=285, 343.282
+<2_GlobalPlaner/img/KorridorBeispiel_img2-eps-converted-to.pdf, id=295, 343.282
 5pt x 292.09125pt>
 File: 2_GlobalPlaner/img/KorridorBeispiel_img2-eps-converted-to.pdf Graphic fil
 e (type pdf)
@@ -1843,7 +1829,7 @@ Beispiel_img3-eps-converted-to.pdf 2_GlobalPlaner/img/KorridorBeispiel_img3.eps
 (epstopdf)             \includegraphics on input line 86.
 Package epstopdf Info: Output file is already uptodate.
 
-<2_GlobalPlaner/img/KorridorBeispiel_img3-eps-converted-to.pdf, id=286, 343.282
+<2_GlobalPlaner/img/KorridorBeispiel_img3-eps-converted-to.pdf, id=296, 343.282
 5pt x 292.09125pt>
 File: 2_GlobalPlaner/img/KorridorBeispiel_img3-eps-converted-to.pdf Graphic fil
 e (type pdf)
@@ -1866,7 +1852,7 @@ Beispiel_img4-eps-converted-to.pdf 2_GlobalPlaner/img/KorridorBeispiel_img4.eps
 (epstopdf)             \includegraphics on input line 90.
 Package epstopdf Info: Output file is already uptodate.
 
-<2_GlobalPlaner/img/KorridorBeispiel_img4-eps-converted-to.pdf, id=287, 343.282
+<2_GlobalPlaner/img/KorridorBeispiel_img4-eps-converted-to.pdf, id=297, 343.282
 5pt x 292.09125pt>
 File: 2_GlobalPlaner/img/KorridorBeispiel_img4-eps-converted-to.pdf Graphic fil
 e (type pdf)
@@ -1889,7 +1875,7 @@ Beispiel_img5-eps-converted-to.pdf 2_GlobalPlaner/img/KorridorBeispiel_img5.eps
 (epstopdf)             \includegraphics on input line 91.
 Package epstopdf Info: Output file is already uptodate.
 
-<2_GlobalPlaner/img/KorridorBeispiel_img5-eps-converted-to.pdf, id=288, 343.282
+<2_GlobalPlaner/img/KorridorBeispiel_img5-eps-converted-to.pdf, id=298, 343.282
 5pt x 292.09125pt>
 File: 2_GlobalPlaner/img/KorridorBeispiel_img5-eps-converted-to.pdf Graphic fil
 e (type pdf)
@@ -1971,7 +1957,7 @@ Beispiel_img6-eps-converted-to.pdf 2_GlobalPlaner/img/KorridorBeispiel_img6.eps
 (epstopdf)             \includegraphics on input line 117.
 Package epstopdf Info: Output file is already uptodate.
 
-<2_GlobalPlaner/img/KorridorBeispiel_img6-eps-converted-to.pdf, id=325, 335.252
+<2_GlobalPlaner/img/KorridorBeispiel_img6-eps-converted-to.pdf, id=335, 335.252
 5pt x 308.15125pt>
 File: 2_GlobalPlaner/img/KorridorBeispiel_img6-eps-converted-to.pdf Graphic fil
 e (type pdf)
@@ -2035,7 +2021,7 @@ Beispiel_img7-eps-converted-to.pdf 2_GlobalPlaner/img/KorridorBeispiel_img7.eps
 (epstopdf)             \includegraphics on input line 135.
 Package epstopdf Info: Output file is already uptodate.
 
-<2_GlobalPlaner/img/KorridorBeispiel_img7-eps-converted-to.pdf, id=354, 622.325
+<2_GlobalPlaner/img/KorridorBeispiel_img7-eps-converted-to.pdf, id=364, 622.325
 pt x 545.03625pt>
 File: 2_GlobalPlaner/img/KorridorBeispiel_img7-eps-converted-to.pdf Graphic fil
 e (type pdf)
@@ -2140,7 +2126,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 1.
 
-<3_StochastischeModelle/img/Bild_Kinematik_1.pdf, id=387, 963.6pt x 542.025pt>
+<3_StochastischeModelle/img/Bild_Kinematik_1.pdf, id=397, 963.6pt x 542.025pt>
 File: 3_StochastischeModelle/img/Bild_Kinematik_1.pdf Graphic file (type pdf)
 
 <use 3_StochastischeModelle/img/Bild_Kinematik_1.pdf>
@@ -2368,7 +2354,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 55.
 
 [32]
-<4_Kartographierung/img/Bilder_Karten_InvSensModel_1.pdf, id=541, 963.6pt x 542
+<4_Kartographierung/img/Bilder_Karten_InvSensModel_1.pdf, id=551, 963.6pt x 542
 .025pt>
 File: 4_Kartographierung/img/Bilder_Karten_InvSensModel_1.pdf Graphic file (typ
 e pdf)
@@ -2448,7 +2434,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 64.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 64.
- <2_GlobalPlaner/img/Distanz_img1.pdf, id=585, 963.72044pt x 542.025pt>
+ <2_GlobalPlaner/img/Distanz_img1.pdf, id=595, 963.72044pt x 542.025pt>
 File: 2_GlobalPlaner/img/Distanz_img1.pdf Graphic file (type pdf)
 
 <use 2_GlobalPlaner/img/Distanz_img1.pdf>
@@ -2778,19 +2764,19 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--22
+Underfull \hbox (badness 10000) in paragraph at lines 23--25
 [][]\T1/lmr/m/n/12 navfn al-go-rism[sic][]: []$\T1/pcr/m/n/12 https : / / answe
 rs . ros . org / question / 11388 /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--24
+Underfull \hbox (badness 10000) in paragraph at lines 25--27
 [][]\T1/lmr/m/n/12 costmap_2d[]: []$\T1/pcr/m/n/12 http : / / wiki . ros . org 
 / costmap _ 2d$[]\T1/lmr/m/n/12 , auf-ge-ru-fen am
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--26
+Underfull \hbox (badness 10000) in paragraph at lines 27--29
 [][]\T1/lmr/m/n/12 staticmap[]: []$\T1/pcr/m/n/12 http : / / wiki . ros . org /
  costmap _ 2d / hydro / staticmap$[]\T1/lmr/m/n/12 ,
  []
@@ -2799,16 +2785,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--26
 Overfull \vbox (6.59328pt too high) has occurred while \output is active []
 
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 33.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 33.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 33.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 30.
+(babel)             in language  on input line 33.
 
 [53]
-Underfull \hbox (badness 10000) in paragraph at lines 44--45
+Underfull \hbox (badness 10000) in paragraph at lines 47--49
 [][]\T1/lmr/m/n/12 :[] []$\T1/pcr/m/n/12 http : / / wiki . ros . org / turtlebo
 t _ navigation$[]\T1/lmr/m/n/12 , auf-ge-ru-fen am
  []
@@ -2835,43 +2821,58 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 52.
 (7_ROSImplementierung/ROSImplementierung.aux) (99_Literatur.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 52.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 52.
-Package rerunfilecheck Info: File `GesamtDokumentationTex.out' has not changed.
 
-(rerunfilecheck)             Checksum: 6F2282263D81E6B65C497EBC30392048;1657.
+
+Package rerunfilecheck Warning: File `GesamtDokumentationTex.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `GesamtDokumentationTex.out':
+(rerunfilecheck)             Before: 6F2282263D81E6B65C497EBC30392048;1657
+(rerunfilecheck)             After:  7E4999BD9952D53CAA96AB6B52D6872C;1657.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 52.
  ) 
 Here is how much of TeX's memory you used:
- 22782 strings out of 493323
- 369738 string characters out of 3139072
- 511073 words of memory out of 3000000
- 25404 multiletter control sequences out of 15000+200000
+ 22791 strings out of 493323
+ 369822 string characters out of 3139072
+ 511170 words of memory out of 3000000
+ 25410 multiletter control sequences out of 15000+200000
  104399 words of font info for 84 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,28n,103p,2131b,1940s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}{C:/Program Files/Mi
-KTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dv
-ips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.
-enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files
-/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}<C:/Program Files/MiKTeX 2.9/fonts
-/type1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/
-lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/lm/lmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/lm/lmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi7.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/
-lmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/lm/lmro12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/urw/courier/ucrb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/urw/courier/ucrr8a.pfb>
-Output written on GesamtDokumentationTex.pdf (56 pages, 1438072 bytes).
+pdfTeX warning (dest): name{chapter*.47} has been referenced but does not exi
+st, replaced by a fixed one
+
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}{C:/Program Files/MiKT
+eX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvip
+s/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.en
+c}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
+iKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}<C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/lm/lmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lm
+bx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/lm/lmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/lm/lmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi7.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lm
+r6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/lm/lmro12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/urw/courier/ucrb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/urw/courier/ucrr8a.pfb>
+Output written on GesamtDokumentationTex.pdf (56 pages, 1441216 bytes).
 PDF statistics:
- 1108 PDF objects out of 1200 (max. 8388607)
- 443 named destinations out of 1000 (max. 500000)
+ 1122 PDF objects out of 1200 (max. 8388607)
+ 446 named destinations out of 1000 (max. 500000)
  245 words of extra memory for PDF output out of 10000 (max. 10000000)
 
