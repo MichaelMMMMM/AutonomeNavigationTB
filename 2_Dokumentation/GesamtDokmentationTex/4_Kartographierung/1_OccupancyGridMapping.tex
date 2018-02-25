@@ -19,7 +19,7 @@ Für die Berechnung der Karte wird das logarithmische Verhältnis
 \begin{equation}
 l(x) = log\left[ \frac{p(m\idx{i})}{1-p(m\idx{i}} \right] = log\left[ \frac{p(m\idx{i}}{p(\neg m\idx{i}} \right]\,,
 \end{equation}
-die bei binären Zufallsvariablen  rechentechnische Vorteile mit sich bringen  \cite[S. 94 f]{ProbRob}. Bei der Kartenaufzeichnung soll das logarithmische Verhältnis $l(m\idx{i})_t$ am Zeitpunkt $t$ anhand des vergangen Wertes $l(m\idx{i})_{t-1}$, des Messvektors $\vec{z}_t$ und des Zustandsvektors $\vec{x}_t$ für alle $i$ Zellen der Karte bestimmt werden. Die gesuchte Wahrscheinlichkeit ergibt sich aus
+das bei binären Zufallsvariablen  rechentechnische Vorteile mit sich bringt  \cite[S. 94 f]{ProbRob}. Bei der Kartenaufzeichnung soll das logarithmische Verhältnis $l(m\idx{i})_t$ am Zeitpunkt $t$ anhand des vergangen Wertes $l(m\idx{i})_{t-1}$, des Messvektors $\vec{z}_t$ und des Zustandsvektors $\vec{x}_t$ für alle $i$ Zellen der Karte bestimmt werden. Die gesuchte Wahrscheinlichkeit ergibt sich aus
 \begin{equation}
 \condP{x} = 1 - \frac{1}{1+e^{l(x)_t}}\,.
 \end{equation}
@@ -33,7 +33,7 @@ Für die Herleitung des Bayes-Filter wird zunächst der Fall betrachtet, dass di
 &= \frac{\condP{\vec{z}_t}{m_i}\cdot \condP{m_i}{\vec{z}_{1:t-1}}}{\condP{\vec{z}_t}{\vec{z}_{1:t-1}}}\,.
 \end{split}
 \end{equation}
-Wie Wahrscheinlichkeit $\condP{\vec{z}_t}{m_i}$ heißt Messmodell, da sie angibt, wie wahrscheinlich ein Messwert $\vec{z}_t$ aus einer gegebenen Umgebung $m_i$ folgt. Aus Bayes-Theorem folgt wiederum
+Wie Wahrscheinlichkeit $\condP{\vec{z}_t}{m_i}$ wird als Messmodell bezeichnet, da sie angibt, wie wahrscheinlich ein Messwert $\vec{z}_t$ aus einer gegebenen Umgebung $m_i$ folgt. Aus Bayes-Theorem folgt wiederum
 \begin{equation}
 \condP{\vec{z}_t}{m_i} = \frac{\condP{m_i}{\vec{z}_t}\cdot p(\vec{z}_t}{p(m_i)}
 \end{equation}
@@ -74,4 +74,6 @@ Im inversen Messmodell werden nun drei Fälle unterschieden. Liegt eine Zelle au
 \begin{equation}
 l(m_i)_t = l(m_i)_{t-1} + l_0 - l_0 = l(m_i)_{t-1}
 \end{equation}
-führt.In dem Fall, dass die Zelle innerhalb des Messkegels liegt, wird geprüft auf welchem Messstrahl und in welcher Distanz die Zelle sich befindet. Ist der Abstand zwischen der Zelle und der gemessenen Distanz kleiner als ein Toleranzmaß $\alpha$, wird angenommen, dass die Zelle belegt ist und ein entsprechender Wert $l_{\text{occupied}}$ zurückgegeben. Liegt die Zelle mehr als $\alpha$ Einheiten vor der gemessen Distanz, gilt sie als frei und das Modell liefert den Wert $l_{\text{free}}$.
+führt; die Wahrscheinlichkeit der Zelle bleibt also unverändert. 
+
+In dem Fall, dass die Zelle innerhalb des Messkegels liegt, wird geprüft auf welchem Messstrahl und in welcher Distanz die Zelle sich befindet. Ist der Abstand zwischen der Zelle und der gemessenen Distanz kleiner als ein Toleranzmaß $\alpha$, wird angenommen, dass die Zelle belegt ist und ein entsprechender Wert $l_{\text{occupied}}$ zurückgegeben. Liegt die Zelle mehr als $\alpha$ Einheiten vor der gemessen Distanz, gilt sie als frei und das Modell liefert den Wert $l_{\text{free}}$.

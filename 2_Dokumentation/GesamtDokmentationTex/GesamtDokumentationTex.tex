@@ -2,25 +2,25 @@
 \include{0_Format}
 
 \makeatletter
-\def\input@path{{0_Introduction/}{1_Infrastruktur/}{2_GlobalPlaner/}{3_StochastischeModelle/}{4_Kartographierung/}{6_LocalPlaner/}{7_ROSImplementierung/}}
+\def\input@path{{0_Introduction/}{1_Infrastruktur/}{2_GlobalPlaner/}{3_StochastischeModelle/}{4_Kartographierung/}{6_LocalPlaner/}{7_ROSImplementierung/}{8_Lokalisierung/}{9_Ausblick/}}
 \makeatother
-\graphicspath{{0_Introduction/}{1_Infrastruktur/}{2_GlobalPlaner/}{3_StochastischeModelle/}{4_Kartographierung/}{6_LocalPlaner/}{7_ROSImplementierung/}}
+\graphicspath{{0_Introduction/}{1_Infrastruktur/}{2_GlobalPlaner/}{3_StochastischeModelle/}{4_Kartographierung/}{6_LocalPlaner/}{7_ROSImplementierung/}{8_Lokalisierung/}{9_Ausblick/}}
 
 
-%\input{0_0_Deckblatt}
+\input{0_0_Deckblatt}
 \begin{document}
 \frontmatter
 \pagestyle{scrheadings}
 \clearscrheadfoot
 \setheadsepline{0pt}
 \setfootsepline{0pt}
-%\maketitle
-%\afterpage{\null\newpage}
+\maketitle
+\afterpage{\null\newpage}
 
 \ohead{\pagemark}
 \tableofcontents
-%\listoffigures\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
-%\lstlistoflistings\addcontentsline{toc}{chapter}{Listings}
+\listoffigures\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+\lstlistoflistings\addcontentsline{toc}{chapter}{Listings}
 %\include{0_0_Nomenklatur}
 
 \mainmatter
@@ -45,6 +45,8 @@
 \include{6_LocalPlaner/LocalPlaner}
 
 \include{7_ROSImplementierung/ROSImplementierung}
+
+\include{9_Ausblick/AusblickFazit}
 
 \include{99_Literatur}
 

@@ -1,0 +1,6 @@
+\chapter{Ausblick und Fazit}
+Im Rahmen der vorliegenden Arbeit wurde das Funktionsprinzip des ROS-Navigation-Stack erläutert und an einzelnen Beispielen illustriert. Im Anschluss wurde dieses Wissen auf den gegebenen Anwendungsfall übertragen. Die Navigationsaufgabe konnte im Fall eines einzelnen Roboter erfolgreich gelöst werden. Der Roboter ist in der Lage mithilfe einer Karte durch den Raum zu navigieren, unerwartete Hindernisse zu erkennen, ihnen auszuweichen und sich selbstständig auf der Karte zu lokalisieren. Insofern wurden sämtliche Anforderungen an die Navigation erfüllt.
+
+Allerdings konnte das Ergebnis nicht auf die parallele Navigation mehrerer Roboter übertragen werden. Der Grund hierfür liegt in den Namenskonflikten der ROS-Transformationen zwischen den Robotern, die nicht vollständig aufgelöst werden konnten. In dieser Arbeit wurde versucht, mittels des ROS-Parameter \lstinline{tf_prefix}{} den Transformationen der verschiedenen Robotern Namensräume zuzuweisen, wodurch eine klare Trennung erfolgt. Allerdings hat dieser Schritt nicht die erwarteten Ergebnisse geliefert. Die exakten Ursachen des Fehlverhalten konnten in dieser Arbeit nicht geklärt werden.
+
+Hieraus resultiert auch das offensichtliche Ziel für eine Folgearbeit: Es muss ein Konzept entwickelt werden, um die Namenskonflikte unter ROS aufzulösen.
