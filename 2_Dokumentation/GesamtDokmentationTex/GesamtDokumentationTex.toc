@@ -1,24 +1,24 @@
 \select@language {ngerman}
 \contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}Aufbau des Gesamtsystems und der Infrastruktur}{5}{chapter.2}
-\contentsline {chapter}{\numberline {3}Funktionsprinzip des globalen Planers}{9}{chapter.3}
-\contentsline {section}{\numberline {3.1}Forward-Search: Breiten Suche}{10}{section.3.1}
-\contentsline {section}{\numberline {3.2}Forward-Search: Tiefensuche}{12}{section.3.2}
-\contentsline {section}{\numberline {3.3}Optimale Suche und Planung}{13}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}A*}{15}{subsection.3.3.1}
-\contentsline {chapter}{\numberline {4}Stochastische Modelle in der Robotik}{17}{chapter.4}
-\contentsline {section}{\numberline {4.1}Geschwindigkeitsbasiertes Bewegungsmodell }{19}{section.4.1}
-\contentsline {section}{\numberline {4.2}Messmodell}{23}{section.4.2}
-\contentsline {section}{\numberline {4.3}Kontinuierliches Bayes Filter}{25}{section.4.3}
-\contentsline {chapter}{\numberline {5}Kartenerstellung}{31}{chapter.5}
-\contentsline {section}{\numberline {5.1}Occupancy-Grid-Mapping}{31}{section.5.1}
-\contentsline {chapter}{\numberline {6}Lokaler Planer: Dynamic Window Appraoch}{35}{chapter.6}
-\contentsline {section}{\numberline {6.1}Anwendungsbeispiel}{37}{section.6.1}
-\contentsline {chapter}{\numberline {7}ROS Implementierung}{43}{chapter.7}
-\contentsline {section}{\numberline {7.1}Systemstruktur}{44}{section.7.1}
-\contentsline {section}{\numberline {7.2}Inbetriebnahme der Turtlebots}{45}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}Fernsteuerung eines Turtlebots}{46}{subsection.7.2.1}
-\contentsline {subsection}{\numberline {7.2.2}Aufzeichnung einer Karte}{47}{subsection.7.2.2}
-\contentsline {subsection}{\numberline {7.2.3}Navigation eines einzelnen Roboters}{49}{subsection.7.2.3}
-\contentsline {subsection}{\numberline {7.2.4}Navigation mehrerer Roboter}{51}{subsection.7.2.4}
-\contentsline {chapter}{Literaturverzeichnis}{55}{chapter*.47}
+\contentsline {chapter}{\numberline {3}Funktionsprinzip des globalen Planers}{11}{chapter.3}
+\contentsline {section}{\numberline {3.1}Forward-Search: Breitensuche}{13}{section.3.1}
+\contentsline {section}{\numberline {3.2}Forward-Search: Tiefensuche}{15}{section.3.2}
+\contentsline {section}{\numberline {3.3}Optimale Suche und Planung}{16}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}A*}{17}{subsection.3.3.1}
+\contentsline {chapter}{\numberline {4}Stochastische Modelle in der Robotik}{21}{chapter.4}
+\contentsline {section}{\numberline {4.1}Geschwindigkeitsbasiertes Bewegungsmodell }{23}{section.4.1}
+\contentsline {section}{\numberline {4.2}Messmodell}{27}{section.4.2}
+\contentsline {section}{\numberline {4.3}Kontinuierliches Bayes Filter}{29}{section.4.3}
+\contentsline {chapter}{\numberline {5}Kartenerstellung}{35}{chapter.5}
+\contentsline {section}{\numberline {5.1}Occupancy-Grid-Mapping}{35}{section.5.1}
+\contentsline {chapter}{\numberline {6}Lokaler Planer: Dynamic Window Appraoch}{39}{chapter.6}
+\contentsline {section}{\numberline {6.1}Anwendungsbeispiel}{41}{section.6.1}
+\contentsline {chapter}{\numberline {7}ROS Implementierung}{47}{chapter.7}
+\contentsline {section}{\numberline {7.1}Systemstruktur}{48}{section.7.1}
+\contentsline {section}{\numberline {7.2}Inbetriebnahme der Turtlebots}{49}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Fernsteuerung eines Turtlebots}{50}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Aufzeichnung einer Karte}{51}{subsection.7.2.2}
+\contentsline {subsection}{\numberline {7.2.3}Navigation eines einzelnen Roboters}{53}{subsection.7.2.3}
+\contentsline {subsection}{\numberline {7.2.4}Navigation mehrerer Roboter}{55}{subsection.7.2.4}
+\contentsline {chapter}{Literaturverzeichnis}{61}{chapter*.35}

@@ -1,7 +1,7 @@
 \BOOKMARK [0][-]{chapter.1}{Einleitung}{}% 1
 \BOOKMARK [0][-]{chapter.2}{Aufbau\040des\040Gesamtsystems\040und\040der\040Infrastruktur}{}% 2
 \BOOKMARK [0][-]{chapter.3}{Funktionsprinzip\040des\040globalen\040Planers}{}% 3
-\BOOKMARK [1][-]{section.3.1}{Forward-Search:\040Breiten\040Suche}{chapter.3}% 4
+\BOOKMARK [1][-]{section.3.1}{Forward-Search:\040Breitensuche}{chapter.3}% 4
 \BOOKMARK [1][-]{section.3.2}{Forward-Search:\040Tiefensuche}{chapter.3}% 5
 \BOOKMARK [1][-]{section.3.3}{Optimale\040Suche\040und\040Planung}{chapter.3}% 6
 \BOOKMARK [2][-]{subsection.3.3.1}{A*}{section.3.3}% 7
@@ -20,4 +20,4 @@
 \BOOKMARK [2][-]{subsection.7.2.2}{Aufzeichnung\040einer\040Karte}{section.7.2}% 20
 \BOOKMARK [2][-]{subsection.7.2.3}{Navigation\040eines\040einzelnen\040Roboters}{section.7.2}% 21
 \BOOKMARK [2][-]{subsection.7.2.4}{Navigation\040mehrerer\040Roboter}{section.7.2}% 22
-\BOOKMARK [0][-]{chapter*.47}{Literaturverzeichnis}{}% 23
+\BOOKMARK [0][-]{chapter*.35}{Literaturverzeichnis}{}% 23

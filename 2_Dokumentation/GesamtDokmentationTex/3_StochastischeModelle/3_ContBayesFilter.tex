@@ -1,4 +1,4 @@
-\section{Kontinuierliches Bayes Filter}
+\section{Kontinuierliches Bayes Filter} 
 In der Robotik werden stochastische Filter genutzt, um anhand von gegebenen Information wie Mess- und Stellgrößen eine Schätzung über unbekannte Zustände des Systems zu treffen. Die Grundlage für derartige Methoden stellt das Bayes-Filter für kontinuierlich verteilte Zustände dar. Als Beispiel für die Herleitung und Illustration des Filters wird die Lokalisierungsaufgabe herangezogen, bei welcher die aktuelle Position $\mVec{x}\idx{t}$ des Roboters ermittelt werden soll. Die Schätzung stützt sich dabei auf die bisher gesammelten Messwerte $\mVec{z}\idx{1:t}$ und Stellgrößen $\mVec{u}\idx{1:t}$. Insofern kann die Lokalisierungsaufgabe als die Bestimmung der bedingten Wahrscheinlichkeit
 \begin{equation}
 \condP{\mVec{x}\idx{t}}{\mVec{z}\idx{1:t},\mVec{u}\idx{1:t}}

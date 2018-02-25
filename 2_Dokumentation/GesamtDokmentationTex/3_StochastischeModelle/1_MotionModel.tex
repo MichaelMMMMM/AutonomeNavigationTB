@@ -105,7 +105,7 @@ führt. Die Aufgabe besteht jetzt darin, ein Bewegungsmodell in Form der bedingt
 \begin{equation}
 \condP{\mVec{x}_t]}{\mVec{u}_t, \mVec{x}_{t-1}}
 \end{equation}
-zu formulieren. Das heißt es soll eine Funktion aufgestellt werden, die anhand der Vektoren $\mVec{u}_t$, $\mVec{x}_t$ und $\mVec{x}_{t-1}$ die Wahrscheinlichkeit dieses Ereignisses berechnet. Dafür wird nach Gleichung (\ref{eq_kinematic_3}) die Werte der stochastisch unabhängigen Zufallsvariablen $v\idx{err}$, $\omega\idx{err}$ und $\gamma\idx{err}$ berechnet. Die gesuchte Wahrscheinlichkeit ergibt sich dann aus deren gemeinsamer Verteilung
+zu formulieren. Das heißt es soll eine Funktion aufgestellt werden, die berechnet wie wahrscheinlich der Zustand $\mVec{x}_t$ auf den Zustand $\mVec{x}_{t-1}$ und die Aktion $\mVec{u}_t$ folgt. Dafür wird nach Gleichung (\ref{eq_kinematic_3}) die Werte der stochastisch unabhängigen Zufallsvariablen $v\idx{err}$, $\omega\idx{err}$ und $\gamma\idx{err}$ berechnet. Die gesuchte Wahrscheinlichkeit ergibt sich dann aus deren gemeinsamer Verteilung
 \begin{equation}
 p(\mVec{x}_t, \mVec{u}_t, \mVec{x}_{t-1}) = \condP{\mVec{x}_t}{\mVec{u}_t, \mVec{x}_{t-1}} = \varepsilon_v(v\idx{err})\cdot \varepsilon_\omega(\omega\idx{err})\cdot \varepsilon_\gamma(\gamma\idx{err})\,.
 \end{equation}

@@ -334,7 +334,70 @@ rosrun tf view_frames
 \end{lstlisting}
 Grafiken wie die obige zu generieren, wodurch die Fehlerfindung erleichtert wird. In dem aktuellen Transformationsbaum wird zuerst von \lstinline{map}{} nach \lstinline{odom}{} transformiert, wofür der AMCL-Knoten verantwortlich ist. Anschließend veröffentlicht der Knoten \lstinline{mobile_base_nodelet_manager}{} eine Transformation von \lstinline{odom}{} zu \lstinline{base_footprint}{}. Von \lstinline{base_footprint}{} wird wiederum in \lstinline{base_link}{} überführt. Veröffentlicht wird diese Transformation von \lstinline{base_link_footprint_tf_broadcaster}{}. Zuletzt erfolgt die Transformation von \lstinline{base_link}{} zu \lstinline{laser}{}, wofür der Knoten \lstinline{robot_state_publisher} \lstinline{_no_ns}{} zuständig ist. In dem Bezugssystem \lstinline{laser}{} werden die Daten des Laserscanners interpretiert. Bei \lstinline{base_footprint}{} und \lstinline{base_link}{} handelt es sich jeweils um körperfeste Bezugssysteme des Roboters, deren relative Ausrichtung zueinander konstant ist.
 
-Die Knoten \lstinline{base_link_footprint_tf_broadcaster}{} und \lstinline{robot_state_}  \lstinline{publisher_no_ns}{} werden jeweils über das Slave-Skript gestartet; \lstinline{mobile_base_}{} \lstinline{nodelet_manager}{} und \lstinline{amcl}{} von der Master-Datei aus.
+Die Knoten \lstinline{base_link_footprint_tf_broadcaster}{} und \lstinline{robot_state_}{}\linebreak  \lstinline{publisher_no_ns}{} werden jeweils über das Slave-Skript gestartet; \lstinline{mobile_base_}{} \lstinline{nodelet_manager}{} und \lstinline{amcl}{} von der Master-Datei aus.
 
-Ein Ansatz, um die Namenskonflikte aufzulösen, besteht darin, den Parameter \lstinline{tf_prefix}{} zu nutzen, womit ähnlich zum \lstinline{group}{}-Tag Präfixe an die Bezugssysteme der Roboter angefügt werden können.
+Ein Ansatz, um die Namenskonflikte aufzulösen, besteht darin, den Parameter \lstinline{tf_prefix}{} zu nutzen, womit ähnlich zum \lstinline{group}{}-Tag Präfixe an die Bezugssysteme der Roboter angefügt werden können. Dieser Ansatz wird mittel der Launch-Datei \lstinline{EML_NS_TF_Hardware_Init_Slave.launch}{} verfolgt.
+\begin{lstlisting}[caption={EML\_NS\_TF\_Hardware\_Init\_Slave.launch},captionpos=b]
+<launch>
+	<arg name="namespace" default="Robot"/>
+	<group ns="$(arg namespace)">
+		<!-- Basis-Initialisierung -->
+		<include file="$(find EML_Navigation_Slave)/launch/ ...
+				include/EML_minimal.launch">
+			<arg name="namespace" value="$(arg namespace)"/>
+		</include>
+	
+		<!-- Initialisierung des SICK-TIM551 -->
+		<param name="robot_description" command="$(find xacro)/ ...
+			xacro.py '$(find sick_tim)/urdf/example.urdf.xacro'"/>
+		<include file="$(find turtlebot_chor_navigation)/...
+			launch/include/sick_tim551_2050001_timefix.launch"/>
+	</group>
+</launch>
 
+\end{lstlisting}
+Der primäre Unterschied zu der vorherigen Variante besteht darin, dass die Standarddatei \lstinline{minimal.launch}{} aus dem \lstinline{turtlebot_bringup}{}-Paket durch die Datei \lstinline{EML_minimal.launch}{} ersetzt wurde. Hierbei handelt es sich um eine Kopie der Ausgangsdatei, die um den Namensraumparameter ergänzt wurde, der den jeweiligen ROS-Knoten beim Start übergeben wird. Im relevant Teil von \lstinline{EML_minimal.launch}{} werden drei weitere Launch-Dateien inkludiert, die wiederum durch angepasste Kopien ersetzt werden.
+\begin{lstlisting}[caption={Ausschnitt aus EML\_minimal.launch},captionpos=b]
+ <arg name="namespace"         default="Robot"/>
+
+  <param name="/use_sim_time" value="$(arg simulation)"/>
+
+  <include file="$(find EML_Navigation_Slave)/launch/ ...
+  		include/EML_robot.launch.xml">
+    <arg name="stacks" value="$(arg stacks)" />
+    <arg name="3d_sensor" value="$(arg 3d_sensor)" />
+    <arg name="namespace" value="$(arg namespace)" />
+  </include>
+  <include file="$(find EML_Navigation_Slave)/launch/ ...
+  		include/EML_mobile_base.launch.xml">
+    <arg name="serialport" value="$(arg serialport)" />
+    <arg name="namespace"  value="$(arg namespace)" />
+  </include>
+  <include file="$(find EML_Navigation_Slave)/launch/ ...
+  		include/EML_netbook.launch.xml">
+    <arg name="battery" value="$(arg battery)" />
+    <arg name="namespace" value="$(arg namespace)" />
+  </include>
+\end{lstlisting}
+Die drei Dateien \lstinline{EML_robot.launch.xml}{}, \lstinline{EML_mobile_base.launch.xml}{} und \lstinline{EML}{} \lstinline{_netbook.launch.xml}{} sind wiederum angepasste Kopien der Dateien \linebreak \lstinline{robot.launch.xml}{}, \lstinline{mobile_base.launch.xml}{} und \lstinline{netbook.launch.xml}{}, die ebenfalls aus dem Paket \lstinline{turtlebot_bringup}{} entnommen sind. 
+
+Die Hauptproblematik entsteht in der Datei \lstinline{EML_mobile_base.launch.xml}{}, in der die Node \lstinline{mobile_base_nodelet_manager}{} mit den folgenden Zeile gestartet wird.
+\begin{lstlisting}[caption={Ausschnitt aus EML\_mobile\_base.launch.xml},captionpos=b]
+<node pkg="nodelet" type="nodelet" name="mobile_base_ ...
+		nodelet_manager" args="manager">
+	<param name="tf_prefix" value="R4" />
+</node>
+\end{lstlisting}
+In diesem Beispiel wird der Parameter \lstinline{tf_prefix}{} auf den fixen Wert R4 gesetzt. Die korrekte Ausführung der Parametrisierung wurde mithilfe des ROS-Befehls
+\begin{lstlisting}
+rosparam get mobile_base_nodelet_manager/tf_prefix
+\end{lstlisting}
+geprüft, mit dem Ergebnis, dass der Präfix erfolgreich gesetzt wurde. Allerdings zeigt der Transformationsbaum, dass die ROS-Node den Präfix bei der Transformation nicht verwendet.
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.8\linewidth, trim={1cm, 1cm, 1cm, 5cm}, clip]{img/TF_Tree_TF_Prefix.pdf}
+\caption{Transformationsbaum nach gesetztem Transformationspräfix}
+\end{figure}
+Das Setzen des Präfixparameter bei dem Knoten \lstinline{robot_state_publisher}{} funktioniert, wie auch in der obigen Abbildung ersichtlich wird, wie erwartet. Insofern handelt es sich um kein prinzipielles Problem des \lstinline{tf_prefix}{}-Parameter. 
+
+Das hier beschriebene Problem macht es zu dem aktuellen Zeitpunkt unmöglich zwei Roboter parallel in Betrieb zu nehmen.
