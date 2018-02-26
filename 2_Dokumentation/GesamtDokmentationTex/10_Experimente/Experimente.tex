@@ -1,0 +1,13 @@
+\chapter{Erprobung der Navigation}
+In diesem Kapitel werden die Ergebnisse der zuvor diskutierten Algorithmen in realen Anwendungsszenarien untersucht. Als Beispiel dient der Laborraum F001 der Hochschule Karlsruhe, von dem im Voraus eine Karte mithilfe des ROS-Pakets \lstinline{hector_slam}{} aufgezeichnet wurde. An dieser Stelle werden drei verschiedene Anwendungsfälle untersucht. Im Ersten wurde der Raum im Vergleich zur Karte nicht verändert. Außerdem wird angenommen, dass die Position des Roboters zu Beginn der Navigation bekannt ist. Somit handelt es sich um den trivialsten Anwendungsfall der Navigation, womit die Grundfunktionen nachgewiesen werden sollen.
+Im zweiten Szenario wird der Fall untersucht, das der auf der Karte unmittelbare Weg zum Ziel durch ein Hindernis blockiert wird, wodurch gezwungenermaßen Sensordaten beachtet werde müssen, um einen Weg zum Ziel zu planen.
+Der letzte Test dient zur Beurteilung der Lokalisierung. In diesem Fall wird die Roboterposition als unbekannt angenommen und durch mittels einer ungenauen Schätzung initialisiert. 
+
+\newpage
+\input{1_Experiment1}
+
+\newpage
+\input{2_Experiment2}
+
+\newpage
+\input{3_Experiment3}
