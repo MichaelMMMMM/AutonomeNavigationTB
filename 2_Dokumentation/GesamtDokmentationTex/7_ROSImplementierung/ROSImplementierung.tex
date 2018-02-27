@@ -7,8 +7,6 @@ Im dritten Anwendungsbeispiel wird die zuvor aufgezeichnete Karte für die auton
 
 Im Anschluss wird der Endszenario diskutiert, in dem zwei Robotern simultan navigieren. Hier entsteht auf ROS-Seite das Problem, dass Konflikte in der Namensgebung von Nachrichten und Topics entstehen. Eine mögliche Lösung stellen die unter ROS verfügbaren Namensräume dar, wodurch die Daten der beiden Roboter entkoppelt werden können. Allerdings sind in der Umsetzung dieses Lösungsansatzes Probleme mit der Lokalisierung aufgetreten, die bisher noch nicht erklärt bzw. gelöst werden konnten. An dieser Stelle wird der Fehlerfall aufgezeigt und mögliche Lösungen analysiert.
 
-Als eine Lösung für das Problem werden unterschiedliche Launch-Dateien für die beiden Robotern angelegt, in denen die Nachrichtennamen den Robotern angepasst werden. Hierbei handelt es sich um eine recht umständliche und unflexible Lösung, die allerdings funktioniert. \pdfcomment{Nicht gut; aber geht}
-
 \newpage
 \input{1_Systemstruktur}
 

@@ -31,4 +31,4 @@
 \contentsline {subsection}{\numberline {9.2.3}Navigation eines einzelnen Roboters}{65}{subsection.9.2.3}
 \contentsline {subsection}{\numberline {9.2.4}Navigation mehrerer Roboter}{67}{subsection.9.2.4}
 \contentsline {chapter}{\numberline {10}Ausblick und Fazit}{73}{chapter.10}
-\contentsline {chapter}{Literaturverzeichnis}{75}{chapter*.45}
+\contentsline {chapter}{Literaturverzeichnis}{75}{chapter*.38}
