@@ -1,4 +1,4 @@
-\section{Messmodell}
+\section{Messmodell}\footnote{Diser Abschnitt orientiert sich inhaltlich an \cite[S. 153 ff]{ProbRob}}
 Als weiteres Beispiel wird ein stochastisches Messmodell vorgestellt, das später bei der Lokalisierung wiederverwendet wird. Das Ziel des Messmodells ist es den Zusammenhang zwischen einem Zustandsvektor $\mVec{x}\idx{t}$ und einem Messvektor $\mVec{z}\idx{t}$ in Form der bedingten Wahrscheinlichkeit
 \begin{equation}
 \condP{\mVec{z}\idx{t}}{\mVec{x}\idx{t}}
@@ -29,11 +29,9 @@ p\idx{max}\left(z^k\idx{t} \mCond \mVec{x}\idx{t}\right) = \left\{ \begin{array}
 0 & \hspace{5mm} \forall z  \neq z\idx{max}
 \end{array}\right.
 \end{equation}
-motiviert wird. Die Aussage der Zufallsvariable besteht darin, ...
+motiviert wird. Die Aussage der Zufallsvariable besteht darin, dass im Falle eines maximalen Messwertes von einem Messfehler ausgegangen werden kann
 
-{\color{red} Die Aussage von dieser Verteilung ist ein bisschen Banane, wenn wenn der Messwert den maximal Möglichen anzeigt, ist die dass 100 Prozent der Fall, ansonsten nicht? Oder ist es so zu verstehen, dass ein maximaler Messwert zu 100 Prozent den Fall von Messfehler bedeutet? Dann müsste ich die Interpretation der anderen Verteilungen nochmal überdenken}
-
-Als letzter und absurdester Fall werden rein zufällig falsche Phänomene betrachtet. Als Argument dient die Beobachtung, dass es unerklärliche Messwerte gibt, die - zu Gunsten der Simplizität - durch eine Gleichverteilung der Form
+Als letzter  Fall werden rein zufällig falsche Phänomene betrachtet. Als Argument dient die Beobachtung, dass es unerklärliche Messwerte gibt, die - zu Gunsten der Simplizität - durch eine Gleichverteilung der Form
 \begin{equation}
 \renewcommand*{\arraystretch}{1.3}
 p\idx{rand}\left( z^k\idx{t} \mCond \mVec{x}\idx{t}\right) = \left\{ \begin{array}{cl}
@@ -42,7 +40,7 @@ p\idx{rand}\left( z^k\idx{t} \mCond \mVec{x}\idx{t}\right) = \left\{ \begin{arra
 0 & \hspace{5mm} \forall z^k\idx{t} \notin \left[0, z\idx{max}\right]
 \end{array} \right.
 \end{equation}
-repräsentiert werden. Es liegt schließlich nahe das komplexeste aller Probleme durch die simpelste aller Darstellung zu beschreiben. An diesem Beispiel wird deutlich, dass heuristische Einflüsse in stochastischen Modellen auch mit variierendem Elan verteidigt werden.
+repräsentiert werden. 
 
 Die gesuchte Wahrscheinlichkeit $\condP{z^k\idx{t}}{\mVec{x}\idx{t}}$ wird aus Summe der vier Verteilung berechnet, wobei diese mit den Faktoren $z\idx{hit}$, $z\idx{short}$, $z\idx{max}$ und $z\idx{rand}$ gewichtet werden. Die Gewichtung erlauben es dem Anwender, die Heuristiken nach ihrer Glaubhaftigkeit zu bewerten.
 \begin{equation}
