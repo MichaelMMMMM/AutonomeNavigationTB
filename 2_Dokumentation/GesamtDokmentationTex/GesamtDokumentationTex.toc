@@ -16,16 +16,19 @@
 \contentsline {section}{\numberline {5.1}Occupancy-Grid-Mapping}{35}{section.5.1}
 \contentsline {chapter}{\numberline {6}Lokaler Planer: Dynamic Window Appraoch}{39}{chapter.6}
 \contentsline {section}{\numberline {6.1}Anwendungsbeispiel}{41}{section.6.1}
-\contentsline {chapter}{\numberline {7}Erprobung der Navigation}{47}{chapter.7}
-\contentsline {section}{\numberline {7.1}Anwendungsszenario 1: Triviale Navigation}{48}{section.7.1}
-\contentsline {section}{\numberline {7.2}Anwendungsszenario 2: Hindernisdetektion}{50}{section.7.2}
-\contentsline {section}{\numberline {7.3}Anwendungsszenario 3: Lokalisierung}{52}{section.7.3}
-\contentsline {chapter}{\numberline {8}ROS Implementierung}{55}{chapter.8}
-\contentsline {section}{\numberline {8.1}Systemstruktur}{56}{section.8.1}
-\contentsline {section}{\numberline {8.2}Inbetriebnahme der Turtlebots}{57}{section.8.2}
-\contentsline {subsection}{\numberline {8.2.1}Fernsteuerung eines Turtlebots}{58}{subsection.8.2.1}
-\contentsline {subsection}{\numberline {8.2.2}Aufzeichnung einer Karte}{59}{subsection.8.2.2}
-\contentsline {subsection}{\numberline {8.2.3}Navigation eines einzelnen Roboters}{61}{subsection.8.2.3}
-\contentsline {subsection}{\numberline {8.2.4}Navigation mehrerer Roboter}{63}{subsection.8.2.4}
-\contentsline {chapter}{\numberline {9}Ausblick und Fazit}{69}{chapter.9}
-\contentsline {chapter}{Literaturverzeichnis}{71}{chapter*.45}
+\contentsline {chapter}{\numberline {7}Lokalisierung}{47}{chapter.7}
+\contentsline {section}{\numberline {7.1}Grid-Localization}{48}{section.7.1}
+\contentsline {section}{\numberline {7.2}Adaptive Monte-Carlo-Lokalisierung}{49}{section.7.2}
+\contentsline {chapter}{\numberline {8}Erprobung der Navigation}{51}{chapter.8}
+\contentsline {section}{\numberline {8.1}Anwendungsszenario 1: Triviale Navigation}{52}{section.8.1}
+\contentsline {section}{\numberline {8.2}Anwendungsszenario 2: Hindernisdetektion}{54}{section.8.2}
+\contentsline {section}{\numberline {8.3}Anwendungsszenario 3: Lokalisierung}{56}{section.8.3}
+\contentsline {chapter}{\numberline {9}ROS Implementierung}{59}{chapter.9}
+\contentsline {section}{\numberline {9.1}Systemstruktur}{60}{section.9.1}
+\contentsline {section}{\numberline {9.2}Inbetriebnahme der Turtlebots}{61}{section.9.2}
+\contentsline {subsection}{\numberline {9.2.1}Fernsteuerung eines Turtlebots}{62}{subsection.9.2.1}
+\contentsline {subsection}{\numberline {9.2.2}Aufzeichnung einer Karte}{63}{subsection.9.2.2}
+\contentsline {subsection}{\numberline {9.2.3}Navigation eines einzelnen Roboters}{65}{subsection.9.2.3}
+\contentsline {subsection}{\numberline {9.2.4}Navigation mehrerer Roboter}{67}{subsection.9.2.4}
+\contentsline {chapter}{\numberline {10}Ausblick und Fazit}{73}{chapter.10}
+\contentsline {chapter}{Literaturverzeichnis}{75}{chapter*.45}

@@ -1,0 +1,42 @@
+\chapter{Lokalisierung}\footnote{Inhalt orientiert sich an \cite[S. 237 ff]{ProbRob}}
+Als letzte Komponente wird in diesem Kapitel die Lokalisierung betrachtet, wobei diese streng genommen nicht zum Navigationstack gezählt wird. Allerdings spielt die Lokalisierung eine unerlässliche und eminent wichtige Rolle bei der Navigation, da sie deren Qualität maßgeblich beeinflusst. In dieser Arbeit wird die adaptive Monte-Carlo-Lokalisierung (AMCL) verwendet, die mittels eines Partikelfilters eine Positionsschätzung durchführt.
+Die Aufgabe der Lokalisierung besteht darin, anhand eines vergangenen Zustandes $\mVec{x}_{t-1}$, einer Aktion $\mVec{u}_t$ und eines Messvektors $\mVec{z}_t$ den aktuellen Zustand $\mVec{x}_t$ zu schätzen. Der Zusammenhang zwischen dem Zustand $\mVec{x}_{t-1}$, der Aktion $\mVec{u}_t$ und dem daraus resultierenden Zustand $\mVec{x}_t$ wird von einem Bewegungsmodell beschrieben, dass im stochastischen Fall durch eine bedingte Wahrscheinlichkeit $\condP{\mVec{x}_t}{\mVec{x}_{t-1},\mVec{u}_t}$ beschreiben wird.
+Der Zusammenhang zwischen dem Zustand $\mVec{x}_t$ und dem Messvektor $\mVec{z}_t$ wird von einem Messmodell beschreiben, das ebenfalls in Form einer Wahrscheinlichkeit $\condP{\mVec{x}_t}{\mVec{z}_t}$ vorliegt. Folglich wird ein Filter gesucht, dass es ermöglicht aus den beiden Verteilungen einen Rückschluss auf die Zufallsvariable $\mVec{x}_t$ zu ziehen.
+
+\newpage
+\section{Grid-Localization}
+Als erstes Ansatz wird das Bayes-Filter herangezogen, das sich bereits in anderen Anwendungsfällen bewährt hat. Damit das Filter in Form eines Algorithmus implementiert werden kann, muss es in einer diskretisierten Form vorliegen. Allerdings handelt es sich bei dem Zustand $\mVec{x}_t$ um eine wertkontinuierliche Zufallsvariable. Der Ansatz der Grid-Localization besteht darin, den Wertverlauf der Zufallsvariable zu diskretisieren, indem die mögliche Positionen in ein Raster aufgeteilt wird. Jeder einzelnen Zelle des Gitters kann nun eine Wahrscheinlichkeit zugeordnet werden, womit eine diskrete Verteilung vorliegt. Wird eine kontinuierliche Zufallsvariable derart diskretisiert, wird das darauf applizierte Bayes-Filter auch als Histogrammfilter bezeichnet. Im Vergleich zum kontinuierlichen Bayes-Filter wird lediglich das Integral durch eine Summe ersetzt und die bedingten Wahrscheinlichkeiten durch die entsprechenden Modelle.
+\begin{lstlisting}[mathescape=true, caption={Grid-Localization},captionpos=b]
+Algorithm: GridLocalization($\bel{\mVec{x}\idx{t-1}},\mVec{u}\idx{t},\mVec{z}\idx{t}$):
+	for all $\mVec{x}\idx{t}$ do:
+		$\pbel{\mVec{x}\idx{t}} = \sum \text{MotionModel}(\mVec{x}_t, \mVec{u}_t)\cdot \bel{\mVec{x}\idx{t-1}}$
+		$\bel{\mVec{x}\idx{t}} = \mu \cdot \text{MeasurementModel}(\mVec{x}_t, \mVec{z}_t)\cdot \pbel{\mVec{x}\idx{t}}$
+	endfor
+	return $\bel{\mVec{x}\idx{t}}$
+\end{lstlisting}
+Ein Konflikt den das Histrogrammfilter aufwirft besteht darin, wie präzise die Rasterung gewählt werden soll. Bei sehr feinen Zellen verspricht die Lokalisierung ein präziseres Ergebnis, allerdings steigt damit auch der Rechenaufwand. Die umgekehrte Variante spart Ressourcen, liefert dafür aber entsprechend schlechtere Ergebnisse. Dieser Umstand fällt bei der Lokalisierungsaufgabe besonders negativ ins Gewicht, da im Konvergenzfall der Lokalisierung die Wahrscheinlichkeiten nahezu aller Zellen gegen Null laufen. Lediglich einzelne Zellen, die nahe an der vermutlichen Position liegen, besitzen eine von Null verschiedene Wahrscheinlichkeit. Insofern werden unnötige Ressourcen verschwendet, indem die Zellen gleichmäßig über den Raum verteilt sind. Allerdings ist es im Allgemeinen auch nicht möglich, mittels a priori Informationen die Raumaufteilung anzupassen. Dieses Problem motiviert weitere Ansätze zu betrachten, die besser für die Lokalisierungsaufgabe geeignet sind.
+
+\newpage
+\section{Adaptive Monte-Carlo-Lokalisierung}
+Eine Lösung für dieses Problem liefert das Partikelfilter, das die Verteilung durch eine
+finite Menge von Stichproben repräsentiert. Die Proben der Verteilung werden als Partikel
+bezeichnet, woher auch der Name des Filters stammt. Da die Partikel aus der Verteilung
+gezogen werden, folgt im Umkehrschluss, dass eine von vielen Partikeln bevölkerte Region
+mit einer hohen Wahrscheinlichkeit korrespondiert. Bei der Monte-Carlo-Lokalisierung wird ein solches Partikelfilter verwendet, um die Position des Roboters zu ermitteln. Jeder Partikel repräsentiert eine mögliche Position des Roboters.
+
+\begin{lstlisting}[mathescape=true, caption={Monte-Carlo-Lokalisierung}, captionpos=bot]
+ParticleFilter($\bs{\mathcal{X}}\idx{t-1}$, $\mVec{u}\idx{t}$, $\mVec{z}\idx{t}$)
+	$\overline{\bs{\mathcal{X}}}\idx{t} = \bs{\mathcal{X}}\idx{t} = \emptyset$
+	for $m = 1$ to $M$ do
+		$\mVec{x}\idx{t}^{[m]} = \text{SampleMotionModel}(\mVec{u}\idx{t},\mVec{x}^{[m]}\idx{t-1})$
+		$\omega^{[m]}\idx{t} = \text{MeasurementModel}(\mVec{z}\idx{t},\mVec{x}^{[m]}\idx{t})$
+		add $\left(\mVec{x}\idx{t}^{[m]}, \omega\idx{t}^{[m]}\right)$ to $\overline{\bs{\mathcal{X}}}\idx{t}$
+	endfor
+	for $m = 1$ to $M$ do
+		draw $i$ with probability $\omega\idx{t}^{[m]}$
+		add $\mVec{x}\idx{t}^{[i]}$ to $\bs{\mathcal{X}}\idx{t}$
+	endfor
+	return $\bs{\mathcal{X}\idx{t}}$
+\end{lstlisting}
+Das Filter arbeitet rekursiv, so wird ihm die Partikelmenge des vorherigen Abtastzeitpunktes $\bs{\mathcal{X}}\idx{t-1}$, sowie der Stellvektor $\mVec{u}\idx{t}$ und Messvektor $\mVec{z}\idx{t}$ übergeben. Im ersten Schritt wird die vorläufige Partikelmenge $\overline{\bs{\mathcal{X}}}\idx{t}$ bestimmt, indem aus dem Bewegungsmodell und den vorherigen Paritkeln $\mVec{x}\idx{t-1}^{[m]}$ neue Werte $\mVec{x}\idx{t}^{[m]}$ gezogen werden. Die neuen Partikel können als das wahrscheinlichste Resultat aus den bisherigen Partikeln und dem aktuellen Stellvektor interpretiert werden. Im nächsten Schritt wird bestimmt, wie wahrscheinlich der Messvektor $\mVec{z}\idx{t}$ unter diesem neuen Partikeln $\mVec{x}\idx{t}^{[m]}$ auftritt, wofür das Messmodell verwendet wird. Diese Wahrscheinlichkeit wird auch als Gewichtung bezeichnet, da sie zur Plausibilisierung des vorherigen Schrittes verwendet wird. Im Fall, dass das aus dem Bewegungsmodell gewonnene Partikel mit hoher Wahrscheinlichkeit die gemessenen Sensorwerte hervorruft, nimmt $\omega^{[m]}\idx{t}$ zu, weshalb das Gewicht im Umkehrschluss zur Plausibilisierung der neuen Partikel verwendet werden kann. Das so bestimmte Paar $\left(\mVec{x}\idx{t}^{[m]}, \omega\idx{t}^{[m]}\right)$ wird der Menge $\overline{\bs{\mathcal{X}}}\idx{t}$ hinzugefügt.
+Der bisherige Schritt bestand lediglich darin, die Partikel des vorherigen Abtastpunktes der zeitlichen Veränderung anzupassen, woraus die vorläufige Menge $\overline{\bs{\mathcal{X}}}\idx{t}$ resultiert ist. Im Anschluss werden die Partikel mit einer zu der Gewichtung $\omega\idx{t}^{[m]}$ proportionalen Wahrscheinlichkeit neu gezogen. Dieser Schritt wird dadurch motiviert, dass es sich bei $\omega\idx{t}^{[m]}$ um die Wahrscheinlichkeit handelt, dass der Messvektor aus dem Partikel $\mVec{x}\idx{t}^{[m]}$ resultiert. Insofern plausibilisiert $\omega\idx{t}^{[m]}$ sein zugehöriges Partikel $\mVec{x}\idx{t}^{[m]}$. Angenommen das Bewegungsmodell $\condP{\mVec{u}\idx{t}}{\mVec{x}\idx{t}, \mVec{x}\idx{t-1}^{[m]}}$ bringt ein Partikel $\bs{\mathcal{X}}\idx{t}$ hervor, das der Position des Roboters in einer Ecke entspricht. Befindet sich der Roboter in der Realität aber vor einer gerade verlaufenden Wand, so ergibt das Messmodell $\condP{\mVec{z}\idx{t}}{\mVec{x}\idx{t}^{[m]}}$ für das Partikel $\mVec{x}\idx{t}^{[m]}$ eine sehr geringe Gewichtung $\omega\idx{t}^{[m]}$. Weshalb das Partikel mit einer nur sehr geringen Wahrscheinlichkeit in die neue Menge $\bs{\mathcal{X}}\idx{t}$ übernommen werden. Genau durch diesen Mechanismus kompensiert das Partikelfilter die Nachteile des Histogrammfilters. Die Plausibilisierung mittels $\omega\idx{t}^{[m]}$ verhindert, das unwahrscheinliche Hypothesen in Form von Partikeln verfolgt werden. Langfristig fokussieren sich die Partikel und somit auch die Ressourcen des Algorithmus auf die wahrscheinlichsten Hypothesen.

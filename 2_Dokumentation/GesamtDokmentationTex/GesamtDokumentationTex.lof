@@ -16,15 +16,16 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Darstellung der Trajektorie und Hindernissen\relax }}{42}{figure.caption.31}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces \IeC {\"U}bersicht von \lstinline {RViz}{}\relax }}{48}{figure.caption.32}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Globaler Plan\relax }}{49}{figure.caption.33}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Globale Kostenkarte des Labors\relax }}{49}{figure.caption.34}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Roboter und Sensordaten mit Hindernis\relax }}{50}{figure.caption.35}
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Integration der Sensordaten in die Pfadplanung\relax }}{51}{figure.caption.36}
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Ausgangszustand der Lokalisierung nach Positionssch\IeC {\"a}tzung\relax }}{52}{figure.caption.37}
-\contentsline {figure}{\numberline {7.7}{\ignorespaces Positionssch\IeC {\"a}tzung nach kurzer Fahrdistanz\relax }}{53}{figure.caption.38}
-\contentsline {figure}{\numberline {7.8}{\ignorespaces Positionssch\IeC {\"a}tzung bei Erreichen der Zielposition\relax }}{53}{figure.caption.39}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Transformationsbaum von Roboter 4\relax }}{66}{figure.caption.43}
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Transformationsbaum nach gesetztem Transformationspr\IeC {\"a}fix\relax }}{68}{figure.caption.44}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces \IeC {\"U}bersicht von \lstinline {RViz}{}\relax }}{52}{figure.caption.32}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Globaler Plan\relax }}{53}{figure.caption.33}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Globale Kostenkarte des Labors\relax }}{53}{figure.caption.34}
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Roboter und Sensordaten mit Hindernis\relax }}{54}{figure.caption.35}
+\contentsline {figure}{\numberline {8.5}{\ignorespaces Integration der Sensordaten in die Pfadplanung\relax }}{55}{figure.caption.36}
+\contentsline {figure}{\numberline {8.6}{\ignorespaces Ausgangszustand der Lokalisierung nach Positionssch\IeC {\"a}tzung\relax }}{56}{figure.caption.37}
+\contentsline {figure}{\numberline {8.7}{\ignorespaces Positionssch\IeC {\"a}tzung nach kurzer Fahrdistanz\relax }}{57}{figure.caption.38}
+\contentsline {figure}{\numberline {8.8}{\ignorespaces Positionssch\IeC {\"a}tzung bei Erreichen der Zielposition\relax }}{57}{figure.caption.39}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Transformationsbaum von Roboter 4\relax }}{70}{figure.caption.43}
+\contentsline {figure}{\numberline {9.2}{\ignorespaces Transformationsbaum nach gesetztem Transformationspr\IeC {\"a}fix\relax }}{72}{figure.caption.44}
 \addvspace {10\p@ }
